@@ -1,0 +1,5964 @@
+{
+  "islem_tarihi": "2025-09-17T20:18:32.684Z",
+  "dosya_yolu": "C:\\Users\\BERKAN\\Desktop\\PolenPDKS\\PDKS DENEME-2.xlsx",
+  "toplam_kayit": 332,
+  "hata_sayisi": 0,
+  "veriler": [
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:33"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:35"
+      },
+      "calisma_dk": 582,
+      "fm_dk": 105,
+      "fm_hhmm": "01:45",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:19",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:40"
+      },
+      "calisma_dk": 589,
+      "fm_dk": 110,
+      "fm_hhmm": "01:50",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:34"
+      },
+      "calisma_dk": 582,
+      "fm_dk": 104,
+      "fm_hhmm": "01:44",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-05",
+      "ic_dis": "",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:35"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:35"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 105,
+      "fm_hhmm": "01:45",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:14",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:36"
+      },
+      "calisma_dk": 584,
+      "fm_dk": 106,
+      "fm_hhmm": "01:46",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:30"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:11",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:35"
+      },
+      "calisma_dk": 581,
+      "fm_dk": 105,
+      "fm_hhmm": "01:45",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:15",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:36"
+      },
+      "calisma_dk": 585,
+      "fm_dk": 106,
+      "fm_hhmm": "01:46",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:40"
+      },
+      "calisma_dk": 582,
+      "fm_dk": 110,
+      "fm_hhmm": "01:50",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:33"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ABDULLAH BİNİCİ",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:30"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:30"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:31"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:28"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-05",
+      "ic_dis": "10:04",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:28"
+      },
+      "calisma_dk": 574,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:29"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:31"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:28"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:29"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:29"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:30"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:03",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:26"
+      },
+      "calisma_dk": 573,
+      "fm_dk": 96,
+      "fm_hhmm": "01:36",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYSUN SARIIŞIK",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "AYTÜL ILIKSU",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:33"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYTÜL ILIKSU",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:17",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:19",
+        "cik": "18:36"
+      },
+      "calisma_dk": 587,
+      "fm_dk": 106,
+      "fm_hhmm": "01:46",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYTÜL ILIKSU",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:22",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:19",
+        "cik": "18:41"
+      },
+      "calisma_dk": 592,
+      "fm_dk": 111,
+      "fm_hhmm": "01:51",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYTÜL ILIKSU",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:14",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:35"
+      },
+      "calisma_dk": 584,
+      "fm_dk": 105,
+      "fm_hhmm": "01:45",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYTÜL ILIKSU",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:33"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYTÜL ILIKSU",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:11",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:35"
+      },
+      "calisma_dk": 581,
+      "fm_dk": 105,
+      "fm_hhmm": "01:45",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYTÜL ILIKSU",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:11",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:31"
+      },
+      "calisma_dk": 581,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYTÜL ILIKSU",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:27",
+        "cik": "18:37"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 107,
+      "fm_hhmm": "01:47",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYTÜL ILIKSU",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:09",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:31"
+      },
+      "calisma_dk": 579,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYTÜL ILIKSU",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:32"
+      },
+      "calisma_dk": 582,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AYTÜL ILIKSU",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "BEYTULLAH CER",
+      "tarih": "2025-09-02",
+      "ic_dis": "07:51",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:16",
+        "cik": "16:07"
+      },
+      "calisma_dk": 441,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "BEYTULLAH CER",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:39",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:04",
+        "cik": "18:43"
+      },
+      "calisma_dk": 609,
+      "fm_dk": 113,
+      "fm_hhmm": "01:53",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "BEYTULLAH CER",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:27",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:09",
+        "cik": "18:36"
+      },
+      "calisma_dk": 597,
+      "fm_dk": 106,
+      "fm_hhmm": "01:46",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "BEYTULLAH CER",
+      "tarih": "2025-09-05",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:14",
+        "cik": "18:19"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 89,
+      "fm_hhmm": "01:29",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "BEYTULLAH CER",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:21",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:06",
+        "cik": "18:27"
+      },
+      "calisma_dk": 591,
+      "fm_dk": 97,
+      "fm_hhmm": "01:37",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "BEYTULLAH CER",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:32",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:04",
+        "cik": "18:36"
+      },
+      "calisma_dk": 602,
+      "fm_dk": 106,
+      "fm_hhmm": "01:46",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "BEYTULLAH CER",
+      "tarih": "2025-09-10",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "07:55",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "BEYTULLAH CER",
+      "tarih": "2025-09-11",
+      "ic_dis": "08:30",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:05",
+        "cik": "16:35"
+      },
+      "calisma_dk": 480,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "BEYTULLAH CER",
+      "tarih": "2025-09-12",
+      "ic_dis": "09:56",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:19",
+        "cik": "18:15"
+      },
+      "calisma_dk": 566,
+      "fm_dk": 85,
+      "fm_hhmm": "01:25",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "BEYTULLAH CER",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:11",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:32"
+      },
+      "calisma_dk": 581,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "BEYTULLAH CER",
+      "tarih": "2025-09-16",
+      "ic_dis": "09:48",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:16"
+      },
+      "calisma_dk": 558,
+      "fm_dk": 86,
+      "fm_hhmm": "01:26",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "BEYTULLAH CER",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:19",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ERDAL ÇAKIR",
+      "tarih": "2025-09-01",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:36"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ERDAL ÇAKIR",
+      "tarih": "2025-09-03",
+      "ic_dis": "11:03",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "07:46",
+        "cik": "18:49"
+      },
+      "calisma_dk": 633,
+      "fm_dk": 119,
+      "fm_hhmm": "01:59",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ERDAL ÇAKIR",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:32",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:54"
+      },
+      "calisma_dk": 602,
+      "fm_dk": 124,
+      "fm_hhmm": "02:04",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ERDAL ÇAKIR",
+      "tarih": "2025-09-05",
+      "ic_dis": "06:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "12:38",
+        "cik": "18:50"
+      },
+      "calisma_dk": 342,
+      "fm_dk": 120,
+      "fm_hhmm": "02:00",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ERDAL ÇAKIR",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:48",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "07:47",
+        "cik": "18:35"
+      },
+      "calisma_dk": 618,
+      "fm_dk": 105,
+      "fm_hhmm": "01:45",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ERDAL ÇAKIR",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:37",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:02",
+        "cik": "18:39"
+      },
+      "calisma_dk": 607,
+      "fm_dk": 109,
+      "fm_hhmm": "01:49",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ERDAL ÇAKIR",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:36",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:07",
+        "cik": "18:43"
+      },
+      "calisma_dk": 606,
+      "fm_dk": 113,
+      "fm_hhmm": "01:53",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:33"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:16",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:19",
+        "cik": "18:35"
+      },
+      "calisma_dk": 586,
+      "fm_dk": 105,
+      "fm_hhmm": "01:45",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:22",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:19",
+        "cik": "18:41"
+      },
+      "calisma_dk": 592,
+      "fm_dk": 111,
+      "fm_hhmm": "01:51",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:16",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:18",
+        "cik": "18:35"
+      },
+      "calisma_dk": 587,
+      "fm_dk": 105,
+      "fm_hhmm": "01:45",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-05",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:19",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-08",
+      "ic_dis": "08:23",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "10:10",
+        "cik": "18:33"
+      },
+      "calisma_dk": 473,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:33"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:32"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-11",
+      "ic_dis": "09:41",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:01"
+      },
+      "calisma_dk": 551,
+      "fm_dk": 71,
+      "fm_hhmm": "01:11",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:09",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:27",
+        "cik": "18:36"
+      },
+      "calisma_dk": 579,
+      "fm_dk": 106,
+      "fm_hhmm": "01:46",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:32"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:11",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:32"
+      },
+      "calisma_dk": 581,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA ÇAKAL",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:30"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:30"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:09",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:31"
+      },
+      "calisma_dk": 579,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:29"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-05",
+      "ic_dis": "10:04",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:28"
+      },
+      "calisma_dk": 574,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:29"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:31"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:28"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:29"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:30"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:30"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:03",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:26"
+      },
+      "calisma_dk": 573,
+      "fm_dk": 96,
+      "fm_hhmm": "01:36",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FATMA SARIŞIK",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:25",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "GÜLBAHAR BİLGİ",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:28"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "GÜLBAHAR BİLGİ",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:28"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "GÜLBAHAR BİLGİ",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:04",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:27"
+      },
+      "calisma_dk": 574,
+      "fm_dk": 97,
+      "fm_hhmm": "01:37",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "GÜLBAHAR BİLGİ",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:29"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "GÜLBAHAR BİLGİ",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:27"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 97,
+      "fm_hhmm": "01:37",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "GÜLBAHAR BİLGİ",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:29"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "GÜLBAHAR BİLGİ",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:29"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "GÜLBAHAR BİLGİ",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "HALİL İBRAHİM PARLAR",
+      "tarih": "2025-09-01",
+      "ic_dis": "09:55",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:53",
+        "cik": "18:48"
+      },
+      "calisma_dk": 565,
+      "fm_dk": 118,
+      "fm_hhmm": "01:58",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "HALİL İBRAHİM PARLAR",
+      "tarih": "2025-09-04",
+      "ic_dis": "..:..",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "09:03",
+        "cik": "18:12"
+      },
+      "calisma_dk": 519,
+      "fm_dk": 82,
+      "fm_hhmm": "01:22",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "HALİL İBRAHİM PARLAR",
+      "tarih": "2025-09-05",
+      "ic_dis": "09:48",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:45",
+        "cik": "18:33"
+      },
+      "calisma_dk": 558,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "HALİL İBRAHİM PARLAR",
+      "tarih": "2025-09-08",
+      "ic_dis": "09:35",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:48",
+        "cik": "18:23"
+      },
+      "calisma_dk": 545,
+      "fm_dk": 93,
+      "fm_hhmm": "01:33",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "HALİL İBRAHİM PARLAR",
+      "tarih": "2025-09-09",
+      "ic_dis": "09:45",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:43",
+        "cik": "18:28"
+      },
+      "calisma_dk": 555,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM GÜNERCAN",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:03",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:28"
+      },
+      "calisma_dk": 573,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM GÜNERCAN",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:28"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM GÜNERCAN",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:16",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:38"
+      },
+      "calisma_dk": 586,
+      "fm_dk": 108,
+      "fm_hhmm": "01:48",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM GÜNERCAN",
+      "tarih": "2025-09-05",
+      "ic_dis": "",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:33"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "İBRAHİM GÜNERCAN",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:31"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM GÜNERCAN",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:31"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM GÜNERCAN",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:03",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:26",
+        "cik": "18:29"
+      },
+      "calisma_dk": 573,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM GÜNERCAN",
+      "tarih": "2025-09-11",
+      "ic_dis": "09:51",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:11"
+      },
+      "calisma_dk": 561,
+      "fm_dk": 81,
+      "fm_hhmm": "01:21",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM GÜNERCAN",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:03",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:27"
+      },
+      "calisma_dk": 573,
+      "fm_dk": 97,
+      "fm_hhmm": "01:37",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM GÜNERCAN",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:01",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:23"
+      },
+      "calisma_dk": 571,
+      "fm_dk": 93,
+      "fm_hhmm": "01:33",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM GÜNERCAN",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:27"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 97,
+      "fm_hhmm": "01:37",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM GÜNERCAN",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
+      "tarih": "2025-09-01",
+      "ic_dis": "09:45",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "09:03",
+        "cik": "18:48"
+      },
+      "calisma_dk": 555,
+      "fm_dk": 118,
+      "fm_hhmm": "01:58",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
+      "tarih": "2025-09-02",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "09:57",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
+      "tarih": "2025-09-05",
+      "ic_dis": "09:26",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "09:07",
+        "cik": "18:33"
+      },
+      "calisma_dk": 536,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
+      "tarih": "2025-09-08",
+      "ic_dis": "09:28",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:55",
+        "cik": "18:23"
+      },
+      "calisma_dk": 538,
+      "fm_dk": 93,
+      "fm_hhmm": "01:33",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:54",
+        "cik": "19:01"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 131,
+      "fm_hhmm": "02:11",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
+      "tarih": "2025-09-11",
+      "ic_dis": "09:28",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:51",
+        "cik": "18:19"
+      },
+      "calisma_dk": 538,
+      "fm_dk": 89,
+      "fm_hhmm": "01:29",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
+      "tarih": "2025-09-12",
+      "ic_dis": "09:28",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "09:13",
+        "cik": "18:41"
+      },
+      "calisma_dk": 538,
+      "fm_dk": 111,
+      "fm_hhmm": "01:51",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
+      "tarih": "2025-09-15",
+      "ic_dis": "33:33",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:54",
+        "cik": "18:27"
+      },
+      "calisma_dk": 543,
+      "fm_dk": 97,
+      "fm_hhmm": "01:37",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "10:04",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "MEHMET UĞUR",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:01",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:29"
+      },
+      "calisma_dk": 571,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MEHMET UĞUR",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:04",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:27"
+      },
+      "calisma_dk": 574,
+      "fm_dk": 97,
+      "fm_hhmm": "01:37",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MEHMET UĞUR",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:11",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:31"
+      },
+      "calisma_dk": 581,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MEHMET UĞUR",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:29"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MEHMET UĞUR",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:01",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:29"
+      },
+      "calisma_dk": 571,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MEHMET UĞUR",
+      "tarih": "2025-09-09",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:22",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "MEHMET UĞUR",
+      "tarih": "2025-09-10",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:25",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "MEHMET UĞUR",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:28"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MEHMET UĞUR",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:04",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:27",
+        "cik": "18:31"
+      },
+      "calisma_dk": 574,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MEHMET UĞUR",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:01",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:29"
+      },
+      "calisma_dk": 571,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MEHMET UĞUR",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:29"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:19",
+        "cik": "18:27"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 97,
+      "fm_hhmm": "01:37",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:19",
+        "cik": "18:31"
+      },
+      "calisma_dk": 582,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:11",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:19",
+        "cik": "18:30"
+      },
+      "calisma_dk": 581,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-05",
+      "ic_dis": "09:50",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:07",
+        "cik": "17:57"
+      },
+      "calisma_dk": 560,
+      "fm_dk": 67,
+      "fm_hhmm": "01:07",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:03",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:28"
+      },
+      "calisma_dk": 573,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:29"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:34"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 104,
+      "fm_hhmm": "01:44",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:11",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:31"
+      },
+      "calisma_dk": 581,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:29"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-15",
+      "ic_dis": "12:00",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "20:22"
+      },
+      "calisma_dk": 690,
+      "fm_dk": 212,
+      "fm_hhmm": "03:32",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:29"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "NİHAT BAYRAK",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "OĞUZHAN SÜNBÜL",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:14",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:34"
+      },
+      "calisma_dk": 584,
+      "fm_dk": 104,
+      "fm_hhmm": "01:44",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "OĞUZHAN SÜNBÜL",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:14",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:18",
+        "cik": "18:32"
+      },
+      "calisma_dk": 584,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "OĞUZHAN SÜNBÜL",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:29"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "OĞUZHAN SÜNBÜL",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:32"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "OĞUZHAN SÜNBÜL",
+      "tarih": "2025-09-12",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:21",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "OĞUZHAN SÜNBÜL",
+      "tarih": "2025-09-13",
+      "ic_dis": "03:21",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:57",
+        "cik": "15:39"
+      },
+      "calisma_dk": 372,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "OĞUZHAN SÜNBÜL",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:09",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:30"
+      },
+      "calisma_dk": 579,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "OĞUZHAN SÜNBÜL",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:23",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ÖVÜNÇ ÖZBAY",
+      "tarih": "2025-09-01",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:40"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ÖVÜNÇ ÖZBAY",
+      "tarih": "2025-09-02",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:19",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ÖVÜNÇ ÖZBAY",
+      "tarih": "2025-09-03",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:19",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ÖVÜNÇ ÖZBAY",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:18",
+        "cik": "18:28"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÖVÜNÇ ÖZBAY",
+      "tarih": "2025-09-05",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:18",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ÖVÜNÇ ÖZBAY",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:29"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÖVÜNÇ ÖZBAY",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:32"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÖVÜNÇ ÖZBAY",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:33"
+      },
+      "calisma_dk": 582,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÖVÜNÇ ÖZBAY",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ÖZGE GÜMÜŞBAĞ",
+      "tarih": "2025-09-01",
+      "ic_dis": "00:00",
+      "vardiya": {
+        "kod": "V2",
+        "plan_bas": "16:30",
+        "plan_bit": "00:30"
+      },
+      "gercek": {
+        "gir": "16:04",
+        "cik": "18:32"
+      },
+      "calisma_dk": 118,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÖZGE GÜMÜŞBAĞ",
+      "tarih": "2025-09-03",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:21",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ÖZGE GÜMÜŞBAĞ",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:11",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:38"
+      },
+      "calisma_dk": 586,
+      "fm_dk": 108,
+      "fm_hhmm": "01:48",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÖZGE GÜMÜŞBAĞ",
+      "tarih": "2025-09-05",
+      "ic_dis": "",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:36"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ÖZGE GÜMÜŞBAĞ",
+      "tarih": "2025-09-08",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:28",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ÖZGE GÜMÜŞBAĞ",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:15",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:37"
+      },
+      "calisma_dk": 585,
+      "fm_dk": 107,
+      "fm_hhmm": "01:47",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÖZGE GÜMÜŞBAĞ",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:30"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÖZGE GÜMÜŞBAĞ",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:15",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:36"
+      },
+      "calisma_dk": 585,
+      "fm_dk": 106,
+      "fm_hhmm": "01:46",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÖZGE GÜMÜŞBAĞ",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:40"
+      },
+      "calisma_dk": 582,
+      "fm_dk": 110,
+      "fm_hhmm": "01:50",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÖZGE GÜMÜŞBAĞ",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:04",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:32"
+      },
+      "calisma_dk": 574,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÖZGE GÜMÜŞBAĞ",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "RECEP TUTAL",
+      "tarih": "2025-09-01",
+      "ic_dis": "08:33",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:06",
+        "cik": "16:39"
+      },
+      "calisma_dk": 483,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "RECEP TUTAL",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:19",
+        "cik": "18:27"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 97,
+      "fm_hhmm": "01:37",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "RECEP TUTAL",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:11",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:19",
+        "cik": "18:30"
+      },
+      "calisma_dk": 581,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "RECEP TUTAL",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:24",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:05",
+        "cik": "18:29"
+      },
+      "calisma_dk": 594,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "RECEP TUTAL",
+      "tarih": "2025-09-05",
+      "ic_dis": "10:11",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:18",
+        "cik": "18:29"
+      },
+      "calisma_dk": 581,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "RECEP TUTAL",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:03",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:28"
+      },
+      "calisma_dk": 573,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "RECEP TUTAL",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:29"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "RECEP TUTAL",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:29"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "RECEP TUTAL",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:11",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:31"
+      },
+      "calisma_dk": 581,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "RECEP TUTAL",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:09",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:31"
+      },
+      "calisma_dk": 579,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "RECEP TUTAL",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:29"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "RECEP TUTAL",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:30"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:30"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:31"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:29"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-05",
+      "ic_dis": "10:04",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:28"
+      },
+      "calisma_dk": 574,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:29"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:31"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:28"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:28"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:29"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:29"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:03",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:26"
+      },
+      "calisma_dk": 573,
+      "fm_dk": 96,
+      "fm_hhmm": "01:36",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SABRİYE ELMA",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:25",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SAMET ÇOLAK",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:29"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SAMET ÇOLAK",
+      "tarih": "2025-09-02",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SAMET ÇOLAK",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:14",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:18",
+        "cik": "18:32"
+      },
+      "calisma_dk": 584,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SAMET ÇOLAK",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:30"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SAMET ÇOLAK",
+      "tarih": "2025-09-09",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:25",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SAMET ÇOLAK",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:30"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SAMET ÇOLAK",
+      "tarih": "2025-09-11",
+      "ic_dis": "",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:30"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SAMET ÇOLAK",
+      "tarih": "2025-09-12",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:24",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SAMET ÇOLAK",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:32"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SAMET ÇOLAK",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:33"
+      },
+      "calisma_dk": 582,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SAMET ÇOLAK",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SEVGİ YAMAÇ",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:09",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:32"
+      },
+      "calisma_dk": 579,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEVGİ YAMAÇ",
+      "tarih": "2025-09-02",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:19",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SEVGİ YAMAÇ",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:22",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:19",
+        "cik": "18:41"
+      },
+      "calisma_dk": 592,
+      "fm_dk": 111,
+      "fm_hhmm": "01:51",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEVGİ YAMAÇ",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:13",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:34"
+      },
+      "calisma_dk": 583,
+      "fm_dk": 104,
+      "fm_hhmm": "01:44",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEVGİ YAMAÇ",
+      "tarih": "2025-09-09",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:24",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SEVGİ YAMAÇ",
+      "tarih": "2025-09-16",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:21",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SEVİM KARADAŞ",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:28"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEVİM KARADAŞ",
+      "tarih": "2025-09-03",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SEVİM KARADAŞ",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:30"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "TAYYİP MUTLU",
+      "tarih": "2025-09-01",
+      "ic_dis": "09:36",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:53",
+        "cik": "18:29"
+      },
+      "calisma_dk": 546,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "TAYYİP MUTLU",
+      "tarih": "2025-09-02",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:19",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "TAYYİP MUTLU",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:18",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:19",
+        "cik": "18:37"
+      },
+      "calisma_dk": 588,
+      "fm_dk": 107,
+      "fm_hhmm": "01:47",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "TAYYİP MUTLU",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:13",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:18",
+        "cik": "18:31"
+      },
+      "calisma_dk": 583,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "TAYYİP MUTLU",
+      "tarih": "2025-09-08",
+      "ic_dis": "08:41",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "09:17",
+        "cik": "17:58"
+      },
+      "calisma_dk": 491,
+      "fm_dk": 68,
+      "fm_hhmm": "01:08",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "TAYYİP MUTLU",
+      "tarih": "2025-09-09",
+      "ic_dis": "",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:31"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "TAYYİP MUTLU",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:29"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "TAYYİP MUTLU",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:09",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:29"
+      },
+      "calisma_dk": 579,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "TAYYİP MUTLU",
+      "tarih": "2025-09-12",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:24",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "TAYYİP MUTLU",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:32"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "TAYYİP MUTLU",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:32"
+      },
+      "calisma_dk": 582,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "TAYYİP MUTLU",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "AHMET TARIK AKPINAR",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:02",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:30"
+      },
+      "calisma_dk": 572,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AHMET TARIK AKPINAR",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:28"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AHMET TARIK AKPINAR",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:20",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:41"
+      },
+      "calisma_dk": 590,
+      "fm_dk": 111,
+      "fm_hhmm": "01:51",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AHMET TARIK AKPINAR",
+      "tarih": "2025-09-04",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:22",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "AHMET TARIK AKPINAR",
+      "tarih": "2025-09-09",
+      "ic_dis": "09:45",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:45",
+        "cik": "18:30"
+      },
+      "calisma_dk": 555,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AHMET TARIK AKPINAR",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:32"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AHMET TARIK AKPINAR",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:29"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "AHMET TARIK AKPINAR",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:18",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:39"
+      },
+      "calisma_dk": 588,
+      "fm_dk": 109,
+      "fm_hhmm": "01:49",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SİNAN BUĞUTEKİN",
+      "tarih": "2025-09-08",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:34"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SİNAN BUĞUTEKİN",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:31"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SİNAN BUĞUTEKİN",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:32"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SİNAN BUĞUTEKİN",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:31"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SİNAN BUĞUTEKİN",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:31"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SİNAN BUĞUTEKİN",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:03",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:31"
+      },
+      "calisma_dk": 573,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SİNAN BUĞUTEKİN",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:03",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:31"
+      },
+      "calisma_dk": 573,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SİNAN BUĞUTEKİN",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "MAHİR ATIŞ",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:04",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:27"
+      },
+      "calisma_dk": 574,
+      "fm_dk": 97,
+      "fm_hhmm": "01:37",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MAHİR ATIŞ",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:30"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MAHİR ATIŞ",
+      "tarih": "2025-09-04",
+      "ic_dis": "08:31",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "16:53"
+      },
+      "calisma_dk": 481,
+      "fm_dk": 3,
+      "fm_hhmm": "00:03",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MAHİR ATIŞ",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:00",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:28"
+      },
+      "calisma_dk": 570,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MAHİR ATIŞ",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:29"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MAHİR ATIŞ",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:04",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:29"
+      },
+      "calisma_dk": 574,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MAHİR ATIŞ",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:31"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MAHİR ATIŞ",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:28"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MAHİR ATIŞ",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:04",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:27",
+        "cik": "18:31"
+      },
+      "calisma_dk": 574,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MAHİR ATIŞ",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:02",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:30"
+      },
+      "calisma_dk": 572,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MAHİR ATIŞ",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ÜNSAL KİRLİ",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:00",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:29",
+        "cik": "18:29"
+      },
+      "calisma_dk": 570,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÜNSAL KİRLİ",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:31"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÜNSAL KİRLİ",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:04",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:29"
+      },
+      "calisma_dk": 574,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÜNSAL KİRLİ",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:32"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÜNSAL KİRLİ",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:09",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:30"
+      },
+      "calisma_dk": 579,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÜNSAL KİRLİ",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:02",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:30"
+      },
+      "calisma_dk": 572,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÜNSAL KİRLİ",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:01",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:29"
+      },
+      "calisma_dk": 571,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÜNSAL KİRLİ",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ZEHRA MENGÜLOĞLU",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:09",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:32"
+      },
+      "calisma_dk": 579,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ZEHRA MENGÜLOĞLU",
+      "tarih": "2025-09-16",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:24",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ZEHRA MENGÜLOĞLU",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-01",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:33"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-02",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:23",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:20",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:41"
+      },
+      "calisma_dk": 590,
+      "fm_dk": 111,
+      "fm_hhmm": "01:51",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:35"
+      },
+      "calisma_dk": 583,
+      "fm_dk": 105,
+      "fm_hhmm": "01:45",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-05",
+      "ic_dis": "",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:36"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:33"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:14",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:37"
+      },
+      "calisma_dk": 584,
+      "fm_dk": 107,
+      "fm_hhmm": "01:47",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-10",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:25",
+        "cik": "18:32"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-11",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:31"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 101,
+      "fm_hhmm": "01:41",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-12",
+      "ic_dis": "10:45",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "07:51",
+        "cik": "18:36"
+      },
+      "calisma_dk": 615,
+      "fm_dk": 106,
+      "fm_hhmm": "01:46",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:40"
+      },
+      "calisma_dk": 582,
+      "fm_dk": 110,
+      "fm_hhmm": "01:50",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:04",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:32"
+      },
+      "calisma_dk": 574,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "SEYDA AKÇİL",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-01",
+      "ic_dis": "10:02",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:30"
+      },
+      "calisma_dk": 572,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-02",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:28"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-03",
+      "ic_dis": "10:20",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:41"
+      },
+      "calisma_dk": 590,
+      "fm_dk": 111,
+      "fm_hhmm": "01:51",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-04",
+      "ic_dis": "10:15",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:37"
+      },
+      "calisma_dk": 585,
+      "fm_dk": 107,
+      "fm_hhmm": "01:47",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-05",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:18",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-08",
+      "ic_dis": "10:01",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:29"
+      },
+      "calisma_dk": 571,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-09",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:30"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-10",
+      "ic_dis": "",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:31"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-11",
+      "ic_dis": "",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:31"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-12",
+      "ic_dis": "",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "13:06"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-15",
+      "ic_dis": "10:12",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:40"
+      },
+      "calisma_dk": 582,
+      "fm_dk": 110,
+      "fm_hhmm": "01:50",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:02",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:30"
+      },
+      "calisma_dk": 572,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "İBRAHİM BARIŞÇANKAYA",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "FURKAN AVCI",
+      "tarih": "2025-09-15",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:29"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "FURKAN AVCI",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:13",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:34"
+      },
+      "calisma_dk": 583,
+      "fm_dk": 104,
+      "fm_hhmm": "01:44",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FURKAN AVCI",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:19",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "HATİCE ALKAN",
+      "tarih": "2025-09-15",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:31"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "HATİCE ALKAN",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:00",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:28"
+      },
+      "calisma_dk": 570,
+      "fm_dk": 98,
+      "fm_hhmm": "01:38",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "HATİCE ALKAN",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "KEZİBAN SARIIŞIK",
+      "tarih": "2025-09-15",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:28"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "KEZİBAN SARIIŞIK",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:09",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:32"
+      },
+      "calisma_dk": 579,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "KEZİBAN SARIIŞIK",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:25",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "EMİRHAN SÜNBÜL",
+      "tarih": "2025-09-15",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:29"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "EMİRHAN SÜNBÜL",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:09",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:30"
+      },
+      "calisma_dk": 579,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "EMİRHAN SÜNBÜL",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:23",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "BÜŞRA SÜNBÜL",
+      "tarih": "2025-09-15",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:27"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "BÜŞRA SÜNBÜL",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:29"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 99,
+      "fm_hhmm": "01:39",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "BÜŞRA SÜNBÜL",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:23",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "MELEK VAROL",
+      "tarih": "2025-09-15",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:28"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "MELEK VAROL",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:13",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:20",
+        "cik": "18:33"
+      },
+      "calisma_dk": 583,
+      "fm_dk": 103,
+      "fm_hhmm": "01:43",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "MELEK VAROL",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "CEYLAN BABACAN",
+      "tarih": "2025-09-15",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:28"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "CEYLAN BABACAN",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:07",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:23",
+        "cik": "18:30"
+      },
+      "calisma_dk": 577,
+      "fm_dk": 100,
+      "fm_hhmm": "01:40",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "CEYLAN BABACAN",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "BURCU CANBAZ",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:34"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 104,
+      "fm_hhmm": "01:44",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "BURCU CANBAZ",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:25",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "FEHİM GÜLMAK",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:29",
+        "cik": "18:34"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 104,
+      "fm_hhmm": "01:44",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FEHİM GÜLMAK",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "FERİYA ÖZÇEVİK",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:32"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "FERİYA ÖZÇEVİK",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "GURBET ATIŞ",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:06",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:28",
+        "cik": "18:34"
+      },
+      "calisma_dk": 576,
+      "fm_dk": 104,
+      "fm_hhmm": "01:44",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "GURBET ATIŞ",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "GÜLCAN DEMİRBİLEK",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:10",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:34"
+      },
+      "calisma_dk": 580,
+      "fm_dk": 104,
+      "fm_hhmm": "01:44",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "GÜLCAN DEMİRBİLEK",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "HALİME SAVSA",
+      "tarih": "2025-09-16",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:30"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "HALİME SAVSA",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "HARUN AVCI",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:13",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:22",
+        "cik": "18:35"
+      },
+      "calisma_dk": 583,
+      "fm_dk": 105,
+      "fm_hhmm": "01:45",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "HARUN AVCI",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ÖZAY GÜL",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:05",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:29",
+        "cik": "18:34"
+      },
+      "calisma_dk": 575,
+      "fm_dk": 104,
+      "fm_hhmm": "01:44",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ÖZAY GÜL",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:26",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "REFAN GÜLHAN",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:08",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:24",
+        "cik": "18:32"
+      },
+      "calisma_dk": 578,
+      "fm_dk": 102,
+      "fm_hhmm": "01:42",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "REFAN GÜLHAN",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:25",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ZELİHA LEKESİZ",
+      "tarih": "2025-09-16",
+      "ic_dis": "10:14",
+      "vardiya": {
+        "kod": "V1",
+        "plan_bas": "08:30",
+        "plan_bit": "16:30"
+      },
+      "gercek": {
+        "gir": "08:21",
+        "cik": "18:35"
+      },
+      "calisma_dk": 584,
+      "fm_dk": 105,
+      "fm_hhmm": "01:45",
+      "durum": "ok",
+      "not": ""
+    },
+    {
+      "personel": "ZELİHA LEKESİZ",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:20",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ZEYNEP BABACAN",
+      "tarih": "2025-09-16",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "",
+        "cik": "18:29"
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    },
+    {
+      "personel": "ZEYNEP BABACAN",
+      "tarih": "2025-09-17",
+      "ic_dis": "..:..",
+      "vardiya": null,
+      "gercek": {
+        "gir": "08:36",
+        "cik": ""
+      },
+      "calisma_dk": 0,
+      "fm_dk": 0,
+      "fm_hhmm": "00:00",
+      "durum": "eksik",
+      "not": "Giriş veya çıkış eksik"
+    }
+  ]
+}
