@@ -207,32 +207,7 @@ function loadConfig() {
     }
 }
 
-// Şifre doğrulama ve config güncelleme fonksiyonu
-async function verifyAndDecryptConfig(userPassword) {
-    try {
-        const config = loadConfig();
-        if (!config || !config.pinhuman || !config.pinhuman.credentials) {
-            throw new Error('Config dosyası bulunamadı veya geçersiz');
-        }
-        
-        const storedPassword = config.pinhuman.credentials.password;
-        
-        // Şifreyi doğrula (düz metin karşılaştırması - trim ile boşlukları temizle)
-        if (userPassword.trim() !== storedPassword.trim()) {
-            console.log('Şifre karşılaştırması:');
-            console.log('Girilen şifre:', `"${userPassword}"`);
-            console.log('Kayıtlı şifre:', `"${storedPassword}"`);
-            throw new Error('Geçersiz şifre');
-        }
-        
-        // Config'i döndür (şifre zaten düz metin olarak saklanıyor)
-        return config;
-        
-    } catch (error) {
-        console.error('Config doğrulama hatası:', error);
-        throw error;
-    }
-}
+// Bu fonksiyon artık kullanılmıyor - Firebase authentication kullanılıyor
 
 // Giriş durumu kontrolü
 let isAuthenticated = false;
@@ -376,15 +351,7 @@ ipcMain.handle('get-config', async () => {
     }
 });
 
-// Şifre doğrulama ve config çözümleme
-ipcMain.handle('verify-config-password', async (event, userPassword) => {
-    try {
-        return await verifyAndDecryptConfig(userPassword);
-    } catch (error) {
-        console.error('Config şifre doğrulama hatası:', error);
-        throw error;
-    }
-});
+// Bu handler artık kullanılmıyor - Firebase authentication kullanılıyor
 
 // E-posta kaydetme
 ipcMain.handle('save-remembered-email', async (event, email) => {

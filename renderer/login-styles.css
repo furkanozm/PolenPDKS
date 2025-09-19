@@ -211,6 +211,47 @@ body {
     margin-bottom: 20px;
 }
 
+/* Divider */
+.divider {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.divider::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: #e9ecef;
+}
+
+.divider span {
+    background: #ffffff;
+    padding: 0 15px;
+    color: #6c757d;
+    font-size: 14px;
+}
+
+/* Google Button */
+.btn-google {
+    background: #ffffff;
+    color: #333333;
+    border: 1px solid #dadce0;
+}
+
+.btn-google:hover {
+    background: #f8f9fa;
+    border-color: #dadce0;
+    box-shadow: 0 1px 2px 0 rgba(60,64,67,.3), 0 1px 3px 1px rgba(60,64,67,.15);
+}
+
+.btn-google .btn-icon {
+    color: #4285f4;
+}
+
 
 .login-footer {
     text-align: center;

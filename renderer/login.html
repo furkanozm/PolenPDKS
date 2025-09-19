@@ -64,12 +64,23 @@
                             Giriş Yap
                         </button>
                     </div>
+                    
+                    <div class="divider">
+                        <span>veya</span>
+                    </div>
+                    
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-google btn-block" id="googleLoginBtn">
+                            <i data-lucide="chrome" class="btn-icon"></i>
+                            Google ile Giriş Yap
+                        </button>
+                    </div>
                 </div>
 
                 <div class="login-footer">
                     <button type="button" class="btn btn-outline-primary" id="requestPasswordBtn">
-                        <i data-lucide="key" class="btn-icon"></i>
-                        Şifre İste
+                        <i data-lucide="user-plus" class="btn-icon"></i>
+                        Hesap Oluştur
                     </button>
                 </div>
             </div>
@@ -99,26 +110,26 @@
         <div class="user-info-modal" id="userInfoModal" style="display: none;">
             <div class="user-info-modal-content">
                 <div class="modal-header">
-                    <h3>Kullanıcı Bilgileri</h3>
+                    <h3>Hesap Oluştur</h3>
                     <button class="close-btn" id="closeUserInfoModal">
                         <i data-lucide="x"></i>
                     </button>
                 </div>
                 <div class="modal-body">
                     <div class="form-group">
-                        <label for="userName">Kullanıcı Adı</label>
-                        <input type="text" id="userName" class="form-control" placeholder="Kullanıcı adınızı girin">
+                        <label for="userName">E-posta Adresi</label>
+                        <input type="email" id="userName" class="form-control" placeholder="E-posta adresinizi girin">
                     </div>
                     <div class="form-group">
                         <label for="userPassword">Şifre</label>
-                        <input type="password" id="userPassword" class="form-control" placeholder="Şifrenizi girin">
+                        <input type="password" id="userPassword" class="form-control" placeholder="Şifrenizi girin (min. 6 karakter)">
                     </div>
                 </div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" id="cancelUserInfo">İptal</button>
                     <button class="btn btn-primary" id="sendMailBtn">
-                        <i data-lucide="mail" class="btn-icon"></i>
-                        Mail Gönder
+                        <i data-lucide="user-plus" class="btn-icon"></i>
+                        Hesap Oluştur
                     </button>
                 </div>
             </div>

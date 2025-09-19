@@ -1,8 +1,25 @@
 // Electron IPC modülü
 const { ipcRenderer } = require('electron');
 
-// Firebase'i import et
-const { firebaseConfig } = require('./firebase-config.js');
+// Firebase modülleri
+const { initializeApp } = require('firebase/app');
+const { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } = require('firebase/auth');
+
+// Firebase yapılandırması
+const firebaseConfig = {
+  apiKey: "AIzaSyAYeEyGc3prE8XJQyfdtsJYBKtm-Skowco",
+  authDomain: "polenpdks.firebaseapp.com",
+  projectId: "polenpdks",
+  storageBucket: "polenpdks.firebasestorage.app",
+  messagingSenderId: "456234462898",
+  appId: "1:456234462898:web:4646f358c88f127c0823ab",
+  measurementId: "G-SFEWRJ8634"
+};
+
+// Firebase'i başlat
+const app = initializeApp(firebaseConfig);
+const auth = getAuth(app);
+const googleProvider = new GoogleAuthProvider();
 
 // DOM elementleri
 const emailInput = document.getElementById('email');
@@ -16,6 +33,7 @@ const errorMessage = document.getElementById('errorMessage');
 const errorModalClose = document.getElementById('errorModalClose');
 const rememberMeCheckbox = document.getElementById('rememberMe');
 const requestPasswordBtn = document.getElementById('requestPasswordBtn');
+const googleLoginBtn = document.getElementById('googleLoginBtn');
 const userInfoModal = document.getElementById('userInfoModal');
 const closeUserInfoModal = document.getElementById('closeUserInfoModal');
 const cancelUserInfo = document.getElementById('cancelUserInfo');
@@ -55,29 +73,54 @@ loginBtn.addEventListener('click', async () => {
     showLoading(true);
 
     try {
-        // Config'deki Pinhuman şifresini doğrula
-        const decryptedConfig = await ipcRenderer.invoke('verify-config-password', password);
+        // Firebase ile giriş yap
+        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const user = userCredential.user;
         
-        if (decryptedConfig) {
-            console.log('Pinhuman şifre doğrulaması başarılı');
-            
-            // Beni hatırla seçiliyse e-postayı config'e kaydet
-            if (rememberMeCheckbox && rememberMeCheckbox.checked) {
-                await ipcRenderer.invoke('save-remembered-email', email);
-            }
-            
-            // Ana uygulamaya yönlendir
-            ipcRenderer.invoke('navigate-to-main');
+        console.log('Firebase giriş başarılı:', user.email);
+        
+        // Beni hatırla seçiliyse e-postayı config'e kaydet
+        if (rememberMeCheckbox && rememberMeCheckbox.checked) {
+            await ipcRenderer.invoke('save-remembered-email', email);
         }
         
+        // Ana uygulamaya yönlendir
+        ipcRenderer.invoke('navigate-to-main');
+        
     } catch (error) {
-        console.error('Giriş hatası:', error);
-        showError('Geçersiz şifre. Lütfen şifrenizi girin.');
+        console.error('Firebase giriş hatası:', error);
+        showError(getErrorMessage(error.code));
     } finally {
         showLoading(false);
     }
 });
 
+
+// Google ile giriş
+googleLoginBtn.addEventListener('click', async () => {
+    showLoading(true);
+    
+    try {
+        const result = await signInWithPopup(auth, googleProvider);
+        const user = result.user;
+        
+        console.log('Google giriş başarılı:', user.email);
+        
+        // Beni hatırla seçiliyse e-postayı config'e kaydet
+        if (rememberMeCheckbox && rememberMeCheckbox.checked) {
+            await ipcRenderer.invoke('save-remembered-email', user.email);
+        }
+        
+        // Ana uygulamaya yönlendir
+        ipcRenderer.invoke('navigate-to-main');
+        
+    } catch (error) {
+        console.error('Google giriş hatası:', error);
+        showError(getErrorMessage(error.code));
+    } finally {
+        showLoading(false);
+    }
+});
 
 // Enter tuşu ile giriş
 document.addEventListener('keypress', (e) => {
@@ -108,38 +151,49 @@ userInfoModal.addEventListener('click', (e) => {
     }
 });
 
-// Mail gönderme
-sendMailBtn.addEventListener('click', () => {
+// Kullanıcı kaydı
+sendMailBtn.addEventListener('click', async () => {
     const userName = userNameInput.value.trim();
     const userPassword = userPasswordInput.value.trim();
     
     if (!userName || !userPassword) {
-        showError('Lütfen kullanıcı adı ve şifre alanlarını doldurun.');
+        showError('Lütfen e-posta ve şifre alanlarını doldurun.');
         return;
     }
     
-    // Outlook Classic ile mail gönder
-    const subject = 'PDKS Sistemi - Hesap Oluşturulması İsteği';
-    const body = `Merhaba,
-
-PDKS İşleme Sistemi için hesap oluşturulmasını istiyorum.
-
-Kullanıcı Bilgileri:
-- Kullanıcı Adı: ${userName}
-- Şifre: ${userPassword}
-
-Lütfen bu bilgilerle hesabımı oluşturun.
-
-Teşekkürler.`;
-
-    const mailtoLink = `mailto:furkan.ozmen@guleryuzgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    if (!isValidEmail(userName)) {
+        showError('Lütfen geçerli bir e-posta adresi girin.');
+        return;
+    }
     
-    // Outlook Classic'i aç
-    ipcRenderer.invoke('open-outlook-mail', mailtoLink);
+    if (userPassword.length < 6) {
+        showError('Şifre en az 6 karakter olmalıdır.');
+        return;
+    }
     
-    userInfoModal.style.display = 'none';
-    userNameInput.value = '';
-    userPasswordInput.value = '';
+    showLoading(true);
+    
+    try {
+        // Firebase ile kullanıcı kaydı yap
+        const userCredential = await createUserWithEmailAndPassword(auth, userName, userPassword);
+        const user = userCredential.user;
+        
+        console.log('Kullanıcı kaydı başarılı:', user.email);
+        
+        // Modal'ı kapat
+        userInfoModal.style.display = 'none';
+        userNameInput.value = '';
+        userPasswordInput.value = '';
+        
+        // Başarı mesajı göster
+        showError('Kullanıcı kaydı başarılı! Şimdi giriş yapabilirsiniz.');
+        
+    } catch (error) {
+        console.error('Kullanıcı kaydı hatası:', error);
+        showError(getErrorMessage(error.code));
+    } finally {
+        showLoading(false);
+    }
 });
 
 // Hata modalını kapat
