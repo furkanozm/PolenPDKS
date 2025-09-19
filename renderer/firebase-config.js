@@ -1,7 +1,6 @@
 // Firebase yapılandırması
-const { initializeApp } = require("firebase/app");
-const { getAuth, GoogleAuthProvider } = require("firebase/auth");
-const { getAnalytics } = require("firebase/analytics");
+// Not: Bu dosya sadece config bilgilerini içerir, Firebase'i başlatmaz
+// Firebase başlatma işlemi login.js'de yapılır
 
 // Firebase yapılandırma bilgileri
 const firebaseConfig = {
@@ -14,21 +13,12 @@ const firebaseConfig = {
   measurementId: "G-SFEWRJ8634"
 };
 
-// Firebase'i başlat
-const app = initializeApp(firebaseConfig);
-
-// Authentication servisini al
-const auth = getAuth(app);
-
-// Google Auth Provider'ı oluştur
-const googleProvider = new GoogleAuthProvider();
-
-// Analytics'i başlat (opsiyonel)
-const analytics = getAnalytics(app);
-
-module.exports = {
-    auth,
-    googleProvider,
-    analytics,
-    app
-};
+// Config'i export et
+if (typeof module !== 'undefined' && module.exports) {
+    module.exports = {
+        firebaseConfig
+    };
+} else {
+    // Browser ortamı için
+    window.firebaseConfig = firebaseConfig;
+}

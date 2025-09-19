@@ -1,6 +1,9 @@
 // Electron IPC modülü
 const { ipcRenderer } = require('electron');
 
+// Firebase'i import et
+const { firebaseConfig } = require('./firebase-config.js');
+
 // DOM elementleri
 const emailInput = document.getElementById('email');
 const passwordInput = document.getElementById('password');

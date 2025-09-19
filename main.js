@@ -2,24 +2,12 @@ const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const path = require('path');
 const fs = require('fs');
 const crypto = require('crypto');
-const { execSync } = require('child_process');
 const XLSX = require('xlsx');
 const puppeteer = require('puppeteer');
 const speakeasy = require('speakeasy');
 
 let mainWindow;
 
-// Windows'ta dosyayı gizli yapmak için yardımcı fonksiyon
-function makeFileHidden(filePath) {
-    try {
-        if (process.platform === 'win32') {
-            // Windows'ta attrib +h komutu ile dosyayı gizli yap
-            execSync(`attrib +h "${filePath}"`, { stdio: 'ignore' });
-        }
-    } catch (error) {
-        console.warn('Dosya gizli yapılamadı:', error.message);
-    }
-}
 
 // Global değişkenler
 global.currentBrowser = null;
@@ -206,11 +194,9 @@ function loadConfig() {
                 }
             };
             
-            // Varsayılan config'i kaydet
-            fs.writeFileSync(configPath, JSON.stringify(defaultConfig, null, 2), 'utf8');
-            // Dosyayı gizli yap
-            makeFileHidden(configPath);
-            return defaultConfig;
+        // Varsayılan config'i kaydet
+        fs.writeFileSync(configPath, JSON.stringify(defaultConfig, null, 2), 'utf8');
+        return defaultConfig;
         }
         
         const configData = fs.readFileSync(configPath, 'utf8');
@@ -231,8 +217,11 @@ async function verifyAndDecryptConfig(userPassword) {
         
         const storedPassword = config.pinhuman.credentials.password;
         
-        // Şifreyi doğrula (düz metin karşılaştırması)
-        if (userPassword !== storedPassword) {
+        // Şifreyi doğrula (düz metin karşılaştırması - trim ile boşlukları temizle)
+        if (userPassword.trim() !== storedPassword.trim()) {
+            console.log('Şifre karşılaştırması:');
+            console.log('Girilen şifre:', `"${userPassword}"`);
+            console.log('Kayıtlı şifre:', `"${storedPassword}"`);
             throw new Error('Geçersiz şifre');
         }
         
@@ -421,8 +410,6 @@ ipcMain.handle('save-remembered-email', async (event, email) => {
         
         // Dosyayı kaydet
         fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
-        // Dosyayı gizli yap
-        makeFileHidden(configPath);
         
         return { success: true };
     } catch (error) {
@@ -468,8 +455,6 @@ ipcMain.handle('save-ui-settings', async (event, settings) => {
         
         // Dosyayı kaydet
         fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
-        // Dosyayı gizli yap
-        makeFileHidden(configPath);
         
         return { success: true, message: 'UI ayarları başarıyla kaydedildi' };
     } catch (error) {
@@ -539,8 +524,6 @@ ipcMain.handle('update-config', async (event, newCredentials) => {
         
         // Dosyayı kaydet
         fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
-        // Dosyayı gizli yap
-        makeFileHidden(configPath);
         
         return { success: true, message: 'Config başarıyla güncellendi' };
     } catch (error) {
