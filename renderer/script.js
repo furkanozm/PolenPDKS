@@ -71,12 +71,45 @@ if (closeLogBtn) {
 
 // Çıkış butonu
 if (logoutBtn) {
-    logoutBtn.addEventListener('click', () => {
+    logoutBtn.addEventListener('click', async () => {
         if (confirm('Çıkış yapmak istediğinizden emin misiniz?')) {
-            ipcRenderer.invoke('logout');
+            try {
+                // Çıkış zamanını kaydet
+                localStorage.setItem('lastLogout', Date.now().toString());
+                console.log('Çıkış zamanı kaydedildi');
+                
+                // Firebase'den çıkış yap
+                if (window.firebaseAuth && window.signOut) {
+                    console.log('Firebase\'den çıkış yapılıyor...');
+                    await window.signOut(window.firebaseAuth);
+                    console.log('Firebase çıkış başarılı');
+                }
+                
+                // Electron çıkış
+                ipcRenderer.invoke('logout');
+            } catch (error) {
+                console.error('Çıkış hatası:', error);
+                // Hata olsa bile Electron çıkış yap
+                ipcRenderer.invoke('logout');
+            }
         }
     });
 }
+
+// Tema yönetimi - uygulama başlangıcında config'den tema yükle
+document.addEventListener('DOMContentLoaded', async () => {
+    try {
+        const configTheme = await ipcRenderer.invoke('get-theme-preference');
+        console.log('Ana uygulamada tema tercihi yüklendi:', configTheme);
+        
+        if (configTheme) {
+            document.body.classList.add(configTheme === 'dark' ? 'dark-theme' : 'light-theme');
+            console.log('Tema uygulandı:', configTheme);
+        }
+    } catch (error) {
+        console.error('Tema yükleme hatası:', error);
+    }
+});
 
 // Log görüntüleme fonksiyonları
 function showLogSection() {

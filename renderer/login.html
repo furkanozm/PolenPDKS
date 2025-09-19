@@ -15,20 +15,26 @@
                     <img src="logo.png" alt="PDKS Logo" class="logo">
                 </div>
                 <h1>PDKS İşleme Sistemi</h1>
-                <p>Güvenli giriş yapın</p>
+                <p>Firebase hesabınızla güvenli giriş yapın</p>
             </div>
 
             <div class="login-content">
+                <!-- Tema Değiştirme Butonu JavaScript ile oluşturulacak -->
+                <div id="themeToggleContainer"></div>
+
                 <div class="login-form">
+                    <div class="welcome-text">
+                        <h3>Hoş Geldiniz</h3>
+                        <p>Firebase hesabınızla giriş yapın</p>
+                    </div>
+                    
                     <div class="form-group">
                         <label for="email">E-posta Adresi</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i data-lucide="mail"></i>
-                                </span>
+                                <i data-lucide="mail" class="input-group-text"></i>
                             </div>
-                            <input type="email" id="email" class="form-control" placeholder="E-posta adresinizi girin" required>
+                            <input type="email" id="email" class="form-control" placeholder="ornek@email.com" required>
                         </div>
                     </div>
 
@@ -36,16 +42,9 @@
                         <label for="password">Şifre</label>
                         <div class="input-group">
                             <div class="input-group-prepend">
-                                <span class="input-group-text">
-                                    <i data-lucide="lock"></i>
-                                </span>
+                                <i data-lucide="lock" class="input-group-text"></i>
                             </div>
                             <input type="password" id="password" class="form-control" placeholder="Şifrenizi girin" required>
-                            <div class="input-group-append">
-                                <button type="button" class="btn btn-outline-secondary" id="togglePassword">
-                                    <i data-lucide="eye" id="eyeIcon"></i>
-                                </button>
-                            </div>
                         </div>
                     </div>
 
@@ -64,24 +63,6 @@
                             Giriş Yap
                         </button>
                     </div>
-                    
-                    <div class="divider">
-                        <span>veya</span>
-                    </div>
-                    
-                    <div class="form-actions">
-                        <button type="button" class="btn btn-google btn-block" id="googleLoginBtn">
-                            <i data-lucide="chrome" class="btn-icon"></i>
-                            Google ile Giriş Yap
-                        </button>
-                    </div>
-                </div>
-
-                <div class="login-footer">
-                    <button type="button" class="btn btn-outline-primary" id="requestPasswordBtn">
-                        <i data-lucide="user-plus" class="btn-icon"></i>
-                        Hesap Oluştur
-                    </button>
                 </div>
             </div>
         </div>
@@ -105,37 +86,37 @@
                 <button class="btn btn-primary" id="errorModalClose">Tamam</button>
             </div>
         </div>
-
-        <!-- User Info Modal -->
-        <div class="user-info-modal" id="userInfoModal" style="display: none;">
-            <div class="user-info-modal-content">
-                <div class="modal-header">
-                    <h3>Hesap Oluştur</h3>
-                    <button class="close-btn" id="closeUserInfoModal">
-                        <i data-lucide="x"></i>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <div class="form-group">
-                        <label for="userName">E-posta Adresi</label>
-                        <input type="email" id="userName" class="form-control" placeholder="E-posta adresinizi girin">
-                    </div>
-                    <div class="form-group">
-                        <label for="userPassword">Şifre</label>
-                        <input type="password" id="userPassword" class="form-control" placeholder="Şifrenizi girin (min. 6 karakter)">
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" id="cancelUserInfo">İptal</button>
-                    <button class="btn btn-primary" id="sendMailBtn">
-                        <i data-lucide="user-plus" class="btn-icon"></i>
-                        Hesap Oluştur
-                    </button>
-                </div>
-            </div>
-        </div>
     </div>
 
+    <!-- Firebase SDK -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-app.js';
+        import { getAuth, signInWithEmailAndPassword, signOut, onAuthStateChanged } from 'https://www.gstatic.com/firebasejs/10.7.1/firebase-auth.js';
+        
+        // Firebase yapılandırması
+        const firebaseConfig = {
+            apiKey: "AIzaSyAYeEyGc3prE8XJQyfdtsJYBKtm-Skowco",
+            authDomain: "polenpdks.firebaseapp.com",
+            projectId: "polenpdks",
+            storageBucket: "polenpdks.firebasestorage.app",
+            messagingSenderId: "456234462898",
+            appId: "1:456234462898:web:4646f358c88f127c0823ab",
+            measurementId: "G-SFEWRJ8634"
+        };
+
+        // Firebase'i başlat
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+        
+        console.log('Firebase başlatıldı:', app);
+        
+        // Global değişkenler
+        window.firebaseAuth = auth;
+        window.signInWithEmailAndPassword = signInWithEmailAndPassword;
+        window.signOut = signOut;
+        window.onAuthStateChanged = onAuthStateChanged;
+    </script>
+    
     <!-- Scripts -->
     <script>
         // Lucide ikonlarını hemen yükle

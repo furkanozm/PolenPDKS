@@ -69,7 +69,7 @@ release/
 
 # User data (contains sensitive information)
 data_history.json
-config.json
+# config.json - artık git'e dahil ediliyor
 
 # Excel files
 *.xlsx

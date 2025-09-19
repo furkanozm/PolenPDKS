@@ -1,222 +1,312 @@
+// Firebase Login Sistemi - Basitleştirilmiş Versiyon
+console.log('Login.js yükleniyor...');
+
 // Electron IPC modülü
 const { ipcRenderer } = require('electron');
 
-// Firebase modülleri
-const { initializeApp } = require('firebase/app');
-const { getAuth, signInWithEmailAndPassword, signInWithPopup, GoogleAuthProvider, createUserWithEmailAndPassword } = require('firebase/auth');
+// DOM elementleri - DOM yüklendikten sonra tanımlanacak
+let emailInput, passwordInput, loginBtn, loadingOverlay, errorModal, errorMessage, errorModalClose, rememberMeCheckbox, themeToggle;
 
-// Firebase yapılandırması
-const firebaseConfig = {
-  apiKey: "AIzaSyAYeEyGc3prE8XJQyfdtsJYBKtm-Skowco",
-  authDomain: "polenpdks.firebaseapp.com",
-  projectId: "polenpdks",
-  storageBucket: "polenpdks.firebasestorage.app",
-  messagingSenderId: "456234462898",
-  appId: "1:456234462898:web:4646f358c88f127c0823ab",
-  measurementId: "G-SFEWRJ8634"
-};
-
-// Firebase'i başlat
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
-const googleProvider = new GoogleAuthProvider();
-
-// DOM elementleri
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password');
-const loginBtn = document.getElementById('loginBtn');
-const togglePasswordBtn = document.getElementById('togglePassword');
-const eyeIcon = document.getElementById('eyeIcon');
-const loadingOverlay = document.getElementById('loadingOverlay');
-const errorModal = document.getElementById('errorModal');
-const errorMessage = document.getElementById('errorMessage');
-const errorModalClose = document.getElementById('errorModalClose');
-const rememberMeCheckbox = document.getElementById('rememberMe');
-const requestPasswordBtn = document.getElementById('requestPasswordBtn');
-const googleLoginBtn = document.getElementById('googleLoginBtn');
-const userInfoModal = document.getElementById('userInfoModal');
-const closeUserInfoModal = document.getElementById('closeUserInfoModal');
-const cancelUserInfo = document.getElementById('cancelUserInfo');
-const sendMailBtn = document.getElementById('sendMailBtn');
-const userNameInput = document.getElementById('userName');
-const userPasswordInput = document.getElementById('userPassword');
-
-// Şifre görünürlüğünü değiştir
-togglePasswordBtn.addEventListener('click', () => {
-    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordInput.setAttribute('type', type);
+// Sayfa yüklendiğinde kullanıcı durumunu kontrol et
+document.addEventListener('DOMContentLoaded', () => {
+    console.log('DOM yüklendi, elementler alınıyor...');
     
-    // İkonu değiştir
-    if (type === 'text') {
-        eyeIcon.setAttribute('data-lucide', 'eye-off');
-    } else {
-        eyeIcon.setAttribute('data-lucide', 'eye');
+    // DOM elementlerini al
+    emailInput = document.getElementById('email');
+    passwordInput = document.getElementById('password');
+    loginBtn = document.getElementById('loginBtn');
+    loadingOverlay = document.getElementById('loadingOverlay');
+    errorModal = document.getElementById('errorModal');
+    errorMessage = document.getElementById('errorMessage');
+    errorModalClose = document.getElementById('errorModalClose');
+    rememberMeCheckbox = document.getElementById('rememberMe');
+    themeToggle = document.getElementById('themeToggle');
+
+    // Elementlerin yüklenip yüklenmediğini kontrol et
+    if (!emailInput || !passwordInput || !loginBtn) {
+        console.error('Gerekli DOM elementleri bulunamadı!');
+        console.error('emailInput:', emailInput);
+        console.error('passwordInput:', passwordInput);
+        console.error('loginBtn:', loginBtn);
+        showError('Sayfa yüklenirken bir hata oluştu. Lütfen sayfayı yenileyin.');
+        return;
     }
-    lucide.createIcons();
+
+    console.log('Tüm elementler başarıyla yüklendi');
+
+    // Event listener'ları ekle
+    setupEventListeners();
+
+    // Firebase auth state listener - DEVRE DIŞI (otomatik giriş yapmasın)
+    // setTimeout(() => {
+    //     if (window.firebaseAuth && window.onAuthStateChanged) {
+    //         console.log('Firebase auth state listener başlatılıyor...');
+    //         window.onAuthStateChanged(window.firebaseAuth, (user) => {
+    //             if (user) {
+    //                 // Kullanıcı zaten giriş yapmış, ana sayfaya yönlendir
+    //                 console.log('Kullanıcı zaten giriş yapmış:', user.email);
+    //                 
+    //                 // Çıkış yapıldıktan sonra otomatik giriş yapmasın
+    //                 const lastLogout = localStorage.getItem('lastLogout');
+    //                 const now = Date.now();
+    //                 
+    //                 if (lastLogout && (now - parseInt(lastLogout)) < 5000) {
+    //                     console.log('Yakın zamanda çıkış yapıldı, otomatik giriş yapılmıyor');
+    //                     return;
+    //                 }
+    //                 
+    //                 ipcRenderer.invoke('navigate-to-main');
+    //             } else {
+    //                 // Kullanıcı giriş yapmamış, login sayfasını göster
+    //                 console.log('Kullanıcı giriş yapmamış');
+    //             }
+    //         });
+    //     } else {
+    //         console.error('Firebase auth bulunamadı!');
+    //     }
+    // }, 1000);
+    
+    console.log('Firebase auth state listener devre dışı bırakıldı - otomatik giriş yapılmayacak');
+
+    // Lucide ikonlarını başlat
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+
+    // Tema yönetimi
+    initializeTheme();
+    
+    // Kayıtlı e-postayı yükle
+    loadRememberedEmail();
 });
 
-// E-posta ve şifre ile giriş
-loginBtn.addEventListener('click', async () => {
-    const email = emailInput.value.trim();
-    const password = passwordInput.value;
+// Event listener'ları kurma fonksiyonu
+function setupEventListeners() {
+    console.log('Event listener\'lar kuruluyor...');
+    
+    // ÖNCE tema butonunu tamamen izole et
+    setupThemeButton();
+    
+    // SONRA diğer event listener'ları ekle
+    setupOtherEventListeners();
+}
 
-    if (!email || !password) {
-        showError('Lütfen e-posta ve şifre alanlarını doldurun.');
+// Tema butonunu tamamen yeniden oluşturma fonksiyonu
+function setupThemeButton() {
+    console.log('Tema butonu tamamen yeniden oluşturuluyor...');
+    
+    const container = document.getElementById('themeToggleContainer');
+    if (!container) {
+        console.error('Tema butonu container bulunamadı!');
         return;
     }
-
-    if (!isValidEmail(email)) {
-        showError('Lütfen geçerli bir e-posta adresi girin.');
-        return;
+    
+    // Container'ı temizle
+    container.innerHTML = '';
+    
+    // Tema butonunu sıfırdan oluştur
+    const themeToggleDiv = document.createElement('div');
+    themeToggleDiv.className = 'theme-toggle';
+    
+    const themeButton = document.createElement('button');
+    themeButton.type = 'button';
+    themeButton.className = 'theme-btn';
+    themeButton.title = 'Tema değiştir';
+    themeButton.setAttribute('tabindex', '-1');
+    themeButton.setAttribute('data-theme-button', 'true'); // Özel attribute
+    
+    // İkonları oluştur
+    const sunIcon = document.createElement('i');
+    sunIcon.setAttribute('data-lucide', 'sun');
+    sunIcon.className = 'theme-icon light-icon';
+    
+    const moonIcon = document.createElement('i');
+    moonIcon.setAttribute('data-lucide', 'moon');
+    moonIcon.className = 'theme-icon dark-icon';
+    
+    themeButton.appendChild(sunIcon);
+    themeButton.appendChild(moonIcon);
+    themeToggleDiv.appendChild(themeButton);
+    container.appendChild(themeToggleDiv);
+    
+    // Tema butonuna sadece click event'i ekle - hiçbir şey başka event ekleme
+    themeButton.onclick = function(e) {
+        console.log('=== TEMA BUTONU TIKLANDI (YENİ) ===');
+        console.log('Event:', e);
+        console.log('Target:', e.target);
+        
+        // Tüm event'leri engelle
+        e.preventDefault();
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        
+        console.log('Tema değiştirme başlatılıyor...');
+        toggleTheme();
+        console.log('Tema değiştirme tamamlandı');
+        
+        return false;
+    };
+    
+    // Lucide ikonlarını yeniden yükle
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
     }
+    
+    console.log('Tema butonu tamamen yeniden oluşturuldu');
+}
 
-    showLoading(true);
+// Diğer event listener'ları kurma fonksiyonu
+function setupOtherEventListeners() {
+    console.log('Diğer event listener\'lar kuruluyor...');
+    
+    // Login butonu event listener
+    loginBtn.addEventListener('click', async (e) => {
+        console.log('=== GİRİŞ BUTONU TIKLANDI ===');
+        console.log('Event:', e);
+        console.log('Target:', e.target);
+        console.log('Current target:', e.currentTarget);
+        console.log('Event type:', e.type);
+        
+        const email = emailInput.value.trim();
+        const password = passwordInput.value;
 
-    try {
-        // Firebase ile giriş yap
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
-        const user = userCredential.user;
-        
-        console.log('Firebase giriş başarılı:', user.email);
-        
-        // Beni hatırla seçiliyse e-postayı config'e kaydet
-        if (rememberMeCheckbox && rememberMeCheckbox.checked) {
-            await ipcRenderer.invoke('save-remembered-email', email);
+        console.log('E-posta:', email);
+        console.log('Şifre uzunluğu:', password.length);
+
+        // Form validasyonu
+        if (!email || !password) {
+            console.log('Form validasyon hatası: Boş alan');
+            showError('Lütfen e-posta ve şifre alanlarını doldurun.');
+            return;
         }
-        
-        // Ana uygulamaya yönlendir
-        ipcRenderer.invoke('navigate-to-main');
-        
-    } catch (error) {
-        console.error('Firebase giriş hatası:', error);
-        showError(getErrorMessage(error.code));
-    } finally {
-        showLoading(false);
-    }
-});
 
-
-// Google ile giriş
-googleLoginBtn.addEventListener('click', async () => {
-    showLoading(true);
-    
-    try {
-        const result = await signInWithPopup(auth, googleProvider);
-        const user = result.user;
-        
-        console.log('Google giriş başarılı:', user.email);
-        
-        // Beni hatırla seçiliyse e-postayı config'e kaydet
-        if (rememberMeCheckbox && rememberMeCheckbox.checked) {
-            await ipcRenderer.invoke('save-remembered-email', user.email);
+        if (!isValidEmail(email)) {
+            console.log('Form validasyon hatası: Geçersiz e-posta');
+            showError('Lütfen geçerli bir e-posta adresi girin.');
+            return;
         }
-        
-        // Ana uygulamaya yönlendir
-        ipcRenderer.invoke('navigate-to-main');
-        
-    } catch (error) {
-        console.error('Google giriş hatası:', error);
-        showError(getErrorMessage(error.code));
-    } finally {
-        showLoading(false);
+
+        console.log('Form validasyonu başarılı, giriş yapılıyor...');
+        showLoading(true);
+
+        try {
+            // Firebase ile giriş yap
+            console.log('Firebase giriş işlemi başlatılıyor...');
+            
+            if (!window.firebaseAuth || !window.signInWithEmailAndPassword) {
+                throw new Error('Firebase henüz yüklenmedi. Lütfen tekrar deneyin.');
+            }
+            
+            const userCredential = await window.signInWithEmailAndPassword(window.firebaseAuth, email, password);
+            const user = userCredential.user;
+            
+            console.log('Firebase giriş başarılı:', user.email);
+            
+            // Beni hatırla seçiliyse e-postayı kaydet
+            if (rememberMeCheckbox && rememberMeCheckbox.checked) {
+                await ipcRenderer.invoke('save-remembered-email', user.email);
+            }
+            
+            // Ana uygulamaya yönlendir
+            ipcRenderer.invoke('navigate-to-main');
+            
+        } catch (error) {
+            console.error('Firebase giriş hatası:', error);
+            console.error('Hata kodu:', error.code);
+            console.error('Hata mesajı:', error.message);
+            showError(getErrorMessage(error.code));
+        } finally {
+            showLoading(false);
+        }
+    });
+
+    // Enter tuşu ile giriş
+    document.addEventListener('keypress', (e) => {
+        if (e.key === 'Enter') {
+            // Tema butonuna odaklanmışsa giriş yapma
+            if (document.activeElement && document.activeElement.getAttribute('data-theme-button') === 'true') {
+                console.log('Tema butonuna odaklanmış, giriş yapılmıyor');
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+            
+            // E-posta veya şifre input'una odaklanmışsa giriş yap
+            if (document.activeElement === emailInput || document.activeElement === passwordInput) {
+                console.log('Enter tuşu basıldı - giriş yapılıyor');
+                e.preventDefault();
+                loginBtn.click();
+                return false;
+            }
+            
+            // Diğer durumlarda giriş yapma
+            console.log('Enter tuşu basıldı ama giriş yapılmıyor');
+            e.preventDefault();
+            return false;
+        }
+    });
+
+    // Hata modalını kapat
+    if (errorModalClose) {
+        errorModalClose.addEventListener('click', () => {
+            console.log('Hata modalı kapatılıyor');
+            errorModal.style.display = 'none';
+        });
     }
-});
 
-// Enter tuşu ile giriş
-document.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter') {
-        loginBtn.click();
+    // Modal dışına tıklayınca kapat
+    if (errorModal) {
+        errorModal.addEventListener('click', (e) => {
+            if (e.target === errorModal) {
+                console.log('Modal dışına tıklandı, kapatılıyor');
+                errorModal.style.display = 'none';
+            }
+        });
     }
-});
 
-// Şifre iste butonu
-requestPasswordBtn.addEventListener('click', () => {
-    userInfoModal.style.display = 'flex';
-    userNameInput.focus();
-});
+    // Tema butonu artık setupThemeButton() fonksiyonunda izole edildi
 
-// Modal kapatma
-closeUserInfoModal.addEventListener('click', () => {
-    userInfoModal.style.display = 'none';
-});
-
-cancelUserInfo.addEventListener('click', () => {
-    userInfoModal.style.display = 'none';
-});
-
-// Modal dışına tıklayınca kapat
-userInfoModal.addEventListener('click', (e) => {
-    if (e.target === userInfoModal) {
-        userInfoModal.style.display = 'none';
+    // Remember me checkbox değişikliği
+    if (rememberMeCheckbox) {
+        rememberMeCheckbox.addEventListener('change', async (e) => {
+            console.log('Remember me checkbox değişti:', e.target.checked);
+            
+            if (!e.target.checked) {
+                // Checkbox kaldırıldıysa kayıtlı e-postayı sil
+                try {
+                    await ipcRenderer.invoke('save-remembered-email', '');
+                    console.log('Kayıtlı e-posta silindi');
+                } catch (error) {
+                    console.error('E-posta silme hatası:', error);
+                }
+            }
+        });
     }
-});
 
-// Kullanıcı kaydı
-sendMailBtn.addEventListener('click', async () => {
-    const userName = userNameInput.value.trim();
-    const userPassword = userPasswordInput.value.trim();
-    
-    if (!userName || !userPassword) {
-        showError('Lütfen e-posta ve şifre alanlarını doldurun.');
-        return;
-    }
-    
-    if (!isValidEmail(userName)) {
-        showError('Lütfen geçerli bir e-posta adresi girin.');
-        return;
-    }
-    
-    if (userPassword.length < 6) {
-        showError('Şifre en az 6 karakter olmalıdır.');
-        return;
-    }
-    
-    showLoading(true);
-    
-    try {
-        // Firebase ile kullanıcı kaydı yap
-        const userCredential = await createUserWithEmailAndPassword(auth, userName, userPassword);
-        const user = userCredential.user;
-        
-        console.log('Kullanıcı kaydı başarılı:', user.email);
-        
-        // Modal'ı kapat
-        userInfoModal.style.display = 'none';
-        userNameInput.value = '';
-        userPasswordInput.value = '';
-        
-        // Başarı mesajı göster
-        showError('Kullanıcı kaydı başarılı! Şimdi giriş yapabilirsiniz.');
-        
-    } catch (error) {
-        console.error('Kullanıcı kaydı hatası:', error);
-        showError(getErrorMessage(error.code));
-    } finally {
-        showLoading(false);
-    }
-});
-
-// Hata modalını kapat
-errorModalClose.addEventListener('click', () => {
-    errorModal.style.display = 'none';
-});
-
-// Modal dışına tıklayınca kapat
-errorModal.addEventListener('click', (e) => {
-    if (e.target === errorModal) {
-        errorModal.style.display = 'none';
-    }
-});
-
+    console.log('Tüm event listener\'lar başarıyla kuruldu');
+}
 
 // Yardımcı fonksiyonlar
 function showLoading(show) {
-    loadingOverlay.style.display = show ? 'flex' : 'none';
+    console.log('Loading gösteriliyor:', show);
+    if (loadingOverlay) {
+        loadingOverlay.style.display = show ? 'flex' : 'none';
+    } else {
+        console.error('Loading overlay bulunamadı!');
+    }
 }
 
 function showError(message) {
-    errorMessage.textContent = message;
-    errorModal.style.display = 'flex';
+    console.log('Hata gösteriliyor:', message);
+    if (errorMessage && errorModal) {
+        errorMessage.textContent = message;
+        errorModal.style.display = 'flex';
+        console.log('Hata modalı gösterildi');
+    } else {
+        console.error('Hata modalı veya mesaj elementi bulunamadı!');
+        // Fallback: alert kullan
+        alert('Hata: ' + message);
+    }
 }
 
 function isValidEmail(email) {
@@ -232,52 +322,90 @@ function getErrorMessage(errorCode) {
         'auth/user-disabled': 'Bu hesap devre dışı bırakılmış.',
         'auth/too-many-requests': 'Çok fazla başarısız giriş denemesi. Lütfen daha sonra tekrar deneyin.',
         'auth/network-request-failed': 'Ağ bağlantısı hatası. İnternet bağlantınızı kontrol edin.',
-        'auth/popup-closed-by-user': 'Giriş penceresi kapatıldı.',
-        'auth/cancelled-popup-request': 'Giriş işlemi iptal edildi.',
-        'auth/popup-blocked': 'Popup engellendi. Lütfen popup engelleyicisini kapatın.',
-        'auth/account-exists-with-different-credential': 'Bu e-posta adresi farklı bir giriş yöntemi ile kayıtlı.',
-        'auth/email-already-in-use': 'Bu e-posta adresi zaten kullanımda.',
-        'auth/weak-password': 'Şifre çok zayıf. Lütfen daha güçlü bir şifre seçin.',
-        'auth/operation-not-allowed': 'Bu giriş yöntemi etkinleştirilmemiş.',
         'auth/invalid-credential': 'Geçersiz kimlik bilgileri.',
-        'auth/requires-recent-login': 'Bu işlem için tekrar giriş yapmanız gerekiyor.'
+        'auth/requires-recent-login': 'Bu işlem için tekrar giriş yapmanız gerekiyor.',
+        'auth/operation-not-allowed': 'E-posta/şifre girişi etkinleştirilmemiş.',
+        'auth/weak-password': 'Şifre çok zayıf.',
+        'auth/email-already-in-use': 'Bu e-posta adresi zaten kullanımda.'
     };
 
     return errorMessages[errorCode] || 'Bilinmeyen bir hata oluştu. Lütfen tekrar deneyin.';
 }
 
-// Şifre hashleme fonksiyonu
-async function hashPassword(password) {
-    const encoder = new TextEncoder();
-    const data = encoder.encode(password);
-    const hashBuffer = await crypto.subtle.digest('SHA-256', data);
-    const hashArray = Array.from(new Uint8Array(hashBuffer));
-    return hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
-}
-
-// Kayıtlı e-postayı yükle
-async function loadSavedEmail() {
+// Tema yönetimi fonksiyonları
+async function initializeTheme() {
     try {
-        const savedEmail = await ipcRenderer.invoke('get-remembered-email');
+        // Önce config'den tema tercihini al
+        const configTheme = await ipcRenderer.invoke('get-theme-preference');
+        console.log('Config\'den tema tercihi alındı:', configTheme);
         
-        if (savedEmail) {
-            emailInput.value = savedEmail;
-            if (rememberMeCheckbox) {
-                rememberMeCheckbox.checked = true;
-            }
-            // Şifre alanına odaklan
-            passwordInput.focus();
+        // Config'de tema varsa onu kullan, yoksa localStorage'dan al
+        const savedTheme = configTheme || localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
+        
+        // Config'de tema yoksa localStorage'daki temayı config'e kaydet
+        if (!configTheme && localStorage.getItem('theme')) {
+            await ipcRenderer.invoke('save-theme-preference', localStorage.getItem('theme'));
         }
     } catch (error) {
-        console.log('Kayıtlı e-posta yüklenemedi:', error);
+        console.error('Tema yükleme hatası:', error);
+        // Hata durumunda localStorage'dan yükle
+        const savedTheme = localStorage.getItem('theme') || 'light';
+        setTheme(savedTheme);
     }
 }
 
-// Sayfa yüklendiğinde Lucide ikonlarını başlat ve kayıtlı e-postayı yükle
-document.addEventListener('DOMContentLoaded', async () => {
-    // İkonları başlat
-    lucide.createIcons();
+async function toggleTheme() {
+    const currentTheme = document.body.classList.contains('dark-theme') ? 'dark' : 'light';
+    const newTheme = currentTheme === 'light' ? 'dark' : 'light';
     
-    // Kayıtlı e-postayı yükle
-    await loadSavedEmail();
-});
+    setTheme(newTheme);
+    
+    // Hem localStorage'a hem config'e kaydet
+    localStorage.setItem('theme', newTheme);
+    
+    try {
+        await ipcRenderer.invoke('save-theme-preference', newTheme);
+        console.log('Tema tercihi config\'e kaydedildi:', newTheme);
+    } catch (error) {
+        console.error('Tema config\'e kaydetme hatası:', error);
+    }
+}
+
+function setTheme(theme) {
+    if (theme === 'dark') {
+        document.body.classList.add('dark-theme');
+        document.body.classList.remove('light-theme');
+    } else {
+        document.body.classList.add('light-theme');
+        document.body.classList.remove('dark-theme');
+    }
+    
+    // İkonları yeniden yükle
+    if (typeof lucide !== 'undefined') {
+        lucide.createIcons();
+    }
+    
+    console.log('Tema uygulandı:', theme);
+}
+
+// Kayıtlı e-postayı yükleme fonksiyonu
+async function loadRememberedEmail() {
+    try {
+        const rememberedEmail = await ipcRenderer.invoke('get-remembered-email');
+        console.log('Kayıtlı e-posta alındı:', rememberedEmail);
+        
+        if (rememberedEmail && emailInput) {
+            emailInput.value = rememberedEmail;
+            // Remember me checkbox'ını işaretle
+            if (rememberMeCheckbox) {
+                rememberMeCheckbox.checked = true;
+            }
+            console.log('E-posta input\'a yüklendi:', rememberedEmail);
+        }
+    } catch (error) {
+        console.error('Kayıtlı e-posta yükleme hatası:', error);
+    }
+}
+
+console.log('Login.js yüklendi');

@@ -1,0 +1,29 @@
+{
+  "pinhuman": {
+    "baseUrl": "https://pinhuman.com",
+    "loginEndpoint": "/System/LoginStep1",
+    "timeout": 30000,
+    "retryAttempts": 3,
+    "credentials": {
+      "userName": "furkan.ozmen@guleryuzgroup.com",
+      "companyCode": "ngs",
+      "password": "Kralben123.",
+      "totpSecret": "GQ2DCZBYGRRGILLGMI4TELJUMMYGCLJZGU4TILJQHBRDSNDBMJRTQNTBMNXVGZLDOJSXI4DJNZUHK3LBNZNG42LLMI"
+    }
+  },
+  "app": {
+    "name": "PDKS İşleme Sistemi",
+    "version": "1.0.0",
+    "outputDirectory": "./out",
+    "supportedFormats": [
+      "xlsx",
+      "xls"
+    ],
+    "rememberedEmail": "furkanozm@gmail.com"
+  },
+  "ui": {
+    "theme": "dark",
+    "language": "en",
+    "autoSave": true
+  }
+}

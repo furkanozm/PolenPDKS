@@ -396,6 +396,50 @@ ipcMain.handle('get-remembered-email', async () => {
     }
 });
 
+// Tema tercihini kaydetme
+ipcMain.handle('save-theme-preference', async (event, theme) => {
+    try {
+        let configPath;
+        
+        if (app.isPackaged) {
+            configPath = path.join(app.getPath('userData'), 'config.json');
+        } else {
+            configPath = path.join(__dirname, 'config.json');
+        }
+        
+        const config = loadConfig();
+        if (!config) {
+            throw new Error('Config dosyası okunamadı');
+        }
+        
+        // UI bölümünü oluştur veya güncelle
+        if (!config.ui) {
+            config.ui = {};
+        }
+        config.ui.theme = theme;
+        
+        // Dosyayı kaydet
+        fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
+        
+        console.log('Tema tercihi kaydedildi:', theme);
+        return { success: true };
+    } catch (error) {
+        console.error('Tema kaydetme hatası:', error);
+        throw error;
+    }
+});
+
+// Tema tercihini alma
+ipcMain.handle('get-theme-preference', async () => {
+    try {
+        const config = loadConfig();
+        return config?.ui?.theme || 'light';
+    } catch (error) {
+        console.error('Tema okuma hatası:', error);
+        return 'light';
+    }
+});
+
 // UI ayarlarını kaydetme
 ipcMain.handle('save-ui-settings', async (event, settings) => {
     try {
