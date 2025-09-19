@@ -4,18 +4,33 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
-# Output files
+# Build outputs
+dist/
+build/
 out/
-*.xlsx
-*.csv
-*.json
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
 
 # Logs
-logs
+logs/
 *.log
 
 # Runtime data
-pids
+pids/
 *.pid
 *.seed
 *.pid.lock
@@ -24,19 +39,7 @@ pids
 coverage/
 
 # nyc test coverage
-.nyc_output
-
-# Grunt intermediate storage
-.grunt
-
-# Bower dependency directory
-bower_components
-
-# node-waf configuration
-.lock-wscript
-
-# Compiled binary addons
-build/Release
+.nyc_output/
 
 # Dependency directories
 jspm_packages/
@@ -56,51 +59,19 @@ jspm_packages/
 # dotenv environment variables file
 .env
 
-# parcel-bundler cache
-.cache
-.parcel-cache
-
-# next.js build output
-.next
-
-# nuxt.js build output
-.nuxt
-
-# vuepress build output
-.vuepress/dist
-
-# Serverless directories
-.serverless
-
-# FuseBox cache
-.fusebox/
-
-# DynamoDB Local files
-.dynamodb/
-
-# TernJS port file
-.tern-port
-
 # Electron specific
-dist/
-build/
-
-# OS generated files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
+app/
+release/
 
 # Temporary files
 *.tmp
 *.temp
+
+# User data (contains sensitive information)
+data_history.json
+config.json
+
+# Excel files
+*.xlsx
+*.xls
+*.csv

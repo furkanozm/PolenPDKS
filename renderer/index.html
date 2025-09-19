@@ -12,7 +12,6 @@
         <!-- Sidebar -->
         <aside class="sidebar">
             <div class="sidebar-header">
-                <i data-lucide="building-2" class="sidebar-icon"></i>
                 <h2>PDKS Sistemi</h2>
                 <p>Veri İşleme & Analiz</p>
             </div>
@@ -28,10 +27,7 @@
                     <span class="nav-label">Personel Verileri</span>
                 </div>
                 
-                <div class="nav-item" data-page="vardiya">
-                    <i data-lucide="clock" class="nav-icon"></i>
-                    <span class="nav-label">Vardiya Analizi</span>
-                </div>
+                
                 
                         <div class="nav-item" data-page="rapor">
                             <i data-lucide="file-text" class="nav-icon"></i>
@@ -50,6 +46,16 @@
             </nav>
             
               <div class="sidebar-footer">
+                <div class="dark-mode-section">
+                    <div class="dark-mode-toggle">
+                        <span class="theme-label light-label">Açık Tema</span>
+                        <label class="toggle-switch">
+                            <input type="checkbox" id="darkModeToggle">
+                            <span class="toggle-slider"></span>
+                        </label>
+                        <span class="theme-label dark-label">Koyu Tema</span>
+                    </div>
+                </div>
                  <div class="nav-item" data-page="yardim">
                      <i data-lucide="help-circle" class="nav-icon"></i>
                      <span class="nav-label">Yardım</span>
@@ -62,14 +68,13 @@
             <!-- Dashboard Sayfası -->
             <div class="page active" id="dashboard-page">
             <header class="header">
-                <i data-lucide="home" class="page-icon"></i>
                 <h1>Ana Sayfa</h1>
             </header>
 
                 <div class="content-card">
                 <div class="file-section">
                     <div class="file-input-area" id="fileInputArea">
-                        <i data-lucide="folder" class="file-icon"></i>
+                        <i data-lucide="folder" class="file-icon-large"></i>
                         <h3>Excel Dosyasını Seçin</h3>
                         <p>PDKS verilerini içeren Excel dosyasını seçin</p>
                         <button class="btn btn-primary" id="selectFileBtn">
@@ -126,30 +131,8 @@
                     </div>
                 </div>
 
-                <div class="output-files">
-                    <h4>Oluşturulan Dosyalar:</h4>
-                    <div class="file-links">
-                        <a href="#" class="file-link" id="jsonFileLink">
-                            <i data-lucide="bar-chart-3" class="file-icon"></i>
-                            daily.json
-                        </a>
-                        <a href="#" class="file-link" id="csvFileLink">
-                            <i data-lucide="table" class="file-icon"></i>
-                            daily.csv
-                        </a>
-                    </div>
-                </div>
 
-                <div class="action-buttons">
-                    <button class="btn btn-primary" id="newProcessBtn">
-                        <i data-lucide="refresh-cw" class="btn-icon"></i>
-                        Yeni İşlem
-                    </button>
-                    <button class="btn btn-secondary" id="openFolderBtn">
-                        <i data-lucide="folder-open" class="btn-icon"></i>
-                        Klasörü Aç
-                    </button>
-                </div>
+
             </div>
 
             <div class="error-section" id="errorSection" style="display: none;">
@@ -161,6 +144,28 @@
                         <i data-lucide="refresh-cw" class="btn-icon"></i>
                         Tekrar Dene
                     </button>
+                </div>
+            </div>
+
+            <!-- Log Görüntüleme Alanı -->
+            <div class="log-section" id="logSection" style="display: none;">
+                <div class="log-header">
+                    <div class="log-title">
+                        <i data-lucide="terminal" class="log-icon"></i>
+                        <h3>İşlem Logları</h3>
+                    </div>
+                    <button class="btn btn-secondary" id="closeLogBtn">
+                        <i data-lucide="x" class="btn-icon"></i>
+                        Kapat
+                    </button>
+                </div>
+                <div class="log-content">
+                    <div class="log-container" id="logContainer">
+                        <div class="log-entry">
+                            <span class="log-timestamp">[00:00:00]</span>
+                            <span class="log-message">Log alanı hazırlanıyor...</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             </div>
@@ -179,6 +184,13 @@
                         <h3>Filtreler</h3>
                         <div class="filters-grid">
                             <div class="filter-group">
+                                <label class="filter-label">Sicil No</label>
+                                <select class="filter-select" id="sicilFilter">
+                                    <option value="">Tüm Sicil Numaraları</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filter-group">
                                 <label class="filter-label">Personel</label>
                                 <select class="filter-select" id="personelFilter">
                                     <option value="">Tüm Personeller</option>
@@ -187,38 +199,27 @@
                             
                             <div class="filter-group">
                                 <label class="filter-label">Vardiya</label>
-                                <div class="filter-checkboxes">
-                                    <div class="filter-checkbox">
-                                        <input type="checkbox" id="vardiyaV1" value="V1" checked>
-                                        <label for="vardiyaV1">V1 (08:30-16:30)</label>
-                                    </div>
-                                    <div class="filter-checkbox">
-                                        <input type="checkbox" id="vardiyaV2" value="V2" checked>
-                                        <label for="vardiyaV2">V2 (16:30-00:30)</label>
-                                    </div>
-                                    <div class="filter-checkbox">
-                                        <input type="checkbox" id="vardiyaV3" value="V3" checked>
-                                        <label for="vardiyaV3">V3 (00:30-08:30)</label>
-                                    </div>
-                                </div>
+                                <select class="filter-select" id="vardiyaFilter">
+                                    <option value="">Tüm Vardiyalar</option>
+                                    <option value="V1">V1 (08:30-16:30)</option>
+                                    <option value="V2">V2 (16:30-00:30)</option>
+                                    <option value="V3">V3 (00:30-08:30)</option>
+                                </select>
+                            </div>
+                            
+                            <div class="filter-group">
+                                <label class="filter-label">Tarih</label>
+                                <input type="date" class="filter-input" id="tarihFilter">
                             </div>
                             
                             <div class="filter-group">
                                 <label class="filter-label">Durum</label>
-                                <div class="filter-checkboxes">
-                                    <div class="filter-checkbox">
-                                        <input type="checkbox" id="durumOk" value="ok" checked>
-                                        <label for="durumOk">Tamamlanan</label>
-                                    </div>
-                                    <div class="filter-checkbox">
-                                        <input type="checkbox" id="durumEksik" value="eksik" checked>
-                                        <label for="durumEksik">Eksik</label>
-                                    </div>
-                                    <div class="filter-checkbox">
-                                        <input type="checkbox" id="durumGecersiz" value="geçersiz" checked>
-                                        <label for="durumGecersiz">Geçersiz</label>
-                                    </div>
-                                </div>
+                                <select class="filter-select" id="durumFilter">
+                                    <option value="">Tüm Durumlar</option>
+                                    <option value="ok">Tamamlanan</option>
+                                    <option value="eksik">Eksik</option>
+                                    <option value="geçersiz">Geçersiz</option>
+                                </select>
                             </div>
                         </div>
                     </div>
@@ -230,6 +231,7 @@
                                     <table class="data-table" id="dataTable">
                                         <thead>
                                             <tr>
+                                                <th>Sicil No</th>
                                                 <th>Personel</th>
                                                 <th>Tarih</th>
                                                 <th>Vardiya</th>
@@ -242,7 +244,7 @@
                                         </thead>
                                         <tbody id="dataTableBody">
                                             <tr>
-                                                <td colspan="8" style="text-align: center; padding: 40px; color: #7f8c8d;">
+                                                <td colspan="9" style="text-align: center; padding: 40px; color: #7f8c8d;">
                                                     <i data-lucide="database" style="font-size: 2rem; margin-bottom: 10px; display: block;"></i>
                                                     Henüz veri yüklenmedi
                                                 </td>
@@ -254,112 +256,9 @@
                 </div>
             </div>
 
-            <!-- Vardiya Analizi Sayfası -->
-            <div class="page" id="vardiya-page">
-                <header class="header">
-                    <i data-lucide="clock" class="page-icon"></i>
-                    <h1>Vardiya Analizi</h1>
-                </header>
 
-                <div class="content-card">
-                    <!-- Vardiya Özet Kartları -->
-                    <div class="vardiya-summary">
-                        <div class="vardiya-card v1">
-                            <div class="vardiya-header">
-                                <i data-lucide="sunrise" class="vardiya-icon"></i>
-                                <h3>V1 Vardiyası</h3>
-                                <span class="vardiya-time">08:30 - 16:30</span>
-                            </div>
-                            <div class="vardiya-stats">
-                                <div class="stat">
-                                    <span class="stat-label">Personel Sayısı</span>
-                                    <span class="stat-value" id="v1-personel">0</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-label">Toplam Çalışma</span>
-                                    <span class="stat-value" id="v1-calisma">0:00</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-label">Ortalama FM</span>
-                                    <span class="stat-value" id="v1-fm">0:00</span>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="vardiya-card v2">
-                            <div class="vardiya-header">
-                                <i data-lucide="sunset" class="vardiya-icon"></i>
-                                <h3>V2 Vardiyası</h3>
-                                <span class="vardiya-time">16:30 - 00:30</span>
-                            </div>
-                            <div class="vardiya-stats">
-                                <div class="stat">
-                                    <span class="stat-label">Personel Sayısı</span>
-                                    <span class="stat-value" id="v2-personel">0</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-label">Toplam Çalışma</span>
-                                    <span class="stat-value" id="v2-calisma">0:00</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-label">Ortalama FM</span>
-                                    <span class="stat-value" id="v2-fm">0:00</span>
-                                </div>
-                            </div>
-                        </div>
 
-                        <div class="vardiya-card v3">
-                            <div class="vardiya-header">
-                                <i data-lucide="moon" class="vardiya-icon"></i>
-                                <h3>V3 Vardiyası</h3>
-                                <span class="vardiya-time">00:30 - 08:30</span>
-                            </div>
-                            <div class="vardiya-stats">
-                                <div class="stat">
-                                    <span class="stat-label">Personel Sayısı</span>
-                                    <span class="stat-value" id="v3-personel">0</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-label">Toplam Çalışma</span>
-                                    <span class="stat-value" id="v3-calisma">0:00</span>
-                                </div>
-                                <div class="stat">
-                                    <span class="stat-label">Ortalama FM</span>
-                                    <span class="stat-value" id="v3-fm">0:00</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Vardiya Detay Tablosu -->
-                    <div class="vardiya-details">
-                        <h3>Vardiya Detayları</h3>
-                        <div class="vardiya-table-container">
-                            <table class="vardiya-table" id="vardiyaTable">
-                                <thead>
-                                    <tr>
-                                        <th>Vardiya</th>
-                                        <th>Personel</th>
-                                        <th>Giriş</th>
-                                        <th>Çıkış</th>
-                                        <th>Çalışma</th>
-                                        <th>FM</th>
-                                        <th>Durum</th>
-                                    </tr>
-                                </thead>
-                                <tbody id="vardiyaTableBody">
-                                    <tr>
-                                        <td colspan="7" style="text-align: center; padding: 40px; color: #7f8c8d;">
-                                            <i data-lucide="clock" style="font-size: 2rem; margin-bottom: 10px; display: block;"></i>
-                                            Henüz veri yüklenmedi
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
 
             <!-- Raporlar Sayfası -->
             <div class="page" id="rapor-page">
@@ -498,7 +397,81 @@
                     <h1>Ayarlar</h1>
                 </header>
                 <div class="content-card">
-                    <p style="text-align: center; color: #7f8c8d; padding: 40px;">Bu sayfa yakında eklenecek...</p>
+                    <div class="settings-container">
+                        <form class="settings-form" id="mainSettingsForm">
+                            <div class="settings-cards-container">
+                                <div class="settings-card">
+                                    <h3>Pinhuman Bağlantı Bilgileri</h3>
+                                    <p class="settings-description">Pinhuman sistemi için temel bağlantı bilgileri.</p>
+                                    
+                                    <div class="form-group">
+                                        <label for="userName">Kullanıcı Adı / TCKN</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i data-lucide="user"></i>
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control" id="userName" name="userName" placeholder="TCKN/Kullanıcı adınızı girin...">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="companyCode">Firma Kodu</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i data-lucide="building"></i>
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control" id="companyCode" name="companyCode" placeholder="Firma kodunu girin...">
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="settings-card">
+                                    <h3>Güvenlik Bilgileri</h3>
+                                    <p class="settings-description">Şifre ve 2FA bilgileri.</p>
+                                    
+                                    <div class="form-group">
+                                        <label for="password">Şifre</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i data-lucide="lock"></i>
+                                                </span>
+                                            </div>
+                                            <input type="password" class="form-control" id="password" name="password" placeholder="Şifrenizi girin...">
+                                            <div class="input-group-append">
+                                                <button type="button" class="btn btn-outline-secondary" id="togglePassword">
+                                                    <i data-lucide="eye" id="eyeIcon"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="totpSecret">TOTP Secret</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i data-lucide="key"></i>
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control" id="totpSecret" name="totpSecret" placeholder="TOTP secret kodunuzu girin...">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions" style="text-align: center; margin-top: 30px;">
+                                <button type="submit" class="btn btn-success btn-lg">
+                                    <i data-lucide="save"></i>
+                                    Tüm Ayarları Kaydet
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
 
@@ -506,14 +479,36 @@
                 <header class="header">
                     <i data-lucide="help-circle" class="page-icon"></i>
                     <h1>Yardım</h1>
-                    <p>Kullanım kılavuzu ve destek</p>
                 </header>
                 <div class="content-card">
-                    <p style="text-align: center; color: #7f8c8d; padding: 40px;">Bu sayfa yakında eklenecek...</p>
+                    <div style="text-align: center; padding: 40px;">
+                        <h3 style="color: white; margin-bottom: 20px;">Destek ve Yardım</h3>
+                        <p style="color: #7f8c8d; margin-bottom: 30px;">
+                            PDKS sistemi ile ilgili sorunlarınız için bizimle iletişime geçin.
+                        </p>
+                        <button class="btn btn-primary" id="helpMailBtn" onclick="openHelpMail()">
+                            <i data-lucide="mail" class="btn-icon"></i>
+                            Destek Maili Gönder
+                        </button>
+                    </div>
                 </div>
             </div>
         </main>
     </div>
+
+    <!-- Footer -->
+    <footer class="app-footer">
+        <div class="footer-buttons">
+            <button class="btn btn-sm btn-secondary" id="openFolderBtn">
+                <i data-lucide="folder-open" class="btn-icon"></i>
+                Klasörü Aç
+            </button>
+            <button class="btn btn-sm btn-primary" id="pinhumanBtn">
+                <i data-lucide="upload" class="btn-icon"></i>
+                Pinhuman'a Gönder
+            </button>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>

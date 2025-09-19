@@ -1,24 +1,96 @@
 {
   "name": "polenpdks",
   "version": "1.0.0",
-  "description": "",
+  "description": "PDKS İşleme Sistemi - Pinhuman Entegrasyonu",
   "main": "main.js",
+  "homepage": "./",
   "scripts": {
-    "start": "electron .",
-    "dev": "electron . --dev",
+    "start": "npx electron .",
+    "dev": "npx electron . --dev",
     "process": "node pdks-processor.js",
     "clean": "rmdir /s /q %USERPROFILE%\\AppData\\Roaming\\polenpdks 2>nul || echo Cache temizlendi",
+    "build": "electron-builder",
+    "build-win": "electron-builder --win",
+    "build-win-portable": "electron-builder --win portable",
+    "build-win-installer": "electron-builder --win nsis",
+    "dist": "npm run build-win",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "pdks",
+    "pinhuman",
+    "electron",
+    "automation"
+  ],
+  "author": "Güleryüz Group",
   "license": "ISC",
   "type": "commonjs",
+  "build": {
+    "appId": "com.guleryuzgroup.polenpdks",
+    "productName": "PDKS İşleme Sistemi",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "main.js",
+      "config.json",
+      "logo.png",
+      "renderer/**/*",
+      "node_modules/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "config.json",
+        "to": "config.json"
+      },
+      {
+        "from": "logo.png",
+        "to": "logo.png"
+      }
+    ],
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        },
+        {
+          "target": "portable",
+          "arch": [
+            "x64"
+          ]
+        }
+      ],
+      "requestedExecutionLevel": "requireAdministrator",
+      "artifactName": "${productName}-${version}-${arch}.${ext}"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "PDKS İşleme Sistemi",
+      "deleteAppDataOnUninstall": false,
+      "runAfterFinish": true,
+      "menuCategory": "Güleryüz Group",
+      "perMachine": true,
+      "include": "installer.nsh"
+    },
+    "portable": {
+      "artifactName": "PDKS-İşleme-Sistemi-Portable.exe"
+    }
+  },
   "dependencies": {
     "lucide": "^0.544.0",
+    "playwright": "^1.55.0",
+    "puppeteer": "^23.11.1",
+    "speakeasy": "^2.0.0",
     "xlsx": "^0.18.5"
   },
   "devDependencies": {
-    "electron": "^38.1.2"
+    "electron": "^38.1.2",
+    "electron-builder": "^25.1.8"
   }
 }

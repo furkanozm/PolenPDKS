@@ -37,7 +37,8 @@ let selectedFilePath = null;
 let outputPaths = {};
 let currentData = [];
 let filteredData = [];
-let dataHistory = [];
+// dataHistory kaldırıldı
+let historyUpdateInterval = null;
 
 // Event listeners
 selectFileBtn.addEventListener('click', selectFile);
@@ -53,12 +54,19 @@ retryBtn.addEventListener('click', () => {
     }
 });
 
-// Pinhuman buton event listener
-if (pinhumanBtn) {
+
+// Pinhuman buton event listener (sadece bir kez tanımla)
+if (pinhumanBtn && !pinhumanBtn.hasAttribute('data-listener-added')) {
     pinhumanBtn.addEventListener('click', () => {
         showLogSection();
         sendDataToPinhuman();
+        // Durdur butonunu göster
+        const stopBtn = document.getElementById('stopProcessBtn');
+        if (stopBtn) {
+            stopBtn.style.display = 'inline-flex';
+        }
     });
+    pinhumanBtn.setAttribute('data-listener-added', 'true');
 }
 
 // Log kapatma buton event listener
@@ -124,29 +132,11 @@ async function sendDataToPinhuman() {
         pinhumanBtn.innerHTML = '<i data-lucide="loader-2" class="btn-icon loading-spin"></i> Gönderiliyor...';
         lucide.createIcons();
         
-        // Durdur butonunu oluştur ve yanına ekle
-        const stopBtn = document.createElement('button');
-        stopBtn.className = 'stop-btn';
-        stopBtn.innerHTML = '<i data-lucide="square"></i> Durdur';
-        stopBtn.onclick = stopPinhumanProcess;
-        
-        // Pinhuman butonunun yanına ekle
-        pinhumanBtn.parentNode.insertBefore(stopBtn, pinhumanBtn.nextSibling);
-        lucide.createIcons();
-        
         addLogEntry('info', 'Bağlantı bilgileri kontrol ediliyor...');
         
-        // Ayarları config.json'dan al
-        const config = await ipcRenderer.invoke('get-config');
-        const finalSettings = config?.pinhuman?.credentials;
-        
-        if (!finalSettings || !finalSettings.userName || !finalSettings.companyCode || !finalSettings.password || !finalSettings.totpSecret) {
-            addLogEntry('error', '❌ Ayarlar eksik! Lütfen config.json dosyasını kontrol edin.');
-            return;
-        }
-        
+        // Main process'e veri gönderme isteği gönder (handler config'i kendisi okuyacak)
         addLogEntry('info', 'Pinhuman sistemine bağlanılıyor...');
-        const result = await ipcRenderer.invoke('enter-data-pinhuman', finalSettings);
+        const result = await ipcRenderer.invoke('enter-data-pinhuman');
         
         if (result.success) {
             addLogEntry('success', '✅ ' + result.message);
@@ -158,72 +148,20 @@ async function sendDataToPinhuman() {
         console.error('Pinhuman gönderim hatası:', error);
         addLogEntry('error', '❌ Pinhuman\'a veri gönderilirken hata oluştu: ' + error.message);
     } finally {
-        // Durdur butonunu kaldır
-        const stopBtn = document.querySelector('.stop-btn');
-        if (stopBtn) {
-            stopBtn.remove();
-        }
-        
-        // Buton durumunu geri getir
-        pinhumanBtn.disabled = false;
-        pinhumanBtn.innerHTML = '<i data-lucide="upload" class="btn-icon"></i> Pinhuman\'a Gönder';
+        // Buton durumunu geri getir (pasif yap)
+        pinhumanBtn.disabled = true;
+        pinhumanBtn.classList.remove('btn-primary');
+        pinhumanBtn.classList.add('btn-secondary');
+        pinhumanBtn.innerHTML = '<i data-lucide="send" class="btn-icon"></i> Pinhuman\'a Gönder';
         lucide.createIcons();
+        
+        // Durdur butonunu gizle
+        const stopBtn = document.getElementById('stopProcessBtn');
+        if (stopBtn) {
+            stopBtn.style.display = 'none';
+        }
         
         addLogEntry('info', 'İşlem tamamlandı. Log alanını kapatmak için "Kapat" butonuna tıklayın.');
-    }
-}
-
-// Pinhuman işlemini durdurma fonksiyonu
-async function stopPinhumanProcess() {
-    try {
-        addLogEntry('warning', '⏹️ İşlem durduruluyor...');
-        
-        // Main process'e durdurma isteği gönder
-        await ipcRenderer.invoke('stop-pinhuman-process');
-        
-        // Durdur butonunu kaldır
-        const stopBtn = document.querySelector('.stop-btn');
-        if (stopBtn) {
-            stopBtn.remove();
-        }
-        
-        // Buton durumunu geri getir
-        pinhumanBtn.disabled = false;
-        pinhumanBtn.innerHTML = '<i data-lucide="upload" class="btn-icon"></i> Pinhuman\'a Gönder';
-        lucide.createIcons();
-        
-        addLogEntry('info', '✅ İşlem başarıyla durduruldu.');
-    } catch (error) {
-        console.error('Durdurma hatası:', error);
-        addLogEntry('error', '❌ İşlem durdurulurken hata oluştu: ' + error.message);
-    }
-}
-
-// Yardım maili açma fonksiyonu
-function openHelpMail() {
-    const subject = 'PDKS Sistemi - Hata Alıyorum';
-    const body = `Merhaba,
-
-PDKS sistemi ile ilgili bir sorun yaşıyorum. Lütfen yardımcı olabilir misiniz?
-
-Detaylar:
-- Hata mesajı: 
-- Tarih: ${new Date().toLocaleDateString('tr-TR')}
-- Saat: ${new Date().toLocaleTimeString('tr-TR')}
-
-Teşekkürler.`;
-    
-    const mailtoLink = `mailto:furkan.ozmen@guleryuzgroup.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    
-    // Outlook Classic'i açmak için özel protokol kullan
-    const outlookLink = `outlook:${mailtoLink}`;
-    
-    try {
-        // Önce outlook protokolünü dene
-        window.open(outlookLink, '_blank');
-    } catch (error) {
-        // Outlook protokolü çalışmazsa normal mailto kullan
-        window.open(mailtoLink, '_blank');
     }
 }
 
@@ -302,9 +240,13 @@ function switchPage(pageId) {
         loadVardiyaAnalizi();
     }
     
-    // Geçmiş sayfasına geçildiğinde geçmişi güncelle
+    // Geçmiş sayfasına geçildiğinde geçmişi güncelle ve otomatik yenilemeyi başlat
     if (pageId === 'gecmis') {
         updateHistoryList();
+        startHistoryAutoRefresh();
+    } else {
+        // Diğer sayfalara geçildiğinde otomatik yenilemeyi durdur
+        stopHistoryAutoRefresh();
     }
     
     // Ayarlar sayfasına geçildiğinde ayarları yükle
@@ -321,6 +263,13 @@ async function selectFile() {
             selectedFilePath = filePath;
             showSelectedFile(filePath);
             showProcessSection();
+            
+            // Yeni dosya seçildiğinde Pinhuman butonunu pasif yap
+            if (pinhumanBtn) {
+                pinhumanBtn.disabled = true;
+                pinhumanBtn.classList.remove('btn-primary');
+                pinhumanBtn.classList.add('btn-secondary');
+            }
         }
     } catch (error) {
         showError('Dosya seçilirken hata oluştu: ' + error.message);
@@ -503,10 +452,16 @@ function showResults(data) {
     
     // Sidebar istatistiklerini güncelle (artık sidebar'da istatistik yok)
     
-    // Dosya linklerini ayarla
     
     // Veriyi yükle ve sidebar'ı güncelle
     loadDataToSidebar(data);
+    
+    // Pinhuman butonunu aktif hale getir (analiz tamamlandı)
+    if (pinhumanBtn) {
+        pinhumanBtn.disabled = false;
+        pinhumanBtn.classList.remove('btn-secondary');
+        pinhumanBtn.classList.add('btn-primary');
+    }
     
     resultsSection.style.display = 'block';
     resultsSection.classList.add('fade-in');
@@ -518,6 +473,13 @@ function showError(message) {
     errorMessage.textContent = message;
     errorSection.style.display = 'block';
     errorSection.classList.add('fade-in');
+    
+    // Hata durumunda Pinhuman butonunu pasif yap
+    if (pinhumanBtn) {
+        pinhumanBtn.disabled = true;
+        pinhumanBtn.classList.remove('btn-primary');
+        pinhumanBtn.classList.add('btn-secondary');
+    }
 }
 
 // Hata gizle
@@ -953,64 +915,22 @@ function formatMinutesToTime(totalMinutes) {
     return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
 }
 
-// Veri geçmişini yükle
-function loadDataHistory() {
-    try {
-        const historyData = localStorage.getItem('pdks_data_history');
-        if (historyData) {
-            dataHistory = JSON.parse(historyData);
-        }
-    } catch (error) {
-        console.error('Veri geçmişi yüklenirken hata:', error);
-        dataHistory = [];
-    }
-}
 
-// Veri geçmişini kaydet
-function saveDataHistory() {
-    try {
-        localStorage.setItem('pdks_data_history', JSON.stringify(dataHistory));
-    } catch (error) {
-        console.error('Veri geçmişi kaydedilirken hata:', error);
-    }
-}
 
-// Veri geçmişine ekle
-function addToHistory(data, filename) {
-    const historyItem = {
-        id: Date.now(),
-        filename: filename,
-        date: new Date().toISOString(),
-        stats: {
-            toplam_kayit: data.toplam_kayit,
-            personel_sayisi: data.personel_sayisi,
-            hata_sayisi: data.hata_sayisi
-        },
-        data: data
-    };
-    
-    // Aynı dosya adı varsa güncelle, yoksa ekle
-    const existingIndex = dataHistory.findIndex(item => item.filename === filename);
-    if (existingIndex >= 0) {
-        dataHistory[existingIndex] = historyItem;
-    } else {
-        dataHistory.unshift(historyItem);
-    }
-    
-    // Son 50 kaydı tut
-    if (dataHistory.length > 50) {
-        dataHistory = dataHistory.slice(0, 50);
-    }
-    
-    saveDataHistory();
-}
 
-// Geçmiş listesini güncelle
-function updateHistoryList() {
+// Geçmiş listesini güncelle (KALDIRILDI)
+function updateHistoryList(dataToShow = null) {
     const historyTableBody = document.getElementById('historyTableBody');
-    if (!historyTableBody) return;
+    if (!historyTableBody) {
+        console.error('❌ TABLO BULUNAMADI!');
+        return;
+    }
     
-    if (dataHistory.length === 0) {
+    const data = dataToShow || dataHistory;
+    console.log('🔄 TABLO GÜNCELLENİYOR:', data.length, 'kayıt');
+    
+    if (data.length === 0) {
+        console.log('📭 VERİ YOK');
         historyTableBody.innerHTML = `
             <tr>
                 <td colspan="6" style="text-align: center; padding: 40px; color: #7f8c8d;">
@@ -1022,62 +942,263 @@ function updateHistoryList() {
         return;
     }
     
-    historyTableBody.innerHTML = dataHistory.map(item => `
-        <tr>
-            <td class="history-filename">${item.filename}</td>
-            <td><span class="history-date">${formatDate(item.date)}</span></td>
-            <td class="history-stat">${item.stats.toplam_kayit}</td>
-            <td class="history-stat">${item.stats.personel_sayisi}</td>
-            <td class="history-stat">${item.stats.hata_sayisi}</td>
-            <td class="history-actions">
-                <button class="history-action-btn" onclick="loadHistoryData('${item.id}')" title="Veriyi Yükle">
-                    <i data-lucide="upload"></i>
-                    Yükle
-                </button>
-                <button class="history-action-btn delete" onclick="deleteHistoryItem('${item.id}')" title="Kaydı Sil">
-                    <i data-lucide="trash-2"></i>
-                    Sil
-                </button>
-            </td>
-        </tr>
-    `).join('');
+    historyTableBody.innerHTML = data.map(item => {
+        // Yeni format için veri yapısını kontrol et
+        if (item.sicilNo !== undefined) {
+            // Yeni real-time format (Pinhuman'dan gelen veriler)
+            const statusClass = item.status === 'success' ? 'success' : 'error';
+            const statusIcon = item.status === 'success' ? '✓' : '✗';
+            const tarih = item.date ? new Date(item.date).toLocaleDateString('tr-TR') : '-';
+            
+            return `
+            <tr class="history-row ${statusClass}">
+                <td class="history-stat">${item.sicilNo}</td>
+                <td class="history-filename">${item.personel}</td>
+                <td class="history-stat">${tarih}</td>
+                <td class="history-stat">${item.time}</td>
+                <td class="history-stat">${item.type}</td>
+                <td class="history-stat">${item.vardiya} <span class="status-indicator">${statusIcon}</span></td>
+            </tr>
+            `;
+        } else {
+            // Eski format (geriye uyumluluk - dosya işleme geçmişi)
+            const firstPerson = item.data && item.data.length > 0 ? item.data[0] : null;
+            
+            return `
+            <tr class="history-row">
+                <td class="history-stat">${firstPerson ? firstPerson.sicil_no : '-'}</td>
+                <td class="history-filename">${item.filename || '-'}</td>
+                <td class="history-stat">${item.date ? new Date(item.date).toLocaleDateString('tr-TR') : '-'}</td>
+                <td class="history-stat">-</td>
+                <td class="history-stat">Dosya İşleme</td>
+                <td class="history-stat">${item.stats ? `${item.stats.toplam_kayit} kayıt` : '-'}</td>
+            </tr>
+            `;
+        }
+    }).join('');
     
     lucide.createIcons();
 }
 
-// Geçmiş verisini yükle
-function loadHistoryData(historyId) {
-    const historyItem = dataHistory.find(item => item.id == historyId);
-    if (historyItem) {
-        currentData = historyItem.data.kayitlar || [];
-        filteredData = [...currentData];
-        
-        // Personel sayfasına geç ve verileri göster
-        switchPage('personel');
-        updateDataList();
-        updateSicilFilter();
-        updatePersonelFilter();
-    }
-}
-
 // Geçmişi temizle
-function clearHistory() {
+async function clearHistory() {
     if (confirm('Tüm veri geçmişini silmek istediğinizden emin misiniz?')) {
         dataHistory = [];
-        saveDataHistory();
+        await saveDataHistory();
         updateHistoryList();
     }
 }
 
-// Tek kayıt sil
-function deleteHistoryItem(historyId) {
-    const historyItem = dataHistory.find(item => item.id == historyId);
-    if (historyItem && confirm(`"${historyItem.filename}" kaydını silmek istediğinizden emin misiniz?`)) {
-        dataHistory = dataHistory.filter(item => item.id != historyId);
-        saveDataHistory();
+// Veri geçmişini yenile
+async function refreshHistory() {
+    try {
+        console.log('📊 Veri geçmişi yenileniyor...');
+        
+        // localStorage'dan veri geçmişini yeniden yükle
+        await loadDataHistory();
+        
+        // Tabloyu güncelle
         updateHistoryList();
+        
+        console.log('📊 Veri geçmişi başarıyla yenilendi:', dataHistory.length, 'kayıt');
+        
+        // Kullanıcıya bilgi ver
+        const refreshBtn = document.querySelector('button[onclick="refreshHistory()"]');
+        if (refreshBtn) {
+            const originalText = refreshBtn.innerHTML;
+            refreshBtn.innerHTML = '<i data-lucide="check"></i> Yenilendi!';
+            refreshBtn.classList.add('btn-success');
+            refreshBtn.classList.remove('btn-secondary');
+            
+            // 2 saniye sonra eski haline döndür
+            setTimeout(() => {
+                refreshBtn.innerHTML = originalText;
+                refreshBtn.classList.remove('btn-success');
+                refreshBtn.classList.add('btn-secondary');
+                lucide.createIcons();
+            }, 2000);
+        }
+        
+    } catch (error) {
+        console.error('Veri geçmişi yenilenirken hata:', error);
+        alert('Veri geçmişi yenilenirken hata oluştu: ' + error.message);
     }
 }
+
+// Test verisi ekle (geliştirme için)
+async function addTestHistoryData() {
+    const testData = {
+        id: Date.now(),
+        date: new Date().toISOString().split('T')[0],
+        time: '08:30',
+        type: 'Giriş',
+        personel: 'Test Personel',
+        sicilNo: 'TEST001',
+        vardiya: 'V1 (Gündüz)',
+        status: 'success',
+        timestamp: new Date().toISOString(),
+        girisSaati: '08:30',
+        cikisSaati: '-'
+    };
+    
+    dataHistory.unshift(testData);
+    await saveDataHistory();
+    updateHistoryList();
+    console.log('📊 Test verisi eklendi');
+}
+
+// Pinhuman veri girişi simülasyonu (test için)
+async function simulatePinhumanDataEntry() {
+    console.log('📊 Test verisi ekleniyor...');
+    console.log('📊 Mevcut dataHistory uzunluğu:', dataHistory.length);
+    
+    const testEntries = [
+        {
+            id: Date.now() + 1,
+            date: new Date().toISOString().split('T')[0],
+            time: '08:30',
+            type: 'Giriş',
+            personel: 'Ahmet Yılmaz',
+            sicilNo: '12345',
+            vardiya: 'V1 (Gündüz)',
+            status: 'success',
+            timestamp: new Date().toISOString(),
+            girisSaati: '08:30',
+            cikisSaati: '-'
+        },
+        {
+            id: Date.now() + 2,
+            date: new Date().toISOString().split('T')[0],
+            time: '16:30',
+            type: 'Çıkış',
+            personel: 'Ahmet Yılmaz',
+            sicilNo: '12345',
+            vardiya: 'V1 (Gündüz)',
+            status: 'success',
+            timestamp: new Date().toISOString(),
+            girisSaati: '-',
+            cikisSaati: '16:30'
+        },
+        {
+            id: Date.now() + 3,
+            date: new Date().toISOString().split('T')[0],
+            time: '16:30',
+            type: 'Giriş',
+            personel: 'Mehmet Demir',
+            sicilNo: '67890',
+            vardiya: 'V2 (Gece)',
+            status: 'success',
+            timestamp: new Date().toISOString(),
+            girisSaati: '16:30',
+            cikisSaati: '-'
+        }
+    ];
+    
+    console.log('📊 Test verileri:', testEntries);
+    
+    // Her veriyi ayrı ayrı ekle (gerçek zamanlı simülasyon)
+    testEntries.forEach((entry, index) => {
+        setTimeout(async () => {
+            console.log(`📊 Veri ${index + 1} ekleniyor:`, entry);
+            
+            // Yeni entry'yi dataHistory'ye ekle
+            dataHistory.unshift(entry);
+            
+            // Veri geçmişini localStorage'a kaydet
+            await saveDataHistory();
+            
+            // Tabloyu güncelle
+            updateHistoryList();
+            
+            console.log(`📊 Veri ${index + 1} başarıyla eklendi`);
+        }, index * 1000); // Her veri arasında 1 saniye bekle
+    });
+    
+    console.log('📊 Pinhuman test verileri ekleniyor (3 saniye sürecek)...');
+}
+
+// Main process'ten veri gönderme simülasyonu (gerçek zamanlı test)
+function simulateMainProcessData() {
+    console.log('📊 Main process simülasyonu başlatılıyor...');
+    
+    const testEntries = [
+        {
+            id: Date.now() + 1,
+            date: new Date().toISOString().split('T')[0],
+            time: '08:30',
+            type: 'Giriş',
+            personel: 'Ali Veli',
+            sicilNo: '11111',
+            vardiya: 'V1 (Gündüz)',
+            status: 'success',
+            timestamp: new Date().toISOString(),
+            girisSaati: '08:30',
+            cikisSaati: '-'
+        },
+        {
+            id: Date.now() + 2,
+            date: new Date().toISOString().split('T')[0],
+            time: '16:30',
+            type: 'Çıkış',
+            personel: 'Ali Veli',
+            sicilNo: '11111',
+            vardiya: 'V1 (Gündüz)',
+            status: 'success',
+            timestamp: new Date().toISOString(),
+            girisSaati: '-',
+            cikisSaati: '16:30'
+        }
+    ];
+    
+    // Her veriyi ayrı ayrı gönder (main process'ten geliyormuş gibi)
+    testEntries.forEach((entry, index) => {
+        setTimeout(async () => {
+            console.log(`📊 Main process'ten veri ${index + 1} geliyor:`, entry);
+            
+            // Doğrudan history-update event listener'ını çağır
+            // Bu, main process'ten gelen veriyi simüle eder
+            const mockEvent = { type: 'history-update' };
+            const mockEntryData = entry;
+            
+            // ipcRenderer.on('history-update') listener'ını manuel çağır
+            console.log('📊 history-update event listener çağrılıyor...');
+            
+            // Event listener'ı manuel tetikle
+            if (typeof window !== 'undefined' && window.ipcRenderer) {
+                // Gerçek ipcRenderer event'ini simüle et
+                window.ipcRenderer.emit('history-update', mockEvent, mockEntryData);
+            } else {
+                // Fallback: Doğrudan fonksiyonu çağır
+                console.log('📊 ipcRenderer yok, doğrudan fonksiyon çağrılıyor...');
+                
+                // Yeni entry'yi dataHistory'ye ekle
+                dataHistory.unshift(mockEntryData);
+                
+                // Son 100 kaydı tut
+                if (dataHistory.length > 100) {
+                    dataHistory = dataHistory.slice(0, 100);
+                }
+                
+                // Veri geçmişini localStorage'a kaydet
+                await saveDataHistory();
+                
+                // Eğer geçmiş sayfasındaysak tabloyu güncelle
+                const currentPage = document.querySelector('.page.active');
+                if (currentPage && currentPage.id === 'gecmis-page') {
+                    console.log('📊 Geçmiş sayfasında, tablo güncelleniyor...');
+                    updateHistoryList();
+                } else {
+                    console.log('📊 Geçmiş sayfasında değil, sadece veri kaydedildi');
+                }
+            }
+            
+        }, index * 1500); // Her veri arasında 1.5 saniye bekle
+    });
+    
+    console.log('📊 Main process simülasyonu başlatıldı (3 saniye sürecek)...');
+}
+
+
 
 // Rapor oluştur
 async function generateReport(reportType) {
@@ -1173,16 +1294,27 @@ function openOutputFolder() {
 }
 
 // Ayarlar sayfası fonksiyonları
-async function loadSettings() {
+function loadSettings() {
     try {
-        // Config.json'dan ayarları al
-        const config = await ipcRenderer.invoke('get-config');
-        const settings = config?.pinhuman?.credentials || {};
+        const settings = JSON.parse(localStorage.getItem('pinhuman_settings') || '{}');
         
-        document.getElementById('userName').value = settings.userName || '';
-        document.getElementById('companyCode').value = settings.companyCode || '';
-        document.getElementById('password').value = settings.password || '';
-        document.getElementById('totpSecret').value = settings.totpSecret || '';
+        // Varsayılan değerler
+        const defaultSettings = {
+            userName: 'furkan.ozmen@guleryuzgroup.com',
+            companyCode: 'ikb',
+            password: 'Kralben123.',
+            totpSecret: 'GQ2DCZBYGRRGILLGMI4TELJUMMYGCLJZGU4TILJQHBRDSNDBMJRTQNTBMNXVGZLDOJSXI4DJNZUHK3LBNZNG42LLMI',
+            headlessMode: 'false'
+        };
+        
+        // Ayarları birleştir (varsayılan değerler + kaydedilmiş ayarlar)
+        const finalSettings = { ...defaultSettings, ...settings };
+        
+        document.getElementById('userName').value = finalSettings.userName;
+        document.getElementById('companyCode').value = finalSettings.companyCode;
+        document.getElementById('password').value = finalSettings.password;
+        document.getElementById('totpSecret').value = finalSettings.totpSecret;
+        document.getElementById('headlessMode').value = finalSettings.headlessMode;
         
         // Yuvarlanma kurallarını yükle
         loadYuvarlanmaKurallari();
@@ -1208,21 +1340,18 @@ function loadYuvarlanmaKurallari() {
     }
 }
 
-async function saveSettings() {
+function saveSettings() {
     const settings = {
         userName: document.getElementById('userName').value,
         companyCode: document.getElementById('companyCode').value,
         password: document.getElementById('password').value,
-        totpSecret: document.getElementById('totpSecret').value
+        totpSecret: document.getElementById('totpSecret').value,
+        headlessMode: document.getElementById('headlessMode').value
     };
     
     try {
-        const result = await ipcRenderer.invoke('update-config', settings);
-        if (result.success) {
-            alert('Ayarlar başarıyla kaydedildi!');
-        } else {
-            alert('Ayarlar kaydedilirken hata oluştu: ' + result.message);
-        }
+        localStorage.setItem('pinhuman_settings', JSON.stringify(settings));
+        alert('Ayarlar başarıyla kaydedildi!');
     } catch (error) {
         console.error('Ayarlar kaydedilirken hata:', error);
         alert('Ayarlar kaydedilirken hata oluştu!');
@@ -1287,16 +1416,26 @@ function togglePasswordVisibility() {
 
 async function enterDataToPinhuman() {
     try {
-        // Ayarları config.json'dan al
-        const config = await ipcRenderer.invoke('get-config');
-        const finalSettings = config?.pinhuman?.credentials;
+        // Ayarları localStorage'dan al
+        const settings = JSON.parse(localStorage.getItem('pinhuman_settings') || '{}');
         
-        if (!finalSettings || !finalSettings.userName || !finalSettings.companyCode || !finalSettings.password || !finalSettings.totpSecret) {
-            alert('Lütfen config.json dosyasını kontrol edin!');
-            return;
-        }
+        // Varsayılan değerler
+        const defaultSettings = {
+            userName: 'furkan.ozmen@guleryuzgroup.com',
+            companyCode: 'ikb',
+            password: 'Kralben123.',
+            totpSecret: 'GQ2DCZBYGRRGILLGMI4TELJUMMYGCLJZGU4TILJQHBRDSNDBMJRTQNTBMNXVGZLDOJSXI4DJNZUHK3LBNZNG42LLMI'
+        };
+        
+        // Ayarları birleştir
+        const finalSettings = { ...defaultSettings, ...settings };
         
         const { userName, companyCode, password, totpSecret } = finalSettings;
+        
+        if (!userName || !companyCode || !password || !totpSecret) {
+            alert('Lütfen ayarlar sayfasından giriş bilgilerini kontrol edin!');
+            return;
+        }
         
         // Loading overlay göster
         showLoadingOverlay();
@@ -1327,16 +1466,26 @@ async function enterDataToPinhuman() {
 // Excel verilerini Pinhuman'a gir - dinamik personel eşleştirmesi ile
 async function enterExcelDataToPinhuman() {
     try {
-        // Ayarları config.json'dan al
-        const config = await ipcRenderer.invoke('get-config');
-        const finalSettings = config?.pinhuman?.credentials;
+        // Ayarları localStorage'dan al
+        const settings = JSON.parse(localStorage.getItem('pinhuman_settings') || '{}');
         
-        if (!finalSettings || !finalSettings.userName || !finalSettings.companyCode || !finalSettings.password || !finalSettings.totpSecret) {
-            alert('Lütfen config.json dosyasını kontrol edin!');
-            return;
-        }
+        // Varsayılan değerler
+        const defaultSettings = {
+            userName: 'furkan.ozmen@guleryuzgroup.com',
+            companyCode: 'ikb',
+            password: 'Kralben123.',
+            totpSecret: 'GQ2DCZBYGRRGILLGMI4TELJUMMYGCLJZGU4TILJQHBRDSNDBMJRTQNTBMNXVGZLDOJSXI4DJNZUHK3LBNZNG42LLMI'
+        };
+        
+        // Ayarları birleştir
+        const finalSettings = { ...defaultSettings, ...settings };
         
         const { userName, companyCode, password, totpSecret } = finalSettings;
+        
+        if (!userName || !companyCode || !password || !totpSecret) {
+            alert('Lütfen ayarlar sayfasından giriş bilgilerini kontrol edin!');
+            return;
+        }
         
         // Loading overlay göster
         showLoadingOverlay();
@@ -1666,13 +1815,66 @@ ipcRenderer.on('log-message', (event, logData) => {
     }
 });
 
+// IPC history update dinleyicisi
+ipcRenderer.on('history-update', async (event, entryData) => {
+    console.log('✅ VERİ GELDİ:', entryData.personel, entryData.sicilNo, entryData.time);
+    
+    // Yeni entry'yi dataHistory'ye ekle
+    dataHistory.unshift(entryData);
+    
+    // Son 100 kaydı tut
+    if (dataHistory.length > 100) {
+        dataHistory = dataHistory.slice(0, 100);
+    }
+    
+    // Veri geçmişini localStorage'a kaydet
+    await saveDataHistory();
+    
+    // Eğer geçmiş sayfasındaysak tabloyu güncelle
+    const currentPage = document.querySelector('.page.active');
+    if (currentPage && currentPage.id === 'gecmis-page') {
+        console.log('🔄 TABLO GÜNCELLENİYOR...');
+        updateHistoryList();
+    } else {
+        console.log('💾 SADECE KAYDEDİLDİ (sayfa değil)');
+    }
+});
+
+console.log('🎯 EVENT LISTENER HAZIR');
+
+// Dinamik tablo yenileme fonksiyonları
+function startHistoryAutoRefresh() {
+    // Eğer zaten çalışıyorsa durdur
+    if (historyUpdateInterval) {
+        clearInterval(historyUpdateInterval);
+    }
+    
+    // 1 saniyede bir tabloyu yenile
+    historyUpdateInterval = setInterval(() => {
+        const currentPage = document.querySelector('.page.active');
+        if (currentPage && currentPage.id === 'gecmis-page') {
+            updateHistoryList();
+        }
+    }, 1000);
+    
+    console.log('📊 Veri geçmişi otomatik yenileme başlatıldı (1 saniye)');
+}
+
+function stopHistoryAutoRefresh() {
+    if (historyUpdateInterval) {
+        clearInterval(historyUpdateInterval);
+        historyUpdateInterval = null;
+        console.log('📊 Veri geçmişi otomatik yenileme durduruldu');
+    }
+}
+
 // Sayfa yüklendiğinde
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // Lucide iconları başlat
     lucide.createIcons();
     
     // Veri geçmişini yükle
-    loadDataHistory();
+    await loadDataHistory();
     
     // Ayarları yükle
     loadSettings();
@@ -1680,10 +1882,22 @@ document.addEventListener('DOMContentLoaded', () => {
     // Başlangıç durumunu ayarla
     hideAllSections();
     
-    // Ana ayarlar formu
-    const mainSettingsForm = document.getElementById('mainSettingsForm');
-    if (mainSettingsForm) {
-        mainSettingsForm.addEventListener('submit', (e) => {
+    // Pinhuman butonunu başlangıçta pasif yap
+    if (pinhumanBtn) {
+        pinhumanBtn.disabled = true;
+        pinhumanBtn.classList.remove('btn-primary');
+        pinhumanBtn.classList.add('btn-secondary');
+    }
+    
+    // Uygulama kapatılırken interval'ı temizle
+    window.addEventListener('beforeunload', () => {
+        stopHistoryAutoRefresh();
+    });
+    
+    // Ayarlar form event listener'ları
+    const pinhumanForm = document.getElementById('pinhumanForm');
+    if (pinhumanForm) {
+        pinhumanForm.addEventListener('submit', (e) => {
             e.preventDefault();
             saveSettings();
         });
@@ -1698,11 +1912,25 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
     
-    
-    const enterDataMainBtn = document.getElementById('enterDataMainBtn');
-    if (enterDataMainBtn) {
-        enterDataMainBtn.addEventListener('click', enterExcelDataToPinhuman);
+    // Güvenlik formu
+    const securityForm = document.getElementById('securityForm');
+    if (securityForm) {
+        securityForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            saveSettings();
+        });
     }
+    
+    // Otomasyon formu
+    const automationForm = document.getElementById('automationForm');
+    if (automationForm) {
+        automationForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            saveSettings();
+        });
+    }
+    
+    
     
     
     // Şifre göster/gizle toggle
@@ -1762,7 +1990,7 @@ document.addEventListener('keydown', (e) => {
 });
 
 // Dark Mode Toggle
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     const darkModeToggle = document.getElementById('darkModeToggle');
     
     // Kaydedilen tema tercihini yükle
@@ -1776,4 +2004,186 @@ document.addEventListener('DOMContentLoaded', () => {
         document.documentElement.setAttribute('data-theme', theme);
         localStorage.setItem('theme', theme);
     });
+    
+    // Veri geçmişini yükle
+    await loadDataHistory();
+    
+    // History filtreleri event listeners
+    setupHistoryFilters();
+    
+    // History sorting event listeners
+    setupHistorySorting();
+    
+    // Footer butonları event listeners
+    setupFooterButtons();
 });
+
+// Veri geçmişini localStorage'dan yükle
+async function loadDataHistory() {
+    try {
+        console.log('📊 Veri geçmişi yükleniyor...');
+        const historyData = localStorage.getItem('pdks_data_history');
+        if (historyData) {
+            dataHistory = JSON.parse(historyData);
+            console.log('📊 Veri geçmişi yüklendi:', dataHistory.length, 'kayıt');
+            console.log('📊 Yüklenen veri:', dataHistory);
+            updateHistoryList();
+        } else {
+            console.log('📊 Henüz veri geçmişi yok');
+            dataHistory = [];
+        }
+    } catch (error) {
+        console.error('Veri geçmişi yüklenirken hata:', error);
+        dataHistory = [];
+    }
+}
+
+// History filtreleri setup
+function setupHistoryFilters() {
+    const filterSicilNo = document.getElementById('filterSicilNo');
+    const filterAdSoyad = document.getElementById('filterAdSoyad');
+    const filterVardiya = document.getElementById('filterVardiya');
+    const clearFilters = document.getElementById('clearHistoryFilters');
+    
+    if (filterSicilNo) {
+        filterSicilNo.addEventListener('input', applyHistoryFilters);
+    }
+    if (filterAdSoyad) {
+        filterAdSoyad.addEventListener('input', applyHistoryFilters);
+    }
+    if (filterVardiya) {
+        filterVardiya.addEventListener('change', applyHistoryFilters);
+    }
+    if (clearFilters) {
+        clearFilters.addEventListener('click', clearHistoryFilters);
+    }
+}
+
+// History sorting setup
+function setupHistorySorting() {
+    const sortableHeaders = document.querySelectorAll('.history-table th.sortable');
+    sortableHeaders.forEach(header => {
+        header.addEventListener('click', () => {
+            const column = header.getAttribute('data-column');
+            sortHistoryTable(column);
+        });
+    });
+}
+
+// Footer butonları setup
+function setupFooterButtons() {
+    const stopProcessBtn = document.getElementById('stopProcessBtn');
+    
+    if (stopProcessBtn) {
+        stopProcessBtn.addEventListener('click', stopAllProcesses);
+        // Başlangıçta gizle
+        stopProcessBtn.style.display = 'none';
+    }
+}
+
+// History filtreleri uygula
+function applyHistoryFilters() {
+    const filterSicilNo = document.getElementById('filterSicilNo')?.value.toLowerCase() || '';
+    const filterAdSoyad = document.getElementById('filterAdSoyad')?.value.toLowerCase() || '';
+    const filterVardiya = document.getElementById('filterVardiya')?.value || '';
+    
+    const filteredData = dataHistory.filter(item => {
+        const firstPerson = item.data && item.data.length > 0 ? item.data[0] : null;
+        if (!firstPerson) return false;
+        
+        const sicilMatch = !filterSicilNo || (firstPerson.sicil_no && firstPerson.sicil_no.toLowerCase().includes(filterSicilNo));
+        const adSoyadMatch = !filterAdSoyad || (firstPerson.personel && firstPerson.personel.toLowerCase().includes(filterAdSoyad));
+        const vardiyaMatch = !filterVardiya || firstPerson.vardiya === filterVardiya;
+        
+        return sicilMatch && adSoyadMatch && vardiyaMatch;
+    });
+    
+    updateHistoryList(filteredData);
+}
+
+// History filtreleri temizle
+function clearHistoryFilters() {
+    document.getElementById('filterSicilNo').value = '';
+    document.getElementById('filterAdSoyad').value = '';
+    document.getElementById('filterVardiya').value = '';
+    updateHistoryList();
+}
+
+// History tablosu sıralama
+let currentSortColumn = null;
+let currentSortDirection = 'asc';
+
+function sortHistoryTable(column) {
+    if (currentSortColumn === column) {
+        currentSortDirection = currentSortDirection === 'asc' ? 'desc' : 'asc';
+    } else {
+        currentSortColumn = column;
+        currentSortDirection = 'asc';
+    }
+    
+    // Sort icon'ları güncelle
+    document.querySelectorAll('.history-table th.sortable').forEach(th => {
+        th.classList.remove('active', 'asc', 'desc');
+    });
+    
+    const activeHeader = document.querySelector(`.history-table th[data-column="${column}"]`);
+    if (activeHeader) {
+        activeHeader.classList.add('active', currentSortDirection);
+    }
+    
+    // Veriyi sırala
+    const sortedData = [...dataHistory].sort((a, b) => {
+        const firstPersonA = a.data && a.data.length > 0 ? a.data[0] : null;
+        const firstPersonB = b.data && b.data.length > 0 ? b.data[0] : null;
+        
+        if (!firstPersonA || !firstPersonB) return 0;
+        
+        let valueA = firstPersonA[column] || '';
+        let valueB = firstPersonB[column] || '';
+        
+        if (column === 'sicil_no') {
+            valueA = parseInt(valueA) || 0;
+            valueB = parseInt(valueB) || 0;
+        } else {
+            valueA = valueA.toString().toLowerCase();
+            valueB = valueB.toString().toLowerCase();
+        }
+        
+        if (currentSortDirection === 'asc') {
+            return valueA > valueB ? 1 : -1;
+        } else {
+            return valueA < valueB ? 1 : -1;
+        }
+    });
+    
+    updateHistoryList(sortedData);
+}
+
+// Tüm işlemleri durdur
+function stopAllProcesses() {
+    try {
+        // Playwright işlemlerini durdur
+        ipcRenderer.send('stop-processes');
+        
+        // UI'yi güncelle
+        const stopBtn = document.getElementById('stopProcessBtn');
+        const pinhumanBtn = document.getElementById('pinhumanBtn');
+        
+        if (stopBtn) stopBtn.style.display = 'none';
+        if (pinhumanBtn) {
+            pinhumanBtn.disabled = true;
+            pinhumanBtn.classList.remove('btn-primary');
+            pinhumanBtn.classList.add('btn-secondary');
+            pinhumanBtn.innerHTML = '<i data-lucide="send" class="btn-icon"></i> Pinhuman\'a Gönder';
+            lucide.createIcons();
+        }
+        
+        // Log mesajı ekle
+        addLogEntry('warning', '⚠️ İşlem kullanıcı tarafından durduruldu');
+        
+        console.log('Tüm işlemler durduruldu');
+    } catch (error) {
+        console.error('İşlemler durdurulurken hata:', error);
+        addLogEntry('error', '❌ İşlemler durdurulurken hata oluştu: ' + error.message);
+    }
+}

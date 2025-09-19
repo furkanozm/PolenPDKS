@@ -1,29 +1,11 @@
 {
-  "islem_tarihi": "2025-09-17T20:18:32.684Z",
-  "dosya_yolu": "C:\\Users\\BERKAN\\Desktop\\PolenPDKS\\PDKS DENEME-2.xlsx",
-  "toplam_kayit": 332,
+  "islem_tarihi": "2025-09-19T08:29:56.413Z",
+  "dosya_yolu": "/Users/furkanozm/Downloads/PolenPDKS/PDKS DENEME-2.xlsx",
+  "toplam_kayit": 331,
   "hata_sayisi": 0,
   "veriler": [
     {
-      "personel": "ABDULLAH BİNİCİ",
-      "tarih": "2025-09-01",
-      "ic_dis": "10:05",
-      "vardiya": {
-        "kod": "V1",
-        "plan_bas": "08:30",
-        "plan_bit": "16:30"
-      },
-      "gercek": {
-        "gir": "08:28",
-        "cik": "18:33"
-      },
-      "calisma_dk": 575,
-      "fm_dk": 103,
-      "fm_hhmm": "01:43",
-      "durum": "ok",
-      "not": ""
-    },
-    {
+      "sicilNo": "1001",
       "personel": "ABDULLAH BİNİCİ",
       "tarih": "2025-09-02",
       "ic_dis": "10:12",
@@ -43,6 +25,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1001",
       "personel": "ABDULLAH BİNİCİ",
       "tarih": "2025-09-03",
       "ic_dis": "10:19",
@@ -62,6 +45,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1001",
       "personel": "ABDULLAH BİNİCİ",
       "tarih": "2025-09-04",
       "ic_dis": "10:12",
@@ -81,6 +65,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1001",
       "personel": "ABDULLAH BİNİCİ",
       "tarih": "2025-09-05",
       "ic_dis": "",
@@ -96,6 +81,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1001",
       "personel": "ABDULLAH BİNİCİ",
       "tarih": "2025-09-08",
       "ic_dis": "10:07",
@@ -115,6 +101,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1001",
       "personel": "ABDULLAH BİNİCİ",
       "tarih": "2025-09-09",
       "ic_dis": "10:14",
@@ -134,6 +121,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1001",
       "personel": "ABDULLAH BİNİCİ",
       "tarih": "2025-09-10",
       "ic_dis": "10:05",
@@ -153,6 +141,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1001",
       "personel": "ABDULLAH BİNİCİ",
       "tarih": "2025-09-11",
       "ic_dis": "10:11",
@@ -172,6 +161,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1001",
       "personel": "ABDULLAH BİNİCİ",
       "tarih": "2025-09-12",
       "ic_dis": "10:15",
@@ -191,6 +181,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1001",
       "personel": "ABDULLAH BİNİCİ",
       "tarih": "2025-09-15",
       "ic_dis": "10:12",
@@ -210,6 +201,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1001",
       "personel": "ABDULLAH BİNİCİ",
       "tarih": "2025-09-16",
       "ic_dis": "10:05",
@@ -229,6 +221,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1001",
       "personel": "ABDULLAH BİNİCİ",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -244,6 +237,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-01",
       "ic_dis": "10:07",
@@ -263,6 +257,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-02",
       "ic_dis": "10:07",
@@ -282,6 +277,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-03",
       "ic_dis": "10:10",
@@ -301,6 +297,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-04",
       "ic_dis": "10:06",
@@ -320,6 +317,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-05",
       "ic_dis": "10:04",
@@ -339,6 +337,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-08",
       "ic_dis": "10:06",
@@ -358,6 +357,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-09",
       "ic_dis": "10:10",
@@ -377,6 +377,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-10",
       "ic_dis": "10:06",
@@ -396,6 +397,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-11",
       "ic_dis": "10:07",
@@ -415,6 +417,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-12",
       "ic_dis": "10:07",
@@ -434,6 +437,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-15",
       "ic_dis": "10:08",
@@ -453,6 +457,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-16",
       "ic_dis": "10:03",
@@ -472,6 +477,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1004",
       "personel": "AYSUN SARIIŞIK",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -487,6 +493,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1005",
       "personel": "AYTÜL ILIKSU",
       "tarih": "2025-09-01",
       "ic_dis": "10:10",
@@ -506,6 +513,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1005",
       "personel": "AYTÜL ILIKSU",
       "tarih": "2025-09-02",
       "ic_dis": "10:17",
@@ -525,6 +533,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1005",
       "personel": "AYTÜL ILIKSU",
       "tarih": "2025-09-03",
       "ic_dis": "10:22",
@@ -544,6 +553,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1005",
       "personel": "AYTÜL ILIKSU",
       "tarih": "2025-09-04",
       "ic_dis": "10:14",
@@ -563,6 +573,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1005",
       "personel": "AYTÜL ILIKSU",
       "tarih": "2025-09-09",
       "ic_dis": "10:08",
@@ -582,6 +593,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1005",
       "personel": "AYTÜL ILIKSU",
       "tarih": "2025-09-10",
       "ic_dis": "10:11",
@@ -601,6 +613,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1005",
       "personel": "AYTÜL ILIKSU",
       "tarih": "2025-09-11",
       "ic_dis": "10:11",
@@ -620,6 +633,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1005",
       "personel": "AYTÜL ILIKSU",
       "tarih": "2025-09-12",
       "ic_dis": "10:10",
@@ -639,6 +653,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1005",
       "personel": "AYTÜL ILIKSU",
       "tarih": "2025-09-15",
       "ic_dis": "10:09",
@@ -658,6 +673,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1005",
       "personel": "AYTÜL ILIKSU",
       "tarih": "2025-09-16",
       "ic_dis": "10:12",
@@ -677,6 +693,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1005",
       "personel": "AYTÜL ILIKSU",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -692,6 +709,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1007",
       "personel": "BEYTULLAH CER",
       "tarih": "2025-09-02",
       "ic_dis": "07:51",
@@ -711,6 +729,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1007",
       "personel": "BEYTULLAH CER",
       "tarih": "2025-09-03",
       "ic_dis": "10:39",
@@ -730,6 +749,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1007",
       "personel": "BEYTULLAH CER",
       "tarih": "2025-09-04",
       "ic_dis": "10:27",
@@ -749,6 +769,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1007",
       "personel": "BEYTULLAH CER",
       "tarih": "2025-09-05",
       "ic_dis": "10:05",
@@ -768,6 +789,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1007",
       "personel": "BEYTULLAH CER",
       "tarih": "2025-09-08",
       "ic_dis": "10:21",
@@ -787,6 +809,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1007",
       "personel": "BEYTULLAH CER",
       "tarih": "2025-09-09",
       "ic_dis": "10:32",
@@ -806,6 +829,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1007",
       "personel": "BEYTULLAH CER",
       "tarih": "2025-09-10",
       "ic_dis": "..:..",
@@ -821,6 +845,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1007",
       "personel": "BEYTULLAH CER",
       "tarih": "2025-09-11",
       "ic_dis": "08:30",
@@ -840,6 +865,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1007",
       "personel": "BEYTULLAH CER",
       "tarih": "2025-09-12",
       "ic_dis": "09:56",
@@ -859,6 +885,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1007",
       "personel": "BEYTULLAH CER",
       "tarih": "2025-09-15",
       "ic_dis": "10:11",
@@ -878,6 +905,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1007",
       "personel": "BEYTULLAH CER",
       "tarih": "2025-09-16",
       "ic_dis": "09:48",
@@ -897,6 +925,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1007",
       "personel": "BEYTULLAH CER",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -912,6 +941,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1011",
       "personel": "ERDAL ÇAKIR",
       "tarih": "2025-09-01",
       "ic_dis": "..:..",
@@ -927,6 +957,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1011",
       "personel": "ERDAL ÇAKIR",
       "tarih": "2025-09-03",
       "ic_dis": "11:03",
@@ -946,6 +977,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1011",
       "personel": "ERDAL ÇAKIR",
       "tarih": "2025-09-04",
       "ic_dis": "10:32",
@@ -965,6 +997,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1011",
       "personel": "ERDAL ÇAKIR",
       "tarih": "2025-09-05",
       "ic_dis": "06:12",
@@ -984,6 +1017,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1011",
       "personel": "ERDAL ÇAKIR",
       "tarih": "2025-09-08",
       "ic_dis": "10:48",
@@ -1003,6 +1037,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1011",
       "personel": "ERDAL ÇAKIR",
       "tarih": "2025-09-09",
       "ic_dis": "10:37",
@@ -1022,6 +1057,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1011",
       "personel": "ERDAL ÇAKIR",
       "tarih": "2025-09-15",
       "ic_dis": "10:36",
@@ -1041,6 +1077,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-01",
       "ic_dis": "10:10",
@@ -1060,6 +1097,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-02",
       "ic_dis": "10:16",
@@ -1079,6 +1117,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-03",
       "ic_dis": "10:22",
@@ -1098,6 +1137,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-04",
       "ic_dis": "10:16",
@@ -1117,6 +1157,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-05",
       "ic_dis": "..:..",
@@ -1132,6 +1173,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-08",
       "ic_dis": "08:23",
@@ -1151,6 +1193,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-09",
       "ic_dis": "10:08",
@@ -1170,6 +1213,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-10",
       "ic_dis": "10:08",
@@ -1189,6 +1233,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-11",
       "ic_dis": "09:41",
@@ -1208,6 +1253,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-12",
       "ic_dis": "10:09",
@@ -1227,6 +1273,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-15",
       "ic_dis": "10:10",
@@ -1246,6 +1293,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-16",
       "ic_dis": "10:11",
@@ -1265,6 +1313,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1012",
       "personel": "FATMA ÇAKAL",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -1280,6 +1329,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-01",
       "ic_dis": "10:07",
@@ -1299,6 +1349,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-02",
       "ic_dis": "10:07",
@@ -1318,6 +1369,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-03",
       "ic_dis": "10:09",
@@ -1337,6 +1389,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-04",
       "ic_dis": "10:07",
@@ -1356,6 +1409,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-05",
       "ic_dis": "10:04",
@@ -1375,6 +1429,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-08",
       "ic_dis": "10:06",
@@ -1394,6 +1449,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-09",
       "ic_dis": "10:10",
@@ -1413,6 +1469,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-10",
       "ic_dis": "10:05",
@@ -1432,6 +1489,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-11",
       "ic_dis": "10:07",
@@ -1451,6 +1509,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-12",
       "ic_dis": "10:08",
@@ -1470,6 +1529,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-15",
       "ic_dis": "10:08",
@@ -1489,6 +1549,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-16",
       "ic_dis": "10:03",
@@ -1508,6 +1569,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1013",
       "personel": "FATMA SARIŞIK",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -1523,6 +1585,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1015",
       "personel": "GÜLBAHAR BİLGİ",
       "tarih": "2025-09-08",
       "ic_dis": "10:05",
@@ -1542,6 +1605,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1015",
       "personel": "GÜLBAHAR BİLGİ",
       "tarih": "2025-09-09",
       "ic_dis": "10:07",
@@ -1561,6 +1625,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1015",
       "personel": "GÜLBAHAR BİLGİ",
       "tarih": "2025-09-10",
       "ic_dis": "10:04",
@@ -1580,6 +1645,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1015",
       "personel": "GÜLBAHAR BİLGİ",
       "tarih": "2025-09-11",
       "ic_dis": "10:07",
@@ -1599,6 +1665,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1015",
       "personel": "GÜLBAHAR BİLGİ",
       "tarih": "2025-09-12",
       "ic_dis": "10:05",
@@ -1618,6 +1685,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1015",
       "personel": "GÜLBAHAR BİLGİ",
       "tarih": "2025-09-15",
       "ic_dis": "10:06",
@@ -1637,6 +1705,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1015",
       "personel": "GÜLBAHAR BİLGİ",
       "tarih": "2025-09-16",
       "ic_dis": "10:06",
@@ -1656,6 +1725,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1015",
       "personel": "GÜLBAHAR BİLGİ",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -1671,6 +1741,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1016",
       "personel": "HALİL İBRAHİM PARLAR",
       "tarih": "2025-09-01",
       "ic_dis": "09:55",
@@ -1690,6 +1761,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1016",
       "personel": "HALİL İBRAHİM PARLAR",
       "tarih": "2025-09-04",
       "ic_dis": "..:..",
@@ -1709,6 +1781,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1016",
       "personel": "HALİL İBRAHİM PARLAR",
       "tarih": "2025-09-05",
       "ic_dis": "09:48",
@@ -1728,6 +1801,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1016",
       "personel": "HALİL İBRAHİM PARLAR",
       "tarih": "2025-09-08",
       "ic_dis": "09:35",
@@ -1747,6 +1821,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1016",
       "personel": "HALİL İBRAHİM PARLAR",
       "tarih": "2025-09-09",
       "ic_dis": "09:45",
@@ -1766,6 +1841,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1017",
       "personel": "İBRAHİM GÜNERCAN",
       "tarih": "2025-09-01",
       "ic_dis": "10:03",
@@ -1785,6 +1861,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1017",
       "personel": "İBRAHİM GÜNERCAN",
       "tarih": "2025-09-02",
       "ic_dis": "10:08",
@@ -1804,6 +1881,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1017",
       "personel": "İBRAHİM GÜNERCAN",
       "tarih": "2025-09-03",
       "ic_dis": "10:16",
@@ -1823,6 +1901,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1017",
       "personel": "İBRAHİM GÜNERCAN",
       "tarih": "2025-09-05",
       "ic_dis": "",
@@ -1838,6 +1917,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1017",
       "personel": "İBRAHİM GÜNERCAN",
       "tarih": "2025-09-08",
       "ic_dis": "10:07",
@@ -1857,6 +1937,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1017",
       "personel": "İBRAHİM GÜNERCAN",
       "tarih": "2025-09-09",
       "ic_dis": "10:06",
@@ -1876,6 +1957,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1017",
       "personel": "İBRAHİM GÜNERCAN",
       "tarih": "2025-09-10",
       "ic_dis": "10:03",
@@ -1895,6 +1977,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1017",
       "personel": "İBRAHİM GÜNERCAN",
       "tarih": "2025-09-11",
       "ic_dis": "09:51",
@@ -1914,6 +1997,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1017",
       "personel": "İBRAHİM GÜNERCAN",
       "tarih": "2025-09-12",
       "ic_dis": "10:03",
@@ -1933,6 +2017,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1017",
       "personel": "İBRAHİM GÜNERCAN",
       "tarih": "2025-09-15",
       "ic_dis": "10:01",
@@ -1952,6 +2037,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1017",
       "personel": "İBRAHİM GÜNERCAN",
       "tarih": "2025-09-16",
       "ic_dis": "10:07",
@@ -1971,6 +2057,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1017",
       "personel": "İBRAHİM GÜNERCAN",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -1986,6 +2073,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1020",
       "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
       "tarih": "2025-09-01",
       "ic_dis": "09:45",
@@ -2005,6 +2093,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1020",
       "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
       "tarih": "2025-09-02",
       "ic_dis": "..:..",
@@ -2020,6 +2109,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1020",
       "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
       "tarih": "2025-09-05",
       "ic_dis": "09:26",
@@ -2039,6 +2129,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1020",
       "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
       "tarih": "2025-09-08",
       "ic_dis": "09:28",
@@ -2058,6 +2149,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1020",
       "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
       "tarih": "2025-09-09",
       "ic_dis": "10:07",
@@ -2077,6 +2169,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1020",
       "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
       "tarih": "2025-09-11",
       "ic_dis": "09:28",
@@ -2096,6 +2189,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1020",
       "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
       "tarih": "2025-09-12",
       "ic_dis": "09:28",
@@ -2115,6 +2209,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1020",
       "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
       "tarih": "2025-09-15",
       "ic_dis": "33:33",
@@ -2134,6 +2229,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1020",
       "personel": "KUDDUSİ ERSİN KÖSEOĞLU",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -2149,6 +2245,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1022",
       "personel": "MEHMET UĞUR",
       "tarih": "2025-09-01",
       "ic_dis": "10:01",
@@ -2168,6 +2265,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1022",
       "personel": "MEHMET UĞUR",
       "tarih": "2025-09-02",
       "ic_dis": "10:04",
@@ -2187,6 +2285,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1022",
       "personel": "MEHMET UĞUR",
       "tarih": "2025-09-03",
       "ic_dis": "10:11",
@@ -2206,6 +2305,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1022",
       "personel": "MEHMET UĞUR",
       "tarih": "2025-09-04",
       "ic_dis": "10:07",
@@ -2225,6 +2325,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1022",
       "personel": "MEHMET UĞUR",
       "tarih": "2025-09-08",
       "ic_dis": "10:01",
@@ -2244,6 +2345,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1022",
       "personel": "MEHMET UĞUR",
       "tarih": "2025-09-09",
       "ic_dis": "..:..",
@@ -2259,6 +2361,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1022",
       "personel": "MEHMET UĞUR",
       "tarih": "2025-09-10",
       "ic_dis": "..:..",
@@ -2274,6 +2377,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1022",
       "personel": "MEHMET UĞUR",
       "tarih": "2025-09-12",
       "ic_dis": "10:07",
@@ -2293,6 +2397,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1022",
       "personel": "MEHMET UĞUR",
       "tarih": "2025-09-15",
       "ic_dis": "10:04",
@@ -2312,6 +2417,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1022",
       "personel": "MEHMET UĞUR",
       "tarih": "2025-09-16",
       "ic_dis": "10:01",
@@ -2331,6 +2437,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1022",
       "personel": "MEHMET UĞUR",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -2346,6 +2453,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-01",
       "ic_dis": "10:06",
@@ -2365,6 +2473,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-02",
       "ic_dis": "10:08",
@@ -2384,6 +2493,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-03",
       "ic_dis": "10:12",
@@ -2403,6 +2513,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-04",
       "ic_dis": "10:11",
@@ -2422,6 +2533,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-05",
       "ic_dis": "09:50",
@@ -2441,6 +2553,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-08",
       "ic_dis": "10:03",
@@ -2460,6 +2573,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-09",
       "ic_dis": "10:05",
@@ -2479,6 +2593,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-10",
       "ic_dis": "10:10",
@@ -2498,6 +2613,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-11",
       "ic_dis": "10:11",
@@ -2517,6 +2633,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-12",
       "ic_dis": "10:05",
@@ -2536,6 +2653,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-15",
       "ic_dis": "12:00",
@@ -2555,6 +2673,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-16",
       "ic_dis": "10:08",
@@ -2574,6 +2693,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1023",
       "personel": "NİHAT BAYRAK",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -2589,6 +2709,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1024",
       "personel": "OĞUZHAN SÜNBÜL",
       "tarih": "2025-09-08",
       "ic_dis": "10:14",
@@ -2608,6 +2729,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1024",
       "personel": "OĞUZHAN SÜNBÜL",
       "tarih": "2025-09-09",
       "ic_dis": "10:14",
@@ -2627,6 +2749,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1024",
       "personel": "OĞUZHAN SÜNBÜL",
       "tarih": "2025-09-10",
       "ic_dis": "10:08",
@@ -2646,6 +2769,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1024",
       "personel": "OĞUZHAN SÜNBÜL",
       "tarih": "2025-09-11",
       "ic_dis": "10:07",
@@ -2665,6 +2789,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1024",
       "personel": "OĞUZHAN SÜNBÜL",
       "tarih": "2025-09-12",
       "ic_dis": "..:..",
@@ -2680,6 +2805,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1024",
       "personel": "OĞUZHAN SÜNBÜL",
       "tarih": "2025-09-13",
       "ic_dis": "03:21",
@@ -2699,6 +2825,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1024",
       "personel": "OĞUZHAN SÜNBÜL",
       "tarih": "2025-09-16",
       "ic_dis": "10:09",
@@ -2718,6 +2845,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1024",
       "personel": "OĞUZHAN SÜNBÜL",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -2733,6 +2861,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1026",
       "personel": "ÖVÜNÇ ÖZBAY",
       "tarih": "2025-09-01",
       "ic_dis": "..:..",
@@ -2748,6 +2877,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1026",
       "personel": "ÖVÜNÇ ÖZBAY",
       "tarih": "2025-09-02",
       "ic_dis": "..:..",
@@ -2763,6 +2893,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1026",
       "personel": "ÖVÜNÇ ÖZBAY",
       "tarih": "2025-09-03",
       "ic_dis": "..:..",
@@ -2778,6 +2909,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1026",
       "personel": "ÖVÜNÇ ÖZBAY",
       "tarih": "2025-09-04",
       "ic_dis": "10:10",
@@ -2797,6 +2929,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1026",
       "personel": "ÖVÜNÇ ÖZBAY",
       "tarih": "2025-09-05",
       "ic_dis": "..:..",
@@ -2812,6 +2945,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1026",
       "personel": "ÖVÜNÇ ÖZBAY",
       "tarih": "2025-09-10",
       "ic_dis": "10:06",
@@ -2831,6 +2965,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1026",
       "personel": "ÖVÜNÇ ÖZBAY",
       "tarih": "2025-09-15",
       "ic_dis": "10:10",
@@ -2850,6 +2985,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1026",
       "personel": "ÖVÜNÇ ÖZBAY",
       "tarih": "2025-09-16",
       "ic_dis": "10:12",
@@ -2869,6 +3005,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1026",
       "personel": "ÖVÜNÇ ÖZBAY",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -2884,6 +3021,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1027",
       "personel": "ÖZGE GÜMÜŞBAĞ",
       "tarih": "2025-09-01",
       "ic_dis": "00:00",
@@ -2903,6 +3041,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1027",
       "personel": "ÖZGE GÜMÜŞBAĞ",
       "tarih": "2025-09-03",
       "ic_dis": "..:..",
@@ -2918,6 +3057,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1027",
       "personel": "ÖZGE GÜMÜŞBAĞ",
       "tarih": "2025-09-04",
       "ic_dis": "10:11",
@@ -2937,6 +3077,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1027",
       "personel": "ÖZGE GÜMÜŞBAĞ",
       "tarih": "2025-09-05",
       "ic_dis": "",
@@ -2952,6 +3093,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1027",
       "personel": "ÖZGE GÜMÜŞBAĞ",
       "tarih": "2025-09-08",
       "ic_dis": "..:..",
@@ -2967,6 +3109,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1027",
       "personel": "ÖZGE GÜMÜŞBAĞ",
       "tarih": "2025-09-09",
       "ic_dis": "10:15",
@@ -2986,6 +3129,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1027",
       "personel": "ÖZGE GÜMÜŞBAĞ",
       "tarih": "2025-09-10",
       "ic_dis": "10:05",
@@ -3005,6 +3149,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1027",
       "personel": "ÖZGE GÜMÜŞBAĞ",
       "tarih": "2025-09-12",
       "ic_dis": "10:15",
@@ -3024,6 +3169,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1027",
       "personel": "ÖZGE GÜMÜŞBAĞ",
       "tarih": "2025-09-15",
       "ic_dis": "10:12",
@@ -3043,6 +3189,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1027",
       "personel": "ÖZGE GÜMÜŞBAĞ",
       "tarih": "2025-09-16",
       "ic_dis": "10:04",
@@ -3062,6 +3209,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1027",
       "personel": "ÖZGE GÜMÜŞBAĞ",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -3077,6 +3225,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1028",
       "personel": "RECEP TUTAL",
       "tarih": "2025-09-01",
       "ic_dis": "08:33",
@@ -3096,6 +3245,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1028",
       "personel": "RECEP TUTAL",
       "tarih": "2025-09-02",
       "ic_dis": "10:08",
@@ -3115,6 +3265,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1028",
       "personel": "RECEP TUTAL",
       "tarih": "2025-09-03",
       "ic_dis": "10:11",
@@ -3134,6 +3285,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1028",
       "personel": "RECEP TUTAL",
       "tarih": "2025-09-04",
       "ic_dis": "10:24",
@@ -3153,6 +3305,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1028",
       "personel": "RECEP TUTAL",
       "tarih": "2025-09-05",
       "ic_dis": "10:11",
@@ -3172,6 +3325,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1028",
       "personel": "RECEP TUTAL",
       "tarih": "2025-09-08",
       "ic_dis": "10:03",
@@ -3191,6 +3345,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1028",
       "personel": "RECEP TUTAL",
       "tarih": "2025-09-09",
       "ic_dis": "10:05",
@@ -3210,6 +3365,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1028",
       "personel": "RECEP TUTAL",
       "tarih": "2025-09-10",
       "ic_dis": "10:06",
@@ -3229,6 +3385,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1028",
       "personel": "RECEP TUTAL",
       "tarih": "2025-09-11",
       "ic_dis": "10:11",
@@ -3248,6 +3405,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1028",
       "personel": "RECEP TUTAL",
       "tarih": "2025-09-15",
       "ic_dis": "10:09",
@@ -3267,6 +3425,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1028",
       "personel": "RECEP TUTAL",
       "tarih": "2025-09-16",
       "ic_dis": "10:08",
@@ -3286,6 +3445,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1028",
       "personel": "RECEP TUTAL",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -3301,6 +3461,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-01",
       "ic_dis": "10:07",
@@ -3320,6 +3481,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-02",
       "ic_dis": "10:07",
@@ -3339,6 +3501,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-03",
       "ic_dis": "10:10",
@@ -3358,6 +3521,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-04",
       "ic_dis": "10:07",
@@ -3377,6 +3541,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-05",
       "ic_dis": "10:04",
@@ -3396,6 +3561,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-08",
       "ic_dis": "10:06",
@@ -3415,6 +3581,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-09",
       "ic_dis": "10:10",
@@ -3434,6 +3601,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-10",
       "ic_dis": "10:06",
@@ -3453,6 +3621,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-11",
       "ic_dis": "10:06",
@@ -3472,6 +3641,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-12",
       "ic_dis": "10:07",
@@ -3491,6 +3661,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-15",
       "ic_dis": "10:07",
@@ -3510,6 +3681,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-16",
       "ic_dis": "10:03",
@@ -3529,6 +3701,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1029",
       "personel": "SABRİYE ELMA",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -3544,6 +3717,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1030",
       "personel": "SAMET ÇOLAK",
       "tarih": "2025-09-01",
       "ic_dis": "10:06",
@@ -3563,6 +3737,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1030",
       "personel": "SAMET ÇOLAK",
       "tarih": "2025-09-02",
       "ic_dis": "..:..",
@@ -3578,6 +3753,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1030",
       "personel": "SAMET ÇOLAK",
       "tarih": "2025-09-04",
       "ic_dis": "10:14",
@@ -3597,6 +3773,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1030",
       "personel": "SAMET ÇOLAK",
       "tarih": "2025-09-08",
       "ic_dis": "10:05",
@@ -3616,6 +3793,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1030",
       "personel": "SAMET ÇOLAK",
       "tarih": "2025-09-09",
       "ic_dis": "..:..",
@@ -3631,6 +3809,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1030",
       "personel": "SAMET ÇOLAK",
       "tarih": "2025-09-10",
       "ic_dis": "10:06",
@@ -3650,6 +3829,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1030",
       "personel": "SAMET ÇOLAK",
       "tarih": "2025-09-11",
       "ic_dis": "",
@@ -3665,6 +3845,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1030",
       "personel": "SAMET ÇOLAK",
       "tarih": "2025-09-12",
       "ic_dis": "..:..",
@@ -3680,6 +3861,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1030",
       "personel": "SAMET ÇOLAK",
       "tarih": "2025-09-15",
       "ic_dis": "10:10",
@@ -3699,6 +3881,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1030",
       "personel": "SAMET ÇOLAK",
       "tarih": "2025-09-16",
       "ic_dis": "10:12",
@@ -3718,6 +3901,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1030",
       "personel": "SAMET ÇOLAK",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -3733,6 +3917,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1031",
       "personel": "SEVGİ YAMAÇ",
       "tarih": "2025-09-01",
       "ic_dis": "10:09",
@@ -3752,6 +3937,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1031",
       "personel": "SEVGİ YAMAÇ",
       "tarih": "2025-09-02",
       "ic_dis": "..:..",
@@ -3767,6 +3953,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1031",
       "personel": "SEVGİ YAMAÇ",
       "tarih": "2025-09-03",
       "ic_dis": "10:22",
@@ -3786,6 +3973,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1031",
       "personel": "SEVGİ YAMAÇ",
       "tarih": "2025-09-04",
       "ic_dis": "10:13",
@@ -3805,6 +3993,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1031",
       "personel": "SEVGİ YAMAÇ",
       "tarih": "2025-09-09",
       "ic_dis": "..:..",
@@ -3820,6 +4009,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1031",
       "personel": "SEVGİ YAMAÇ",
       "tarih": "2025-09-16",
       "ic_dis": "..:..",
@@ -3835,6 +4025,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1032",
       "personel": "SEVİM KARADAŞ",
       "tarih": "2025-09-02",
       "ic_dis": "10:05",
@@ -3854,6 +4045,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1032",
       "personel": "SEVİM KARADAŞ",
       "tarih": "2025-09-03",
       "ic_dis": "..:..",
@@ -3869,6 +4061,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1032",
       "personel": "SEVİM KARADAŞ",
       "tarih": "2025-09-04",
       "ic_dis": "10:08",
@@ -3888,6 +4081,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1033",
       "personel": "TAYYİP MUTLU",
       "tarih": "2025-09-01",
       "ic_dis": "09:36",
@@ -3907,6 +4101,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1033",
       "personel": "TAYYİP MUTLU",
       "tarih": "2025-09-02",
       "ic_dis": "..:..",
@@ -3922,6 +4117,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1033",
       "personel": "TAYYİP MUTLU",
       "tarih": "2025-09-03",
       "ic_dis": "10:18",
@@ -3941,6 +4137,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1033",
       "personel": "TAYYİP MUTLU",
       "tarih": "2025-09-04",
       "ic_dis": "10:13",
@@ -3960,6 +4157,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1033",
       "personel": "TAYYİP MUTLU",
       "tarih": "2025-09-08",
       "ic_dis": "08:41",
@@ -3979,6 +4177,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1033",
       "personel": "TAYYİP MUTLU",
       "tarih": "2025-09-09",
       "ic_dis": "",
@@ -3994,6 +4193,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1033",
       "personel": "TAYYİP MUTLU",
       "tarih": "2025-09-10",
       "ic_dis": "10:05",
@@ -4013,6 +4213,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1033",
       "personel": "TAYYİP MUTLU",
       "tarih": "2025-09-11",
       "ic_dis": "10:09",
@@ -4032,6 +4233,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1033",
       "personel": "TAYYİP MUTLU",
       "tarih": "2025-09-12",
       "ic_dis": "..:..",
@@ -4047,6 +4249,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1033",
       "personel": "TAYYİP MUTLU",
       "tarih": "2025-09-15",
       "ic_dis": "10:10",
@@ -4066,6 +4269,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1033",
       "personel": "TAYYİP MUTLU",
       "tarih": "2025-09-16",
       "ic_dis": "10:12",
@@ -4085,6 +4289,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1033",
       "personel": "TAYYİP MUTLU",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -4100,6 +4305,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1035",
       "personel": "AHMET TARIK AKPINAR",
       "tarih": "2025-09-01",
       "ic_dis": "10:02",
@@ -4119,6 +4325,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1035",
       "personel": "AHMET TARIK AKPINAR",
       "tarih": "2025-09-02",
       "ic_dis": "10:05",
@@ -4138,6 +4345,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1035",
       "personel": "AHMET TARIK AKPINAR",
       "tarih": "2025-09-03",
       "ic_dis": "10:20",
@@ -4157,6 +4365,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1035",
       "personel": "AHMET TARIK AKPINAR",
       "tarih": "2025-09-04",
       "ic_dis": "..:..",
@@ -4172,6 +4381,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1035",
       "personel": "AHMET TARIK AKPINAR",
       "tarih": "2025-09-09",
       "ic_dis": "09:45",
@@ -4191,6 +4401,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1035",
       "personel": "AHMET TARIK AKPINAR",
       "tarih": "2025-09-10",
       "ic_dis": "10:07",
@@ -4210,6 +4421,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1035",
       "personel": "AHMET TARIK AKPINAR",
       "tarih": "2025-09-11",
       "ic_dis": "10:05",
@@ -4229,6 +4441,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1035",
       "personel": "AHMET TARIK AKPINAR",
       "tarih": "2025-09-12",
       "ic_dis": "10:18",
@@ -4248,6 +4461,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1036",
       "personel": "SİNAN BUĞUTEKİN",
       "tarih": "2025-09-08",
       "ic_dis": "..:..",
@@ -4263,6 +4477,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "1036",
       "personel": "SİNAN BUĞUTEKİN",
       "tarih": "2025-09-09",
       "ic_dis": "10:08",
@@ -4282,6 +4497,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1036",
       "personel": "SİNAN BUĞUTEKİN",
       "tarih": "2025-09-10",
       "ic_dis": "10:07",
@@ -4301,6 +4517,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1036",
       "personel": "SİNAN BUĞUTEKİN",
       "tarih": "2025-09-11",
       "ic_dis": "10:07",
@@ -4320,6 +4537,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1036",
       "personel": "SİNAN BUĞUTEKİN",
       "tarih": "2025-09-12",
       "ic_dis": "10:10",
@@ -4339,6 +4557,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1036",
       "personel": "SİNAN BUĞUTEKİN",
       "tarih": "2025-09-15",
       "ic_dis": "10:03",
@@ -4358,6 +4577,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1036",
       "personel": "SİNAN BUĞUTEKİN",
       "tarih": "2025-09-16",
       "ic_dis": "10:03",
@@ -4377,6 +4597,7 @@
       "not": ""
     },
     {
+      "sicilNo": "1036",
       "personel": "SİNAN BUĞUTEKİN",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -4392,6 +4613,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2001",
       "personel": "MAHİR ATIŞ",
       "tarih": "2025-09-02",
       "ic_dis": "10:04",
@@ -4411,6 +4633,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2001",
       "personel": "MAHİR ATIŞ",
       "tarih": "2025-09-03",
       "ic_dis": "10:10",
@@ -4430,6 +4653,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2001",
       "personel": "MAHİR ATIŞ",
       "tarih": "2025-09-04",
       "ic_dis": "08:31",
@@ -4449,6 +4673,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2001",
       "personel": "MAHİR ATIŞ",
       "tarih": "2025-09-08",
       "ic_dis": "10:00",
@@ -4468,6 +4693,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2001",
       "personel": "MAHİR ATIŞ",
       "tarih": "2025-09-09",
       "ic_dis": "10:07",
@@ -4487,6 +4713,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2001",
       "personel": "MAHİR ATIŞ",
       "tarih": "2025-09-10",
       "ic_dis": "10:04",
@@ -4506,6 +4733,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2001",
       "personel": "MAHİR ATIŞ",
       "tarih": "2025-09-11",
       "ic_dis": "10:07",
@@ -4525,6 +4753,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2001",
       "personel": "MAHİR ATIŞ",
       "tarih": "2025-09-12",
       "ic_dis": "10:07",
@@ -4544,6 +4773,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2001",
       "personel": "MAHİR ATIŞ",
       "tarih": "2025-09-15",
       "ic_dis": "10:04",
@@ -4563,6 +4793,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2001",
       "personel": "MAHİR ATIŞ",
       "tarih": "2025-09-16",
       "ic_dis": "10:02",
@@ -4582,6 +4813,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2001",
       "personel": "MAHİR ATIŞ",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -4597,6 +4829,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2002",
       "personel": "ÜNSAL KİRLİ",
       "tarih": "2025-09-08",
       "ic_dis": "10:00",
@@ -4616,6 +4849,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2002",
       "personel": "ÜNSAL KİRLİ",
       "tarih": "2025-09-09",
       "ic_dis": "10:08",
@@ -4635,6 +4869,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2002",
       "personel": "ÜNSAL KİRLİ",
       "tarih": "2025-09-10",
       "ic_dis": "10:04",
@@ -4654,6 +4889,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2002",
       "personel": "ÜNSAL KİRLİ",
       "tarih": "2025-09-11",
       "ic_dis": "10:08",
@@ -4673,6 +4909,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2002",
       "personel": "ÜNSAL KİRLİ",
       "tarih": "2025-09-12",
       "ic_dis": "10:09",
@@ -4692,6 +4929,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2002",
       "personel": "ÜNSAL KİRLİ",
       "tarih": "2025-09-15",
       "ic_dis": "10:02",
@@ -4711,6 +4949,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2002",
       "personel": "ÜNSAL KİRLİ",
       "tarih": "2025-09-16",
       "ic_dis": "10:01",
@@ -4730,6 +4969,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2002",
       "personel": "ÜNSAL KİRLİ",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -4745,6 +4985,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2003",
       "personel": "ZEHRA MENGÜLOĞLU",
       "tarih": "2025-09-15",
       "ic_dis": "10:09",
@@ -4764,6 +5005,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2003",
       "personel": "ZEHRA MENGÜLOĞLU",
       "tarih": "2025-09-16",
       "ic_dis": "..:..",
@@ -4779,6 +5021,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2003",
       "personel": "ZEHRA MENGÜLOĞLU",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -4794,6 +5037,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-01",
       "ic_dis": "..:..",
@@ -4809,6 +5053,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-02",
       "ic_dis": "..:..",
@@ -4824,6 +5069,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-03",
       "ic_dis": "10:20",
@@ -4843,6 +5089,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-04",
       "ic_dis": "10:12",
@@ -4862,6 +5109,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-05",
       "ic_dis": "",
@@ -4877,6 +5125,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-08",
       "ic_dis": "10:05",
@@ -4896,6 +5145,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-09",
       "ic_dis": "10:14",
@@ -4915,6 +5165,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-10",
       "ic_dis": "10:07",
@@ -4934,6 +5185,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-11",
       "ic_dis": "10:07",
@@ -4953,6 +5205,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-12",
       "ic_dis": "10:45",
@@ -4972,6 +5225,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-15",
       "ic_dis": "10:12",
@@ -4991,6 +5245,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-16",
       "ic_dis": "10:04",
@@ -5010,6 +5265,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2004",
       "personel": "SEYDA AKÇİL",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5025,6 +5281,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-01",
       "ic_dis": "10:02",
@@ -5044,6 +5301,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-02",
       "ic_dis": "10:05",
@@ -5063,6 +5321,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-03",
       "ic_dis": "10:20",
@@ -5082,6 +5341,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-04",
       "ic_dis": "10:15",
@@ -5101,6 +5361,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-05",
       "ic_dis": "..:..",
@@ -5116,6 +5377,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-08",
       "ic_dis": "10:01",
@@ -5135,6 +5397,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-09",
       "ic_dis": "10:07",
@@ -5154,6 +5417,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-10",
       "ic_dis": "",
@@ -5169,6 +5433,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-11",
       "ic_dis": "",
@@ -5184,6 +5449,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-12",
       "ic_dis": "",
@@ -5199,6 +5465,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-15",
       "ic_dis": "10:12",
@@ -5218,6 +5485,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-16",
       "ic_dis": "10:02",
@@ -5237,6 +5505,7 @@
       "not": ""
     },
     {
+      "sicilNo": "2005",
       "personel": "İBRAHİM BARIŞÇANKAYA",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5252,6 +5521,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10000",
       "personel": "FURKAN AVCI",
       "tarih": "2025-09-15",
       "ic_dis": "..:..",
@@ -5267,6 +5537,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10000",
       "personel": "FURKAN AVCI",
       "tarih": "2025-09-16",
       "ic_dis": "10:13",
@@ -5286,6 +5557,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10000",
       "personel": "FURKAN AVCI",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5301,6 +5573,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10001",
       "personel": "HATİCE ALKAN",
       "tarih": "2025-09-15",
       "ic_dis": "..:..",
@@ -5316,6 +5589,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10001",
       "personel": "HATİCE ALKAN",
       "tarih": "2025-09-16",
       "ic_dis": "10:00",
@@ -5335,6 +5609,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10001",
       "personel": "HATİCE ALKAN",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5350,6 +5625,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10002",
       "personel": "KEZİBAN SARIIŞIK",
       "tarih": "2025-09-15",
       "ic_dis": "..:..",
@@ -5365,6 +5641,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10002",
       "personel": "KEZİBAN SARIIŞIK",
       "tarih": "2025-09-16",
       "ic_dis": "10:09",
@@ -5384,6 +5661,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10002",
       "personel": "KEZİBAN SARIIŞIK",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5399,6 +5677,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10003",
       "personel": "EMİRHAN SÜNBÜL",
       "tarih": "2025-09-15",
       "ic_dis": "..:..",
@@ -5414,6 +5693,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10003",
       "personel": "EMİRHAN SÜNBÜL",
       "tarih": "2025-09-16",
       "ic_dis": "10:09",
@@ -5433,6 +5713,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10003",
       "personel": "EMİRHAN SÜNBÜL",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5448,6 +5729,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10004",
       "personel": "BÜŞRA SÜNBÜL",
       "tarih": "2025-09-15",
       "ic_dis": "..:..",
@@ -5463,6 +5745,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10004",
       "personel": "BÜŞRA SÜNBÜL",
       "tarih": "2025-09-16",
       "ic_dis": "10:08",
@@ -5482,6 +5765,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10004",
       "personel": "BÜŞRA SÜNBÜL",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5497,6 +5781,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10005",
       "personel": "MELEK VAROL",
       "tarih": "2025-09-15",
       "ic_dis": "..:..",
@@ -5512,6 +5797,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10005",
       "personel": "MELEK VAROL",
       "tarih": "2025-09-16",
       "ic_dis": "10:13",
@@ -5531,6 +5817,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10005",
       "personel": "MELEK VAROL",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5546,6 +5833,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10006",
       "personel": "CEYLAN BABACAN",
       "tarih": "2025-09-15",
       "ic_dis": "..:..",
@@ -5561,6 +5849,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10006",
       "personel": "CEYLAN BABACAN",
       "tarih": "2025-09-16",
       "ic_dis": "10:07",
@@ -5580,6 +5869,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10006",
       "personel": "CEYLAN BABACAN",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5595,6 +5885,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10009",
       "personel": "BURCU CANBAZ",
       "tarih": "2025-09-16",
       "ic_dis": "10:10",
@@ -5614,6 +5905,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10009",
       "personel": "BURCU CANBAZ",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5629,6 +5921,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10022",
       "personel": "FEHİM GÜLMAK",
       "tarih": "2025-09-16",
       "ic_dis": "10:05",
@@ -5648,6 +5941,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10022",
       "personel": "FEHİM GÜLMAK",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5663,6 +5957,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10023",
       "personel": "FERİYA ÖZÇEVİK",
       "tarih": "2025-09-16",
       "ic_dis": "10:08",
@@ -5682,6 +5977,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10023",
       "personel": "FERİYA ÖZÇEVİK",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5697,6 +5993,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10024",
       "personel": "GURBET ATIŞ",
       "tarih": "2025-09-16",
       "ic_dis": "10:06",
@@ -5716,6 +6013,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10024",
       "personel": "GURBET ATIŞ",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5731,6 +6029,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10025",
       "personel": "GÜLCAN DEMİRBİLEK",
       "tarih": "2025-09-16",
       "ic_dis": "10:10",
@@ -5750,6 +6049,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10025",
       "personel": "GÜLCAN DEMİRBİLEK",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5765,6 +6065,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10026",
       "personel": "HALİME SAVSA",
       "tarih": "2025-09-16",
       "ic_dis": "..:..",
@@ -5780,6 +6081,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10026",
       "personel": "HALİME SAVSA",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5795,6 +6097,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10029",
       "personel": "HARUN AVCI",
       "tarih": "2025-09-16",
       "ic_dis": "10:13",
@@ -5814,6 +6117,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10029",
       "personel": "HARUN AVCI",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5829,6 +6133,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10043",
       "personel": "ÖZAY GÜL",
       "tarih": "2025-09-16",
       "ic_dis": "10:05",
@@ -5848,6 +6153,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10043",
       "personel": "ÖZAY GÜL",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5863,6 +6169,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10045",
       "personel": "REFAN GÜLHAN",
       "tarih": "2025-09-16",
       "ic_dis": "10:08",
@@ -5882,6 +6189,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10045",
       "personel": "REFAN GÜLHAN",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5897,6 +6205,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10053",
       "personel": "ZELİHA LEKESİZ",
       "tarih": "2025-09-16",
       "ic_dis": "10:14",
@@ -5916,6 +6225,7 @@
       "not": ""
     },
     {
+      "sicilNo": "10053",
       "personel": "ZELİHA LEKESİZ",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
@@ -5931,6 +6241,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10054",
       "personel": "ZEYNEP BABACAN",
       "tarih": "2025-09-16",
       "ic_dis": "..:..",
@@ -5946,6 +6257,7 @@
       "not": "Giriş veya çıkış eksik"
     },
     {
+      "sicilNo": "10054",
       "personel": "ZEYNEP BABACAN",
       "tarih": "2025-09-17",
       "ic_dis": "..:..",
