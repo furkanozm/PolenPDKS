@@ -64,7 +64,8 @@
         }
       ],
       "requestedExecutionLevel": "requireAdministrator",
-      "artifactName": "${productName}-${version}-${arch}.${ext}"
+      "artifactName": "${productName}-${version}-${arch}.${ext}",
+      "icon": "logo.png"
     },
     "nsis": {
       "oneClick": false,
