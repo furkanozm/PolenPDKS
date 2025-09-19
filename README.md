@@ -13,6 +13,9 @@ Bu sistem, PDKS Excel dosyalarını okuyup günlük çalışma verilerini işley
 - ⏱️ **Çalışma Süresi**: 30dk mola düş ile çalışma süresi hesaplama
 - 📄 **Çoklu Çıktı**: JSON ve CSV formatında rapor üretme
 - 🎨 **Modern Tasarım**: Responsive ve kullanıcı dostu arayüz
+- 🔐 **Güvenli Config**: Şifreli config dosyası sistemi
+- 🌙 **Tema Desteği**: Açık/koyu tema seçeneği
+- ⚙️ **Ayar Sistemi**: Tüm ayarlar config dosyasında saklanır
 
 ## Kurulum
 
@@ -79,3 +82,4 @@ npm run process
 
 - Node.js
 - xlsx paketi
+- Electron
