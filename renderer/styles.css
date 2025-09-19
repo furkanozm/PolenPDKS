@@ -112,6 +112,22 @@ body {
     margin: 0 0 15px 0;
 }
 
+.logout-btn {
+    margin-top: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: white;
+    font-size: 0.8rem;
+    padding: 8px 12px;
+    transition: all 0.3s ease;
+}
+
+.logout-btn:hover {
+    background: rgba(255, 255, 255, 0.2);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-1px);
+}
+
 /* Dark Mode Section */
 .dark-mode-section {
     margin: 15px 20px;
@@ -459,6 +475,18 @@ body {
 
 .btn-primary:hover {
     background: #2980b9;
+}
+
+.btn-danger {
+    background: #dc3545;
+    color: white;
+    border: none;
+}
+
+.btn-danger:hover {
+    background: #c82333;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
 }
 
 .btn-secondary {
@@ -1389,11 +1417,17 @@ body {
 }
 
 /* Ayarlar Sayfası */
+#ayarlar-page {
+    overflow: hidden;
+    max-height: 100vh;
+}
+
 .settings-container {
     width: 100%;
     max-width: none;
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 .settings-cards-container {

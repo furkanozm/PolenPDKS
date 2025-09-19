@@ -96,7 +96,7 @@
                 </div>
 
                 <div class="process-section" id="processSection" style="display: none;">
-                    <button class="btn btn-success btn-large" id="processBtn">
+                    <button class="btn btn-success btn-sm" id="processBtn">
                         <i data-lucide="play" class="btn-icon"></i>
                         İşlemi Başlat
                     </button>
@@ -360,8 +360,8 @@
 
                 <div class="content-card">
                     <div class="history-controls">
-                        <button class="btn btn-primary" onclick="clearHistory()">
-                            <i data-lucide="trash-2"></i>
+                        <button class="btn btn-primary btn-sm" onclick="clearHistory()">
+                            <i data-lucide="trash-2" class="btn-icon"></i>
                             Geçmişi Temizle
                         </button>
                     </div>
@@ -462,12 +462,43 @@
                                         </div>
                                     </div>
                                 </div>
+                                
+                                <div class="settings-card">
+                                    <h3>UI Ayarları</h3>
+                                    <p class="settings-description">Arayüz tercihleri ve görünüm ayarları.</p>
+                                    
+                                    <div class="form-group">
+                                        <label for="languageSelect">Dil</label>
+                                        <div class="input-group">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text">
+                                                    <i data-lucide="globe"></i>
+                                                </span>
+                                            </div>
+                                            <select class="form-control" id="languageSelect" name="language">
+                                                <option value="tr">Türkçe</option>
+                                                <option value="en">English</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="autoSaveToggle">Otomatik Kaydet</label>
+                                        <div class="toggle-container">
+                                            <label class="toggle-switch">
+                                                <input type="checkbox" id="autoSaveToggle" name="autoSave">
+                                                <span class="toggle-slider"></span>
+                                            </label>
+                                            <span class="toggle-label">İşlemler otomatik olarak kaydedilsin</span>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             
-                            <div class="form-actions" style="text-align: center; margin-top: 30px;">
-                                <button type="submit" class="btn btn-success btn-lg">
-                                    <i data-lucide="save"></i>
-                                    Tüm Ayarları Kaydet
+                            <div class="form-actions" style="text-align: center; margin-top: -50px;">
+                                <button type="submit" class="btn btn-success btn-sm">
+                                    <i data-lucide="save" class="btn-icon"></i>
+                                    Ayarları Kaydet
                                 </button>
                             </div>
                         </form>
@@ -499,6 +530,10 @@
     <!-- Footer -->
     <footer class="app-footer">
         <div class="footer-buttons">
+            <button class="btn btn-sm btn-danger" id="logoutBtn">
+                <i data-lucide="log-out" class="btn-icon"></i>
+                Çıkış Yap
+            </button>
             <button class="btn btn-sm btn-secondary" id="openFolderBtn">
                 <i data-lucide="folder-open" class="btn-icon"></i>
                 Klasörü Aç

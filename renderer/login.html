@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDKS İşleme Sistemi - Giriş</title>
+    <link rel="stylesheet" href="login-styles.css">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="logo-container">
+                    <img src="logo.png" alt="PDKS Logo" class="logo">
+                </div>
+                <h1>PDKS İşleme Sistemi</h1>
+                <p>Güvenli giriş yapın</p>
+            </div>
+
+            <div class="login-content">
+                <div class="login-form">
+                    <div class="form-group">
+                        <label for="email">E-posta Adresi</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i data-lucide="mail"></i>
+                                </span>
+                            </div>
+                            <input type="email" id="email" class="form-control" placeholder="E-posta adresinizi girin" required>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="password">Şifre</label>
+                        <div class="input-group">
+                            <div class="input-group-prepend">
+                                <span class="input-group-text">
+                                    <i data-lucide="lock"></i>
+                                </span>
+                            </div>
+                            <input type="password" id="password" class="form-control" placeholder="Şifrenizi girin" required>
+                            <div class="input-group-append">
+                                <button type="button" class="btn btn-outline-secondary" id="togglePassword">
+                                    <i data-lucide="eye" id="eyeIcon"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="form-group">
+                        <div class="remember-me">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="rememberMe">
+                                E-postamı hatırla
+                            </label>
+                        </div>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="button" class="btn btn-primary btn-block" id="loginBtn">
+                            <i data-lucide="log-in" class="btn-icon"></i>
+                            Giriş Yap
+                        </button>
+                    </div>
+                </div>
+
+                <div class="login-footer">
+                    <button type="button" class="btn btn-outline-primary" id="requestPasswordBtn">
+                        <i data-lucide="key" class="btn-icon"></i>
+                        Şifre İste
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Loading Overlay -->
+        <div class="loading-overlay" id="loadingOverlay" style="display: none;">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Giriş yapılıyor...</p>
+            </div>
+        </div>
+
+        <!-- Error Modal -->
+        <div class="error-modal" id="errorModal" style="display: none;">
+            <div class="error-modal-content">
+                <div class="error-icon">
+                    <i data-lucide="x-circle"></i>
+                </div>
+                <h3>Giriş Hatası</h3>
+                <p id="errorMessage"></p>
+                <button class="btn btn-primary" id="errorModalClose">Tamam</button>
+            </div>
+        </div>
+
+        <!-- User Info Modal -->
+        <div class="user-info-modal" id="userInfoModal" style="display: none;">
+            <div class="user-info-modal-content">
+                <div class="modal-header">
+                    <h3>Kullanıcı Bilgileri</h3>
+                    <button class="close-btn" id="closeUserInfoModal">
+                        <i data-lucide="x"></i>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="userName">Kullanıcı Adı</label>
+                        <input type="text" id="userName" class="form-control" placeholder="Kullanıcı adınızı girin">
+                    </div>
+                    <div class="form-group">
+                        <label for="userPassword">Şifre</label>
+                        <input type="password" id="userPassword" class="form-control" placeholder="Şifrenizi girin">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" id="cancelUserInfo">İptal</button>
+                    <button class="btn btn-primary" id="sendMailBtn">
+                        <i data-lucide="mail" class="btn-icon"></i>
+                        Mail Gönder
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script>
+        // Lucide ikonlarını hemen yükle
+        document.addEventListener('DOMContentLoaded', () => {
+            if (typeof lucide !== 'undefined') {
+                lucide.createIcons();
+            }
+        });
+    </script>
+    <script src="login.js"></script>
+</body>
+</html>

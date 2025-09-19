@@ -1,11 +1,25 @@
 const { app, BrowserWindow, dialog, ipcMain } = require('electron');
 const path = require('path');
 const fs = require('fs');
+const crypto = require('crypto');
+const { execSync } = require('child_process');
 const XLSX = require('xlsx');
 const puppeteer = require('puppeteer');
 const speakeasy = require('speakeasy');
 
 let mainWindow;
+
+// Windows'ta dosyayı gizli yapmak için yardımcı fonksiyon
+function makeFileHidden(filePath) {
+    try {
+        if (process.platform === 'win32') {
+            // Windows'ta attrib +h komutu ile dosyayı gizli yap
+            execSync(`attrib +h "${filePath}"`, { stdio: 'ignore' });
+        }
+    } catch (error) {
+        console.warn('Dosya gizli yapılamadı:', error.message);
+    }
+}
 
 // Global değişkenler
 global.currentBrowser = null;
@@ -20,6 +34,136 @@ function getOutputDir() {
     } else {
         return path.join(__dirname, 'out');
     }
+}
+
+// Şifre hashleme fonksiyonları
+function hashPassword(password) {
+    return crypto.createHash('sha256').update(password).digest('hex');
+}
+
+function verifyPassword(password, hashedPassword) {
+    return hashPassword(password) === hashedPassword;
+}
+
+// Şifre çözümleme fonksiyonu (hash'ten orijinal şifreyi geri alamayız, bu yüzden kullanıcıdan tekrar isteyeceğiz)
+function decryptPassword(hashedPassword, userInput) {
+    if (verifyPassword(userInput, hashedPassword)) {
+        return userInput; // Doğru şifre girildi
+    }
+    return null; // Yanlış şifre
+}
+
+// Şifre dialog fonksiyonu
+async function showPasswordDialog() {
+    return new Promise((resolve) => {
+        const passwordWindow = new BrowserWindow({
+            width: 400,
+            height: 200,
+            resizable: false,
+            modal: true,
+            parent: mainWindow,
+            webPreferences: {
+                nodeIntegration: true,
+                contextIsolation: false
+            },
+            title: 'Şifre Girişi'
+        });
+
+        const passwordHtml = `
+            <!DOCTYPE html>
+            <html>
+            <head>
+                <title>Şifre Girişi</title>
+                <style>
+                    body { 
+                        font-family: Arial, sans-serif; 
+                        padding: 20px; 
+                        background: #f5f5f5;
+                    }
+                    .container {
+                        background: white;
+                        padding: 20px;
+                        border-radius: 8px;
+                        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+                    }
+                    input[type="password"] {
+                        width: 100%;
+                        padding: 10px;
+                        margin: 10px 0;
+                        border: 1px solid #ddd;
+                        border-radius: 4px;
+                        font-size: 14px;
+                    }
+                    button {
+                        background: #007bff;
+                        color: white;
+                        border: none;
+                        padding: 10px 20px;
+                        border-radius: 4px;
+                        cursor: pointer;
+                        margin-right: 10px;
+                    }
+                    button:hover {
+                        background: #0056b3;
+                    }
+                    .cancel {
+                        background: #6c757d;
+                    }
+                    .cancel:hover {
+                        background: #545b62;
+                    }
+                </style>
+            </head>
+            <body>
+                <div class="container">
+                    <h3>Pinhuman Şifresi</h3>
+                    <p>Config dosyasında saklanan şifreyi girin:</p>
+                    <input type="password" id="password" placeholder="Şifrenizi girin">
+                    <div>
+                        <button onclick="submitPassword()">Tamam</button>
+                        <button class="cancel" onclick="cancelPassword()">İptal</button>
+                    </div>
+                </div>
+                <script>
+                    const { ipcRenderer } = require('electron');
+                    
+                    document.getElementById('password').focus();
+                    
+                    document.getElementById('password').addEventListener('keypress', (e) => {
+                        if (e.key === 'Enter') {
+                            submitPassword();
+                        }
+                    });
+                    
+                    function submitPassword() {
+                        const password = document.getElementById('password').value;
+                        ipcRenderer.send('password-submitted', password);
+                    }
+                    
+                    function cancelPassword() {
+                        ipcRenderer.send('password-cancelled');
+                    }
+                </script>
+            </body>
+            </html>
+        `;
+
+        passwordWindow.loadURL('data:text/html;charset=utf-8,' + encodeURIComponent(passwordHtml));
+
+        ipcMain.once('password-submitted', (event, password) => {
+            passwordWindow.close();
+            resolve(password);
+        });
+
+        ipcMain.once('password-cancelled', () => {
+            passwordWindow.close();
+            resolve(null);
+        });
+
+        passwordWindow.on('closed', () => {
+            resolve(null);
+        });
+    });
 }
 
 // Config dosyasını oku
@@ -45,7 +189,7 @@ function loadConfig() {
                     "credentials": {
                         "userName": "furkan.ozmen@guleryuzgroup.com",
                         "companyCode": "ikb",
-                        "password": "Kralben123.",
+                        "password": "Kralben123.", // Şifreyi düz metin olarak sakla
                         "totpSecret": "GQ2DCZBYGRRGILLGMI4TELJUMMYGCLJZGU4TILJQHBRDSNDBMJRTQNTBMNXVGZLDOJSXI4DJNZUHK3LBNZNG42LLMI"
                     }
                 },
@@ -64,6 +208,8 @@ function loadConfig() {
             
             // Varsayılan config'i kaydet
             fs.writeFileSync(configPath, JSON.stringify(defaultConfig, null, 2), 'utf8');
+            // Dosyayı gizli yap
+            makeFileHidden(configPath);
             return defaultConfig;
         }
         
@@ -75,7 +221,90 @@ function loadConfig() {
     }
 }
 
-function createWindow() {
+// Şifre doğrulama ve config güncelleme fonksiyonu
+async function verifyAndDecryptConfig(userPassword) {
+    try {
+        const config = loadConfig();
+        if (!config || !config.pinhuman || !config.pinhuman.credentials) {
+            throw new Error('Config dosyası bulunamadı veya geçersiz');
+        }
+        
+        const storedPassword = config.pinhuman.credentials.password;
+        
+        // Şifreyi doğrula (düz metin karşılaştırması)
+        if (userPassword !== storedPassword) {
+            throw new Error('Geçersiz şifre');
+        }
+        
+        // Config'i döndür (şifre zaten düz metin olarak saklanıyor)
+        return config;
+        
+    } catch (error) {
+        console.error('Config doğrulama hatası:', error);
+        throw error;
+    }
+}
+
+// Giriş durumu kontrolü
+let isAuthenticated = false;
+let loginWindow = null;
+
+function createLoginWindow() {
+    loginWindow = new BrowserWindow({
+        width: 1200,
+        height: 800,
+        resizable: true,
+        webPreferences: {
+            nodeIntegration: true,
+            contextIsolation: false,
+            webSecurity: false,
+            allowRunningInsecureContent: true
+        },
+        icon: path.join(__dirname, 'logo.png'),
+        title: 'PDKS İşleme Sistemi - Giriş',
+        show: false,
+        center: true
+    });
+
+    loginWindow.loadFile('renderer/login.html');
+
+    loginWindow.once('ready-to-show', () => {
+        loginWindow.show();
+    });
+
+    // Giriş penceresi kapatıldığında uygulamayı kapat
+    loginWindow.on('closed', () => {
+        if (!isAuthenticated) {
+            app.quit();
+        }
+    });
+
+    // Giriş başarılı olduğunda ana pencereyi aç
+    loginWindow.webContents.on('navigate-to-main', () => {
+        isAuthenticated = true;
+        loginWindow.close();
+        createMainWindow();
+    });
+
+    // Yardım sayfasını aç
+    loginWindow.webContents.on('open-help', () => {
+        const helpWindow = new BrowserWindow({
+            width: 600,
+            height: 400,
+            webPreferences: {
+                nodeIntegration: true,
+                contextIsolation: false
+            },
+            parent: loginWindow,
+            modal: true,
+            title: 'Yardım'
+        });
+
+        helpWindow.loadURL('https://support.google.com/accounts/answer/41078');
+    });
+}
+
+function createMainWindow() {
     mainWindow = new BrowserWindow({
         width: 1200,
         height: 800,
@@ -85,7 +314,7 @@ function createWindow() {
             webSecurity: false,
             allowRunningInsecureContent: true
         },
-        icon: path.join(__dirname, 'assets/icon.png'), // İsteğe bağlı icon
+        icon: path.join(__dirname, 'logo.png'),
         title: 'PDKS İşleme Sistemi',
         show: false
     });
@@ -101,6 +330,18 @@ function createWindow() {
     if (process.env.NODE_ENV === 'development') {
         mainWindow.webContents.openDevTools();
     }
+
+    // Çıkış yapma işlemi
+    mainWindow.webContents.on('logout', () => {
+        isAuthenticated = false;
+        mainWindow.close();
+        createLoginWindow();
+    });
+}
+
+function createWindow() {
+    // Önce giriş penceresini aç
+    createLoginWindow();
 }
 
 app.whenReady().then(createWindow);
@@ -117,12 +358,156 @@ app.on('activate', () => {
     }
 });
 
+// IPC Handler'ları
+ipcMain.handle('navigate-to-main', () => {
+    if (loginWindow) {
+        loginWindow.webContents.emit('navigate-to-main');
+    }
+});
+
+ipcMain.handle('open-help', () => {
+    if (loginWindow) {
+        loginWindow.webContents.emit('open-help');
+    }
+});
+
+ipcMain.handle('logout', () => {
+    if (mainWindow) {
+        mainWindow.webContents.emit('logout');
+    }
+});
+
 // Config dosyasını okuma
 ipcMain.handle('get-config', async () => {
     try {
         return loadConfig();
     } catch (error) {
         console.error('Config okuma hatası:', error);
+        throw error;
+    }
+});
+
+// Şifre doğrulama ve config çözümleme
+ipcMain.handle('verify-config-password', async (event, userPassword) => {
+    try {
+        return await verifyAndDecryptConfig(userPassword);
+    } catch (error) {
+        console.error('Config şifre doğrulama hatası:', error);
+        throw error;
+    }
+});
+
+// E-posta kaydetme
+ipcMain.handle('save-remembered-email', async (event, email) => {
+    try {
+        let configPath;
+        
+        if (app.isPackaged) {
+            configPath = path.join(app.getPath('userData'), 'config.json');
+        } else {
+            configPath = path.join(__dirname, 'config.json');
+        }
+        
+        const config = loadConfig();
+        if (!config) {
+            throw new Error('Config dosyası okunamadı');
+        }
+        
+        // E-posta bilgisini config'e ekle
+        if (!config.app) {
+            config.app = {};
+        }
+        config.app.rememberedEmail = email;
+        
+        // Dosyayı kaydet
+        fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
+        // Dosyayı gizli yap
+        makeFileHidden(configPath);
+        
+        return { success: true };
+    } catch (error) {
+        console.error('E-posta kaydetme hatası:', error);
+        throw error;
+    }
+});
+
+// Kayıtlı e-postayı alma
+ipcMain.handle('get-remembered-email', async () => {
+    try {
+        const config = loadConfig();
+        return config?.app?.rememberedEmail || null;
+    } catch (error) {
+        console.error('E-posta okuma hatası:', error);
+        return null;
+    }
+});
+
+// UI ayarlarını kaydetme
+ipcMain.handle('save-ui-settings', async (event, settings) => {
+    try {
+        let configPath;
+        
+        if (app.isPackaged) {
+            configPath = path.join(app.getPath('userData'), 'config.json');
+        } else {
+            configPath = path.join(__dirname, 'config.json');
+        }
+        
+        const config = loadConfig();
+        if (!config) {
+            throw new Error('Config dosyası okunamadı');
+        }
+        
+        // UI ayarlarını config'e ekle/güncelle
+        if (!config.ui) {
+            config.ui = {};
+        }
+        
+        // Ayarları güncelle
+        Object.assign(config.ui, settings);
+        
+        // Dosyayı kaydet
+        fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
+        // Dosyayı gizli yap
+        makeFileHidden(configPath);
+        
+        return { success: true, message: 'UI ayarları başarıyla kaydedildi' };
+    } catch (error) {
+        console.error('UI ayarları kaydetme hatası:', error);
+        return { success: false, message: 'UI ayarları kaydedilirken hata oluştu: ' + error.message };
+    }
+});
+
+// UI ayarlarını yükleme
+ipcMain.handle('load-ui-settings', async () => {
+    try {
+        const config = loadConfig();
+        return config?.ui || {
+            theme: 'light',
+            language: 'tr',
+            autoSave: true
+        };
+    } catch (error) {
+        console.error('UI ayarları yükleme hatası:', error);
+        return {
+            theme: 'light',
+            language: 'tr',
+            autoSave: true
+        };
+    }
+});
+
+// Outlook Classic ile mail gönderme
+ipcMain.handle('open-outlook-mail', async (event, mailtoLink) => {
+    try {
+        const { shell } = require('electron');
+        
+        // Outlook Classic'i açmaya çalış
+        await shell.openExternal(mailtoLink);
+        
+        return { success: true };
+    } catch (error) {
+        console.error('Outlook açma hatası:', error);
         throw error;
     }
 });
@@ -145,11 +530,17 @@ ipcMain.handle('update-config', async (event, newCredentials) => {
             throw new Error('Config dosyası okunamadı');
         }
         
-        // Credentials'ı güncelle
-        config.pinhuman.credentials = { ...config.pinhuman.credentials, ...newCredentials };
+        // Credentials'ı güncelle (şifreyi düz metin olarak sakla)
+        const updatedCredentials = { ...config.pinhuman.credentials, ...newCredentials };
+        if (newCredentials.password) {
+            updatedCredentials.password = newCredentials.password;
+        }
+        config.pinhuman.credentials = updatedCredentials;
         
         // Dosyayı kaydet
         fs.writeFileSync(configPath, JSON.stringify(config, null, 2), 'utf8');
+        // Dosyayı gizli yap
+        makeFileHidden(configPath);
         
         return { success: true, message: 'Config başarıyla güncellendi' };
     } catch (error) {
@@ -1467,8 +1858,35 @@ ipcMain.handle('enter-data-pinhuman', async (event, credentials = null) => {
     
     try {
         // Config'den veya parametreden credentials al
-        const config = loadConfig();
-        const creds = credentials || config?.pinhuman?.credentials;
+        let creds;
+        if (credentials) {
+            // Parametre olarak gelen credentials'ı kullan
+            creds = credentials;
+        } else {
+            // Config'den hash'li şifreyi al
+            const config = loadConfig();
+            if (!config?.pinhuman?.credentials) {
+                throw new Error('Config dosyası bulunamadı veya geçersiz');
+            }
+            
+            // Eğer geçici şifre varsa onu kullan, yoksa kullanıcıdan iste
+            let userPassword = global.tempPassword;
+            
+            if (!userPassword) {
+                // Kullanıcıdan şifre iste (sadece ilk kez)
+                userPassword = await showPasswordDialog();
+                if (!userPassword) {
+                    throw new Error('Şifre girilmedi');
+                }
+                
+                // Şifreyi geçici olarak sakla (session boyunca)
+                global.tempPassword = userPassword;
+            }
+            
+            // Config'i şifre ile çözümle
+            const decryptedConfig = await verifyAndDecryptConfig(userPassword);
+            creds = decryptedConfig.pinhuman.credentials;
+        }
         
         if (!creds || !creds.userName || !creds.companyCode || !creds.password) {
             throw new Error('Kullanıcı bilgileri eksik. Lütfen config.json dosyasını kontrol edin.');
@@ -1500,13 +1918,37 @@ ipcMain.handle('enter-data-pinhuman', async (event, credentials = null) => {
         // Browser'ı başlat - Puppeteer ile
         const browserConfig = {
             headless: headlessMode,
-            args: ['--window-size=1200,800', '--window-position=100,100'],
+            args: [
+                '--window-size=1200,800',
+                '--window-position=100,100',
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-accelerated-2d-canvas',
+                '--no-first-run',
+                '--no-zygote',
+                '--disable-gpu'
+            ],
             defaultViewport: { width: 1200, height: 800 }
         };
         
-        // Headless mod değilse pencere konumunu ayarla
-        if (!headlessMode) {
-            browserConfig.args.push('--window-position=100,100');
+        // Packaged uygulamada executablePath belirt
+        if (app.isPackaged) {
+            // Windows için Chrome yolu
+            const possiblePaths = [
+                path.join(process.resourcesPath, 'chrome', 'chrome.exe'),
+                path.join(process.resourcesPath, 'chrome-win', 'chrome.exe'),
+                'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+                'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+                path.join(process.env.LOCALAPPDATA || '', 'Google\\Chrome\\Application\\chrome.exe')
+            ];
+            
+            for (const chromePath of possiblePaths) {
+                if (fs.existsSync(chromePath)) {
+                    browserConfig.executablePath = chromePath;
+                    break;
+                }
+            }
         }
         
         global.currentBrowser = await puppeteer.launch(browserConfig);
@@ -2620,10 +3062,39 @@ ipcMain.handle('enter-excel-data-pinhuman', async (event, { userName, companyCod
         // Headless ayarını al (varsayılan false)
         const headlessMode = false; // Bu fonksiyon için şimdilik false
         
-        browser = await puppeteer.launch({ 
+        const browserConfig = {
             headless: headlessMode,
-            args: ['--no-sandbox', '--disable-setuid-sandbox']
-        });
+            args: [
+                '--no-sandbox',
+                '--disable-setuid-sandbox',
+                '--disable-dev-shm-usage',
+                '--disable-accelerated-2d-canvas',
+                '--no-first-run',
+                '--no-zygote',
+                '--disable-gpu'
+            ]
+        };
+        
+        // Packaged uygulamada executablePath belirt
+        if (app.isPackaged) {
+            // Windows için Chrome yolu
+            const possiblePaths = [
+                path.join(process.resourcesPath, 'chrome', 'chrome.exe'),
+                path.join(process.resourcesPath, 'chrome-win', 'chrome.exe'),
+                'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe',
+                'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe',
+                path.join(process.env.LOCALAPPDATA || '', 'Google\\Chrome\\Application\\chrome.exe')
+            ];
+            
+            for (const chromePath of possiblePaths) {
+                if (fs.existsSync(chromePath)) {
+                    browserConfig.executablePath = chromePath;
+                    break;
+                }
+            }
+        }
+        
+        browser = await puppeteer.launch(browserConfig);
         
         page = await browser.newPage();
         

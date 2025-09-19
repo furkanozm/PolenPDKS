@@ -25,6 +25,7 @@ const pinhumanBtn = document.getElementById('pinhumanBtn');
 const logSection = document.getElementById('logSection');
 const logContainer = document.getElementById('logContainer');
 const closeLogBtn = document.getElementById('closeLogBtn');
+const logoutBtn = document.getElementById('logoutBtn');
 
 // Sidebar elementleri
 const totalRecordsStat = document.getElementById('totalRecordsStat');
@@ -65,6 +66,15 @@ if (pinhumanBtn) {
 if (closeLogBtn) {
     closeLogBtn.addEventListener('click', () => {
         hideLogSection();
+    });
+}
+
+// Çıkış butonu
+if (logoutBtn) {
+    logoutBtn.addEventListener('click', () => {
+        if (confirm('Çıkış yapmak istediğinizden emin misiniz?')) {
+            ipcRenderer.invoke('logout');
+        }
     });
 }
 
@@ -1181,14 +1191,130 @@ async function loadSettings() {
         
         document.getElementById('userName').value = settings.userName || '';
         document.getElementById('companyCode').value = settings.companyCode || '';
-        document.getElementById('password').value = settings.password || '';
+        
+        // Şifre alanını kayıtlı şifre varsa gizli olarak göster, yoksa boş bırak
+        if (settings.password && settings.password.trim() !== '') {
+            document.getElementById('password').value = settings.password;
+            document.getElementById('password').type = 'password'; // Şifreyi gizli göster
+            document.getElementById('password').placeholder = 'Kayıtlı şifre mevcut. Yeni şifre girmek için yazın.';
+        } else {
+            document.getElementById('password').value = '';
+            document.getElementById('password').type = 'password';
+            document.getElementById('password').placeholder = 'Şifre kaydedilmemiş. Şifre girin.';
+        }
+        
         document.getElementById('totpSecret').value = settings.totpSecret || '';
+        
+        // UI ayarlarını yükle
+        await loadUISettings();
         
         // Yuvarlanma kurallarını yükle
         loadYuvarlanmaKurallari();
         
+        // Şifre alanı için event listener ekle
+        const passwordField = document.getElementById('password');
+        passwordField.addEventListener('focus', () => {
+            // Alanı temizle ve text tipine çevir
+            passwordField.value = '';
+            passwordField.type = 'text';
+            passwordField.placeholder = 'Yeni şifre girin...';
+        });
+        
+        passwordField.addEventListener('blur', async () => {
+            if (passwordField.value === '') {
+                // Kayıtlı şifre varsa gerçek şifreyi gizli olarak göster, yoksa boş placeholder
+                const config = await ipcRenderer.invoke('get-config');
+                const settings = config?.pinhuman?.credentials || {};
+                if (settings.password && settings.password.trim() !== '') {
+                    passwordField.value = settings.password;
+                    passwordField.type = 'password';
+                    passwordField.placeholder = 'Kayıtlı şifre mevcut. Yeni şifre girmek için yazın.';
+                } else {
+                    passwordField.type = 'password';
+                    passwordField.placeholder = 'Şifre kaydedilmemiş. Şifre girin.';
+                }
+            }
+        });
+        
     } catch (error) {
         console.error('Ayarlar yüklenirken hata:', error);
+    }
+}
+
+// UI ayarlarını yükle
+async function loadUISettings() {
+    try {
+        const uiSettings = await ipcRenderer.invoke('load-ui-settings');
+        
+        // Tema ayarını uygula
+        if (uiSettings.theme) {
+            document.documentElement.setAttribute('data-theme', uiSettings.theme);
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            if (darkModeToggle) {
+                darkModeToggle.checked = uiSettings.theme === 'dark';
+            }
+        } else {
+            // Varsayılan tema light
+            document.documentElement.setAttribute('data-theme', 'light');
+            const darkModeToggle = document.getElementById('darkModeToggle');
+            if (darkModeToggle) {
+                darkModeToggle.checked = false;
+            }
+        }
+        
+        // Dil ayarını uygula
+        if (uiSettings.language) {
+            const languageSelect = document.getElementById('languageSelect');
+            if (languageSelect) {
+                languageSelect.value = uiSettings.language;
+            }
+        }
+        
+        // Otomatik kaydet ayarını uygula
+        if (uiSettings.autoSave !== undefined) {
+            const autoSaveToggle = document.getElementById('autoSaveToggle');
+            if (autoSaveToggle) {
+                autoSaveToggle.checked = uiSettings.autoSave;
+            }
+        }
+        
+    } catch (error) {
+        console.error('UI ayarları yüklenirken hata:', error);
+    }
+}
+
+// UI ayarlarını kaydet
+async function saveUISettings() {
+    try {
+        const settings = {};
+        
+        // Tema ayarını al
+        const theme = document.documentElement.getAttribute('data-theme') || 'light';
+        settings.theme = theme;
+        
+        // Dil ayarını al
+        const languageSelect = document.getElementById('languageSelect');
+        if (languageSelect) {
+            settings.language = languageSelect.value;
+        }
+        
+        // Otomatik kaydet ayarını al
+        const autoSaveToggle = document.getElementById('autoSaveToggle');
+        if (autoSaveToggle) {
+            settings.autoSave = autoSaveToggle.checked;
+        }
+        
+        // Ayarları kaydet
+        const result = await ipcRenderer.invoke('save-ui-settings', settings);
+        
+        if (result.success) {
+            console.log('UI ayarları başarıyla kaydedildi');
+        } else {
+            console.error('UI ayarları kaydedilemedi:', result.message);
+        }
+        
+    } catch (error) {
+        console.error('UI ayarları kaydedilirken hata:', error);
     }
 }
 
@@ -1209,17 +1335,42 @@ function loadYuvarlanmaKurallari() {
 }
 
 async function saveSettings() {
+    const userName = document.getElementById('userName').value;
+    const companyCode = document.getElementById('companyCode').value;
+    const password = document.getElementById('password').value;
+    const totpSecret = document.getElementById('totpSecret').value;
+    
     const settings = {
-        userName: document.getElementById('userName').value,
-        companyCode: document.getElementById('companyCode').value,
-        password: document.getElementById('password').value,
-        totpSecret: document.getElementById('totpSecret').value
+        userName: userName,
+        companyCode: companyCode,
+        totpSecret: totpSecret
     };
+    
+    // Sadece şifre girilmişse şifreyi güncelle
+    if (password && password.trim() !== '') {
+        settings.password = password;
+    }
     
     try {
         const result = await ipcRenderer.invoke('update-config', settings);
         if (result.success) {
+            // UI ayarlarını da kaydet
+            await saveUISettings();
             alert('Ayarlar başarıyla kaydedildi!');
+            // Şifre alanını kaydedilen şifre ile doldur ve gizli göster
+            if (password && password.trim() !== '') {
+                document.getElementById('password').value = password;
+                document.getElementById('password').type = 'password';
+            } else {
+                // Şifre değiştirilmemişse mevcut şifreyi göster
+                const config = await ipcRenderer.invoke('get-config');
+                const settings = config?.pinhuman?.credentials || {};
+                if (settings.password) {
+                    document.getElementById('password').value = settings.password;
+                    document.getElementById('password').type = 'password';
+                }
+            }
+            document.getElementById('password').placeholder = 'Şifre başarıyla kaydedildi! Yeni şifre girmek için yazın.';
         } else {
             alert('Ayarlar kaydedilirken hata oluştu: ' + result.message);
         }
@@ -1667,9 +1818,12 @@ ipcRenderer.on('log-message', (event, logData) => {
 });
 
 // Sayfa yüklendiğinde
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', async () => {
     // Lucide iconları başlat
     lucide.createIcons();
+    
+    // Önce UI ayarlarını yükle (tema için)
+    await loadUISettings();
     
     // Veri geçmişini yükle
     loadDataHistory();
@@ -1765,15 +1919,12 @@ document.addEventListener('keydown', (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     const darkModeToggle = document.getElementById('darkModeToggle');
     
-    // Kaydedilen tema tercihini yükle
-    const savedTheme = localStorage.getItem('theme') || 'light';
-    document.documentElement.setAttribute('data-theme', savedTheme);
-    darkModeToggle.checked = savedTheme === 'dark';
-    
     // Toggle event listener
     darkModeToggle.addEventListener('change', (e) => {
         const theme = e.target.checked ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', theme);
-        localStorage.setItem('theme', theme);
+        
+        // UI ayarlarını kaydet (localStorage yerine config dosyasına)
+        saveUISettings();
     });
 });
